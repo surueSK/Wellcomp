@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DAF076A122A36CFE0091A1C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF076A022A36CFE0091A1C2 /* AppDelegate.swift */; };
+		DAF076A322A36CFE0091A1C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF076A222A36CFE0091A1C2 /* ViewController.swift */; };
+		DAF076A622A36CFE0091A1C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF076A422A36CFE0091A1C2 /* Main.storyboard */; };
+		DAF076A922A36CFE0091A1C2 /* t_ubicoustics.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DAF076A722A36CFE0091A1C2 /* t_ubicoustics.xcdatamodeld */; };
+		DAF076AB22A36D020091A1C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF076AA22A36D020091A1C2 /* Assets.xcassets */; };
+		DAF076AE22A36D020091A1C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF076AC22A36D020091A1C2 /* LaunchScreen.storyboard */; };
+		DAF076B922A36D030091A1C2 /* t_ubicousticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF076B822A36D030091A1C2 /* t_ubicousticsTests.swift */; };
+		DAF076C422A36D030091A1C2 /* t_ubicousticsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF076C322A36D030091A1C2 /* t_ubicousticsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DAF076B522A36D030091A1C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAF0769522A36CFE0091A1C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAF0769C22A36CFE0091A1C2;
+			remoteInfo = "t-ubicoustics";
+		};
+		DAF076C022A36D030091A1C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAF0769522A36CFE0091A1C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAF0769C22A36CFE0091A1C2;
+			remoteInfo = "t-ubicoustics";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DAF0769D22A36CFE0091A1C2 /* t-ubicoustics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "t-ubicoustics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAF076A022A36CFE0091A1C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DAF076A222A36CFE0091A1C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DAF076A522A36CFE0091A1C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAF076A822A36CFE0091A1C2 /* t_ubicoustics.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = t_ubicoustics.xcdatamodel; sourceTree = "<group>"; };
+		DAF076AA22A36D020091A1C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DAF076AD22A36D020091A1C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DAF076AF22A36D020091A1C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAF076B422A36D030091A1C2 /* t-ubicousticsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "t-ubicousticsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAF076B822A36D030091A1C2 /* t_ubicousticsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = t_ubicousticsTests.swift; sourceTree = "<group>"; };
+		DAF076BA22A36D030091A1C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAF076BF22A36D030091A1C2 /* t-ubicousticsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "t-ubicousticsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAF076C322A36D030091A1C2 /* t_ubicousticsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = t_ubicousticsUITests.swift; sourceTree = "<group>"; };
+		DAF076C522A36D030091A1C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAF0769A22A36CFE0091A1C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAF076B122A36D030091A1C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAF076BC22A36D030091A1C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DAF0769422A36CFE0091A1C2 = {
+			isa = PBXGroup;
+			children = (
+				DAF0769F22A36CFE0091A1C2 /* t-ubicoustics */,
+				DAF076B722A36D030091A1C2 /* t-ubicousticsTests */,
+				DAF076C222A36D030091A1C2 /* t-ubicousticsUITests */,
+				DAF0769E22A36CFE0091A1C2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DAF0769E22A36CFE0091A1C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAF0769D22A36CFE0091A1C2 /* t-ubicoustics.app */,
+				DAF076B422A36D030091A1C2 /* t-ubicousticsTests.xctest */,
+				DAF076BF22A36D030091A1C2 /* t-ubicousticsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAF0769F22A36CFE0091A1C2 /* t-ubicoustics */ = {
+			isa = PBXGroup;
+			children = (
+				DAF076A022A36CFE0091A1C2 /* AppDelegate.swift */,
+				DAF076A222A36CFE0091A1C2 /* ViewController.swift */,
+				DAF076A422A36CFE0091A1C2 /* Main.storyboard */,
+				DAF076AA22A36D020091A1C2 /* Assets.xcassets */,
+				DAF076AC22A36D020091A1C2 /* LaunchScreen.storyboard */,
+				DAF076AF22A36D020091A1C2 /* Info.plist */,
+				DAF076A722A36CFE0091A1C2 /* t_ubicoustics.xcdatamodeld */,
+			);
+			path = "t-ubicoustics";
+			sourceTree = "<group>";
+		};
+		DAF076B722A36D030091A1C2 /* t-ubicousticsTests */ = {
+			isa = PBXGroup;
+			children = (
+				DAF076B822A36D030091A1C2 /* t_ubicousticsTests.swift */,
+				DAF076BA22A36D030091A1C2 /* Info.plist */,
+			);
+			path = "t-ubicousticsTests";
+			sourceTree = "<group>";
+		};
+		DAF076C222A36D030091A1C2 /* t-ubicousticsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DAF076C322A36D030091A1C2 /* t_ubicousticsUITests.swift */,
+				DAF076C522A36D030091A1C2 /* Info.plist */,
+			);
+			path = "t-ubicousticsUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAF0769C22A36CFE0091A1C2 /* t-ubicoustics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAF076C822A36D030091A1C2 /* Build configuration list for PBXNativeTarget "t-ubicoustics" */;
+			buildPhases = (
+				DAF0769922A36CFE0091A1C2 /* Sources */,
+				DAF0769A22A36CFE0091A1C2 /* Frameworks */,
+				DAF0769B22A36CFE0091A1C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "t-ubicoustics";
+			productName = "t-ubicoustics";
+			productReference = DAF0769D22A36CFE0091A1C2 /* t-ubicoustics.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DAF076B322A36D030091A1C2 /* t-ubicousticsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAF076CB22A36D030091A1C2 /* Build configuration list for PBXNativeTarget "t-ubicousticsTests" */;
+			buildPhases = (
+				DAF076B022A36D030091A1C2 /* Sources */,
+				DAF076B122A36D030091A1C2 /* Frameworks */,
+				DAF076B222A36D030091A1C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAF076B622A36D030091A1C2 /* PBXTargetDependency */,
+			);
+			name = "t-ubicousticsTests";
+			productName = "t-ubicousticsTests";
+			productReference = DAF076B422A36D030091A1C2 /* t-ubicousticsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DAF076BE22A36D030091A1C2 /* t-ubicousticsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAF076CE22A36D030091A1C2 /* Build configuration list for PBXNativeTarget "t-ubicousticsUITests" */;
+			buildPhases = (
+				DAF076BB22A36D030091A1C2 /* Sources */,
+				DAF076BC22A36D030091A1C2 /* Frameworks */,
+				DAF076BD22A36D030091A1C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAF076C122A36D030091A1C2 /* PBXTargetDependency */,
+			);
+			name = "t-ubicousticsUITests";
+			productName = "t-ubicousticsUITests";
+			productReference = DAF076BF22A36D030091A1C2 /* t-ubicousticsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAF0769522A36CFE0091A1C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "助川友理";
+				TargetAttributes = {
+					DAF0769C22A36CFE0091A1C2 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					DAF076B322A36D030091A1C2 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = DAF0769C22A36CFE0091A1C2;
+					};
+					DAF076BE22A36D030091A1C2 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = DAF0769C22A36CFE0091A1C2;
+					};
+				};
+			};
+			buildConfigurationList = DAF0769822A36CFE0091A1C2 /* Build configuration list for PBXProject "t-ubicoustics" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAF0769422A36CFE0091A1C2;
+			productRefGroup = DAF0769E22A36CFE0091A1C2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAF0769C22A36CFE0091A1C2 /* t-ubicoustics */,
+				DAF076B322A36D030091A1C2 /* t-ubicousticsTests */,
+				DAF076BE22A36D030091A1C2 /* t-ubicousticsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAF0769B22A36CFE0091A1C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAF076AE22A36D020091A1C2 /* LaunchScreen.storyboard in Resources */,
+				DAF076AB22A36D020091A1C2 /* Assets.xcassets in Resources */,
+				DAF076A622A36CFE0091A1C2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAF076B222A36D030091A1C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAF076BD22A36D030091A1C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAF0769922A36CFE0091A1C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAF076A322A36CFE0091A1C2 /* ViewController.swift in Sources */,
+				DAF076A922A36CFE0091A1C2 /* t_ubicoustics.xcdatamodeld in Sources */,
+				DAF076A122A36CFE0091A1C2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAF076B022A36D030091A1C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAF076B922A36D030091A1C2 /* t_ubicousticsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAF076BB22A36D030091A1C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAF076C422A36D030091A1C2 /* t_ubicousticsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAF076B622A36D030091A1C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAF0769C22A36CFE0091A1C2 /* t-ubicoustics */;
+			targetProxy = DAF076B522A36D030091A1C2 /* PBXContainerItemProxy */;
+		};
+		DAF076C122A36D030091A1C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAF0769C22A36CFE0091A1C2 /* t-ubicoustics */;
+			targetProxy = DAF076C022A36D030091A1C2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DAF076A422A36CFE0091A1C2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAF076A522A36CFE0091A1C2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DAF076AC22A36D020091A1C2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAF076AD22A36D020091A1C2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAF076C622A36D030091A1C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DAF076C722A36D030091A1C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAF076C922A36D030091A1C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 99XL587U89;
+				INFOPLIST_FILE = "t-ubicoustics/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.suke.t-ubicoustics";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DAF076CA22A36D030091A1C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 99XL587U89;
+				INFOPLIST_FILE = "t-ubicoustics/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.suke.t-ubicoustics";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DAF076CC22A36D030091A1C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "t-ubicousticsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.t-ubicousticsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/t-ubicoustics.app/t-ubicoustics";
+			};
+			name = Debug;
+		};
+		DAF076CD22A36D030091A1C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "t-ubicousticsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.t-ubicousticsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/t-ubicoustics.app/t-ubicoustics";
+			};
+			name = Release;
+		};
+		DAF076CF22A36D030091A1C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "t-ubicousticsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.t-ubicousticsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "t-ubicoustics";
+			};
+			name = Debug;
+		};
+		DAF076D022A36D030091A1C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "t-ubicousticsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.t-ubicousticsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "t-ubicoustics";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAF0769822A36CFE0091A1C2 /* Build configuration list for PBXProject "t-ubicoustics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAF076C622A36D030091A1C2 /* Debug */,
+				DAF076C722A36D030091A1C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAF076C822A36D030091A1C2 /* Build configuration list for PBXNativeTarget "t-ubicoustics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAF076C922A36D030091A1C2 /* Debug */,
+				DAF076CA22A36D030091A1C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAF076CB22A36D030091A1C2 /* Build configuration list for PBXNativeTarget "t-ubicousticsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAF076CC22A36D030091A1C2 /* Debug */,
+				DAF076CD22A36D030091A1C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAF076CE22A36D030091A1C2 /* Build configuration list for PBXNativeTarget "t-ubicousticsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAF076CF22A36D030091A1C2 /* Debug */,
+				DAF076D022A36D030091A1C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DAF076A722A36CFE0091A1C2 /* t_ubicoustics.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DAF076A822A36CFE0091A1C2 /* t_ubicoustics.xcdatamodel */,
+			);
+			currentVersion = DAF076A822A36CFE0091A1C2 /* t_ubicoustics.xcdatamodel */;
+			path = t_ubicoustics.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DAF0769522A36CFE0091A1C2 /* Project object */;
+}
