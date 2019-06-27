@@ -1,0 +1,5 @@
+理論面の類似
+http://blog.brainpad.co.jp/entry/2018/04/17/143000
+
+＊Kerasを内包したVGGishで動く、tenserflowがバックグラウンドになってる
+＊Keras(tensorflow backend)を使って学習し、モデルを.h5形式のファイルに出力
