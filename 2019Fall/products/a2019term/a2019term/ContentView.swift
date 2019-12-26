@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-// メニュー画面？開始
+// メニュー画面?
 
 struct ContentView: View {
  @ObservedObject var store = TodoStore()
@@ -40,29 +40,30 @@ struct SubContentView: View {
     @ObservedObject var store = TodoStore()
     var todos: [todos] = []
     @State var isShown = false
+    @State var inPut:String = ""
     var body: some View {
         NavigationView{
-            List {
-                Button(action: addTask) {
-                    Text("Add Task").alert(isPresented:$isShown) {
-                        Alert(title: Text("Alert"))
+                List {
+                    HStack{
+                        TextField("WriteNewtask", text: $inPut)
+                        Button(action: addTask) {
+                            //store.todos.name.append(self.inPut)
+                            Text("Add Task")
+                        }
                     }
-                }
                 ForEach(store.todos){
                 todos in
             HStack{
                 NavigationLink(destination:Text(todos.name)){
                         Text(todos.name)
                         Text("\(todos.time)")
-                }
-                
                 Button(action: {
                     self.gettime()
                     print("hello")
                 }) {
                     Text("START")
                 }
-                
+                }
             }
             }.onDelete(perform:delete)
                     .onMove(perform:move)
@@ -72,9 +73,11 @@ struct SubContentView: View {
         }
 
     }
+    
+//TODO機能
     func addTask(){
         self.isShown = true
-        //store.todos.append(<#todos#>)
+        //store.todos.append(todos.name)
     }
     func delete(at offsets:IndexSet){
         store.todos.remove(atOffsets:offsets)
@@ -82,7 +85,7 @@ struct SubContentView: View {
     func move(from source:IndexSet,to destination:Int){
         store.todos.move(fromOffsets: source, toOffset: destination)
     }
-//時間取得機能↓
+//時間取得機能
     let formatter = DateFormatter()
     weak var timer:Timer!
     var startTime = Date()
@@ -92,7 +95,7 @@ struct SubContentView: View {
         let now = Date()
         print(formatter.string(from: now))
     }
-//時間取得機能↑
+
 }
 
 
