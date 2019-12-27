@@ -10,11 +10,12 @@ import Foundation
 import SwiftUI
 import Combine
 
+
 class TodoStore:ObservableObject {
-    var todos:[todos]{
+    var todos:[todo]{
         didSet{didChange.send()}
     }
-    init(todos:[todos]=[]) {
+    init(todos:[todo]=[]) {
         self.todos=todos
     }
     var didChange = PassthroughSubject<Void,Never>()

@@ -8,10 +8,7 @@
 
 import SwiftUI
 // メニュー画面?
-
 struct ContentView: View {
- @ObservedObject var store = TodoStore()
- var todos: [todos] = []
     var body: some View {
         ZStack{
             Color.blue
@@ -37,10 +34,11 @@ struct ContentView: View {
 
 // TODO画面
 struct SubContentView: View {
+    var todos: [todo] = []
     @ObservedObject var store = TodoStore()
-    var todos: [todos] = []
     @State var isShown = false
     @State var inPut:String = ""
+    //@State var inPut:String = ""
     var body: some View {
         NavigationView{
                 List {
@@ -78,6 +76,7 @@ struct SubContentView: View {
     func addTask(){
         self.isShown = true
         //store.todos.append(todos.name)
+        //store.todos.name.append(self.inPut)
     }
     func delete(at offsets:IndexSet){
         store.todos.remove(atOffsets:offsets)
