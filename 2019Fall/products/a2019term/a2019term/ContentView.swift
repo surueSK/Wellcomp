@@ -34,7 +34,7 @@ struct ContentView: View {
 
 // TODO画面
 struct SubContentView: View {
-    var todos: [todos] = []
+    var todos: [todo] = []
     @ObservedObject var store = TodoStore()
     @State var isShown = false
     @State var inPut:String = ""
@@ -76,7 +76,7 @@ struct SubContentView: View {
     func addTask(){
         self.isShown = true
         //store.todos.append(todos.name)
-        store.todos.name.append(self.inPut)
+        //store.todos.name.append(self.inPut)
     }
     func delete(at offsets:IndexSet){
         store.todos.remove(atOffsets:offsets)

@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct todos: Identifiable{
+struct todo: Identifiable{
     var id = UUID()
     var name: String
     var time: Int
@@ -16,10 +16,10 @@ struct todos: Identifiable{
 
 #if DEBUG
 let testData = [
-    todos(name:"風呂",time:1),
-    todos(name:"洗面所",time:2),
-    todos(name:"食事",time:3),
-    todos(name:"歯磨き",time:4),
-    todos(name:"化粧",time:5)
+    todo(name:"風呂",time:1),
+    todo(name:"洗面所",time:2),
+    todo(name:"食事",time:3),
+    todo(name:"歯磨き",time:4),
+    todo(name:"化粧",time:5)
 ]
 #endif
