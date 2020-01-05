@@ -20,6 +20,12 @@ struct ToDoItemView: View {
                 Text(createdAt)
                 .font(.caption)
             }
+            Text("1")
+            Button(action: {
+                print("Button Tapped")
+            }){
+                Text("START")
+            }
         }
     }
 }

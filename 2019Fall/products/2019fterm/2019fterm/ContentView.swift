@@ -43,8 +43,8 @@ struct ContentView: View {
                 }.font(.headline)
                 Section(header: Text("To do's:")) {
                     ForEach(self.toDoItems) {todoItem in
-                        ToDoItemView(title: todoItem.title!, createdAt: "\(todoItem.createdAt!)")
-                        
+                        ToDoItemView(title: todoItem.title!, createdAt: "\(todoItem.createdAt!)"
+                        )
                     }.onDelete {IndexSet in
                         let deleteItem = self.toDoItems[IndexSet.first!]
                         self.managedObjectContext.delete(deleteItem)
