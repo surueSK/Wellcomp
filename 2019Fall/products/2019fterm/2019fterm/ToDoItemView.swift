@@ -22,7 +22,7 @@ struct ToDoItemView: View {
             }
             Text("1")
             Button(action: {
-                print("Button Tapped")
+                gettime()
             }){
                 Text("START")
             }
@@ -30,6 +30,16 @@ struct ToDoItemView: View {
     }
 }
 
+//時間取得機能
+let formatter = DateFormatter()
+weak var timer:Timer!
+var startTime = Date()
+func gettime(){
+    formatter.timeStyle = .full
+    formatter.dateStyle = .full
+    let now = Date()
+    print(formatter.string(from: now))
+}
 
 #if DEBUG
 struct ToDoItemView_Previews: PreviewProvider {
