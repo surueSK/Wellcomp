@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA9C3E6F2472087D005A1B25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9C3E6E2472087D005A1B25 /* AppDelegate.swift */; };
+		DA9C3E712472087D005A1B25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9C3E702472087D005A1B25 /* SceneDelegate.swift */; };
+		DA9C3E742472087D005A1B25 /* ADLoggerv1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA9C3E722472087D005A1B25 /* ADLoggerv1.xcdatamodeld */; };
+		DA9C3E762472087E005A1B25 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9C3E752472087E005A1B25 /* ContentView.swift */; };
+		DA9C3E7824720887005A1B25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9C3E7724720887005A1B25 /* Assets.xcassets */; };
+		DA9C3E7B24720887005A1B25 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9C3E7A24720887005A1B25 /* Preview Assets.xcassets */; };
+		DA9C3E7E24720887005A1B25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA9C3E7C24720887005A1B25 /* LaunchScreen.storyboard */; };
+		DA9C3E8924720888005A1B25 /* ADLoggerv1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9C3E8824720888005A1B25 /* ADLoggerv1Tests.swift */; };
+		DA9C3E9424720888005A1B25 /* ADLoggerv1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9C3E9324720888005A1B25 /* ADLoggerv1UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA9C3E8524720888005A1B25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA9C3E632472087D005A1B25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA9C3E6A2472087D005A1B25;
+			remoteInfo = ADLoggerv1;
+		};
+		DA9C3E9024720888005A1B25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA9C3E632472087D005A1B25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA9C3E6A2472087D005A1B25;
+			remoteInfo = ADLoggerv1;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DA9C3E6B2472087D005A1B25 /* ADLoggerv1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADLoggerv1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA9C3E6E2472087D005A1B25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DA9C3E702472087D005A1B25 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DA9C3E732472087D005A1B25 /* ADLoggerv1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ADLoggerv1.xcdatamodel; sourceTree = "<group>"; };
+		DA9C3E752472087E005A1B25 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DA9C3E7724720887005A1B25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DA9C3E7A24720887005A1B25 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DA9C3E7D24720887005A1B25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DA9C3E7F24720887005A1B25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA9C3E8424720887005A1B25 /* ADLoggerv1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADLoggerv1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA9C3E8824720888005A1B25 /* ADLoggerv1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADLoggerv1Tests.swift; sourceTree = "<group>"; };
+		DA9C3E8A24720888005A1B25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA9C3E8F24720888005A1B25 /* ADLoggerv1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADLoggerv1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA9C3E9324720888005A1B25 /* ADLoggerv1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADLoggerv1UITests.swift; sourceTree = "<group>"; };
+		DA9C3E9524720888005A1B25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA9C3E682472087D005A1B25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA9C3E8124720887005A1B25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA9C3E8C24720888005A1B25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA9C3E622472087D005A1B25 = {
+			isa = PBXGroup;
+			children = (
+				DA9C3E6D2472087D005A1B25 /* ADLoggerv1 */,
+				DA9C3E8724720888005A1B25 /* ADLoggerv1Tests */,
+				DA9C3E9224720888005A1B25 /* ADLoggerv1UITests */,
+				DA9C3E6C2472087D005A1B25 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA9C3E6C2472087D005A1B25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA9C3E6B2472087D005A1B25 /* ADLoggerv1.app */,
+				DA9C3E8424720887005A1B25 /* ADLoggerv1Tests.xctest */,
+				DA9C3E8F24720888005A1B25 /* ADLoggerv1UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA9C3E6D2472087D005A1B25 /* ADLoggerv1 */ = {
+			isa = PBXGroup;
+			children = (
+				DA9C3E6E2472087D005A1B25 /* AppDelegate.swift */,
+				DA9C3E702472087D005A1B25 /* SceneDelegate.swift */,
+				DA9C3E752472087E005A1B25 /* ContentView.swift */,
+				DA9C3E7724720887005A1B25 /* Assets.xcassets */,
+				DA9C3E7C24720887005A1B25 /* LaunchScreen.storyboard */,
+				DA9C3E7F24720887005A1B25 /* Info.plist */,
+				DA9C3E722472087D005A1B25 /* ADLoggerv1.xcdatamodeld */,
+				DA9C3E7924720887005A1B25 /* Preview Content */,
+			);
+			path = ADLoggerv1;
+			sourceTree = "<group>";
+		};
+		DA9C3E7924720887005A1B25 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DA9C3E7A24720887005A1B25 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DA9C3E8724720888005A1B25 /* ADLoggerv1Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DA9C3E8824720888005A1B25 /* ADLoggerv1Tests.swift */,
+				DA9C3E8A24720888005A1B25 /* Info.plist */,
+			);
+			path = ADLoggerv1Tests;
+			sourceTree = "<group>";
+		};
+		DA9C3E9224720888005A1B25 /* ADLoggerv1UITests */ = {
+			isa = PBXGroup;
+			children = (
+				DA9C3E9324720888005A1B25 /* ADLoggerv1UITests.swift */,
+				DA9C3E9524720888005A1B25 /* Info.plist */,
+			);
+			path = ADLoggerv1UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA9C3E6A2472087D005A1B25 /* ADLoggerv1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA9C3E9824720888005A1B25 /* Build configuration list for PBXNativeTarget "ADLoggerv1" */;
+			buildPhases = (
+				DA9C3E672472087D005A1B25 /* Sources */,
+				DA9C3E682472087D005A1B25 /* Frameworks */,
+				DA9C3E692472087D005A1B25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ADLoggerv1;
+			productName = ADLoggerv1;
+			productReference = DA9C3E6B2472087D005A1B25 /* ADLoggerv1.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DA9C3E8324720887005A1B25 /* ADLoggerv1Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA9C3E9B24720888005A1B25 /* Build configuration list for PBXNativeTarget "ADLoggerv1Tests" */;
+			buildPhases = (
+				DA9C3E8024720887005A1B25 /* Sources */,
+				DA9C3E8124720887005A1B25 /* Frameworks */,
+				DA9C3E8224720887005A1B25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA9C3E8624720888005A1B25 /* PBXTargetDependency */,
+			);
+			name = ADLoggerv1Tests;
+			productName = ADLoggerv1Tests;
+			productReference = DA9C3E8424720887005A1B25 /* ADLoggerv1Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DA9C3E8E24720888005A1B25 /* ADLoggerv1UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA9C3E9E24720888005A1B25 /* Build configuration list for PBXNativeTarget "ADLoggerv1UITests" */;
+			buildPhases = (
+				DA9C3E8B24720888005A1B25 /* Sources */,
+				DA9C3E8C24720888005A1B25 /* Frameworks */,
+				DA9C3E8D24720888005A1B25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA9C3E9124720888005A1B25 /* PBXTargetDependency */,
+			);
+			name = ADLoggerv1UITests;
+			productName = ADLoggerv1UITests;
+			productReference = DA9C3E8F24720888005A1B25 /* ADLoggerv1UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA9C3E632472087D005A1B25 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "助川友理";
+				TargetAttributes = {
+					DA9C3E6A2472087D005A1B25 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					DA9C3E8324720887005A1B25 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = DA9C3E6A2472087D005A1B25;
+					};
+					DA9C3E8E24720888005A1B25 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = DA9C3E6A2472087D005A1B25;
+					};
+				};
+			};
+			buildConfigurationList = DA9C3E662472087D005A1B25 /* Build configuration list for PBXProject "ADLoggerv1" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA9C3E622472087D005A1B25;
+			productRefGroup = DA9C3E6C2472087D005A1B25 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA9C3E6A2472087D005A1B25 /* ADLoggerv1 */,
+				DA9C3E8324720887005A1B25 /* ADLoggerv1Tests */,
+				DA9C3E8E24720888005A1B25 /* ADLoggerv1UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA9C3E692472087D005A1B25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA9C3E7E24720887005A1B25 /* LaunchScreen.storyboard in Resources */,
+				DA9C3E7B24720887005A1B25 /* Preview Assets.xcassets in Resources */,
+				DA9C3E7824720887005A1B25 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA9C3E8224720887005A1B25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA9C3E8D24720888005A1B25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA9C3E672472087D005A1B25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA9C3E6F2472087D005A1B25 /* AppDelegate.swift in Sources */,
+				DA9C3E712472087D005A1B25 /* SceneDelegate.swift in Sources */,
+				DA9C3E762472087E005A1B25 /* ContentView.swift in Sources */,
+				DA9C3E742472087D005A1B25 /* ADLoggerv1.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA9C3E8024720887005A1B25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA9C3E8924720888005A1B25 /* ADLoggerv1Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA9C3E8B24720888005A1B25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA9C3E9424720888005A1B25 /* ADLoggerv1UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA9C3E8624720888005A1B25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA9C3E6A2472087D005A1B25 /* ADLoggerv1 */;
+			targetProxy = DA9C3E8524720888005A1B25 /* PBXContainerItemProxy */;
+		};
+		DA9C3E9124720888005A1B25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA9C3E6A2472087D005A1B25 /* ADLoggerv1 */;
+			targetProxy = DA9C3E9024720888005A1B25 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA9C3E7C24720887005A1B25 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA9C3E7D24720887005A1B25 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA9C3E9624720888005A1B25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DA9C3E9724720888005A1B25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA9C3E9924720888005A1B25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"ADLoggerv1/Preview Content\"";
+				DEVELOPMENT_TEAM = 396285LGRJ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ADLoggerv1/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ADLoggerv1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA9C3E9A24720888005A1B25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"ADLoggerv1/Preview Content\"";
+				DEVELOPMENT_TEAM = 396285LGRJ;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ADLoggerv1/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ADLoggerv1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DA9C3E9C24720888005A1B25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 396285LGRJ;
+				INFOPLIST_FILE = ADLoggerv1Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ADLoggerv1Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ADLoggerv1.app/ADLoggerv1";
+			};
+			name = Debug;
+		};
+		DA9C3E9D24720888005A1B25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 396285LGRJ;
+				INFOPLIST_FILE = ADLoggerv1Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ADLoggerv1Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ADLoggerv1.app/ADLoggerv1";
+			};
+			name = Release;
+		};
+		DA9C3E9F24720888005A1B25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 396285LGRJ;
+				INFOPLIST_FILE = ADLoggerv1UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ADLoggerv1UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ADLoggerv1;
+			};
+			name = Debug;
+		};
+		DA9C3EA024720888005A1B25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 396285LGRJ;
+				INFOPLIST_FILE = ADLoggerv1UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ADLoggerv1UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ADLoggerv1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA9C3E662472087D005A1B25 /* Build configuration list for PBXProject "ADLoggerv1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA9C3E9624720888005A1B25 /* Debug */,
+				DA9C3E9724720888005A1B25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA9C3E9824720888005A1B25 /* Build configuration list for PBXNativeTarget "ADLoggerv1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA9C3E9924720888005A1B25 /* Debug */,
+				DA9C3E9A24720888005A1B25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA9C3E9B24720888005A1B25 /* Build configuration list for PBXNativeTarget "ADLoggerv1Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA9C3E9C24720888005A1B25 /* Debug */,
+				DA9C3E9D24720888005A1B25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA9C3E9E24720888005A1B25 /* Build configuration list for PBXNativeTarget "ADLoggerv1UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA9C3E9F24720888005A1B25 /* Debug */,
+				DA9C3EA024720888005A1B25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DA9C3E722472087D005A1B25 /* ADLoggerv1.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DA9C3E732472087D005A1B25 /* ADLoggerv1.xcdatamodel */,
+			);
+			currentVersion = DA9C3E732472087D005A1B25 /* ADLoggerv1.xcdatamodel */;
+			path = ADLoggerv1.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DA9C3E632472087D005A1B25 /* Project object */;
+}
