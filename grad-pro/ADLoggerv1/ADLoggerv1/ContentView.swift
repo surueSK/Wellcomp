@@ -9,34 +9,38 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack{
-        HStack{
-            Text("0")
-            Text("0")
-            Text(":")
-            Text("0")
-            Text("0")
-            Text(":")
-            Text("0")
-            Text("0")
-        }
-            Button(action: {
-                
-            }) {
-                Text("START")
-            }
-            Button(action: {
-                
-            }) {
-                Text("LOG")
-            }
+    @State var nowDate:Date = Date()
+    let referenceDate:Date
+    var timer:Timer{
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true){
+            _ in self.nowDate = Date()
         }
     }
+    
+    var body: some View {
+        Text(countUpString(from: referenceDate))
+            .font(.largeTitle)
+            .onAppear(perform: {
+                _ = self.timer
+            })
+    }
+    func countUpString(from date: Date) -> String {
+        let calendar = Calendar(identifier: .gregorian)
+        let components = calendar
+            .dateComponents([.day, .hour, .minute, .second],
+                            from: nowDate,
+                            to: referenceDate)
+        return String(format: "%02d:%02d:%02d:%02d",
+                      components.day ?? 00,
+                      components.hour ?? 00,
+                      components.minute ?? 00,
+                      components.second ?? 00)
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView( referenceDate: Date())
     }
 }
