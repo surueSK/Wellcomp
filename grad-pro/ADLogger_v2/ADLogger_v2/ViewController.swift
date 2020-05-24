@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
  
         // 画面背景色を設定してみました
-        self.view.backgroundColor = UIColor(red:0.9,green:1.0,blue:0.9,alpha:1.0)
+        //self.view.backgroundColor = UIColor(red:0.9,green:1.0,blue:0.9,alpha:1.0)
     }
     
     @IBAction func startTimer(_ sender : Any) {
