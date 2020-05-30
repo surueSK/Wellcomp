@@ -8,7 +8,7 @@
 
 //  ViewController.swift
 import UIKit
-import AVFoundation
+//import AVFoundation
 
 //classの継承を追加
 class ViewController: UIViewController,/*AVAudioRecorderDelegate, AVAudioPlayerDelegate ,*/UITableViewDataSource, UITableViewDelegate{
