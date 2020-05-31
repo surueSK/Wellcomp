@@ -15,6 +15,12 @@ class TableViewCell: UITableViewCell {
     
     
    //===============ストップウォッチ関連開始==================
+    weak var timer2: Timer? //どう言う事？
+    var startTime2: Double = 0
+    var time: Double = 0
+    var elapsed: Double = 0
+    var status: Bool = false
+    
     @IBAction func todotime(){
         if (status) {
             stop()
@@ -28,11 +34,6 @@ class TableViewCell: UITableViewCell {
             //resetBtn.isEnabled = false
         }
     }
-    weak var timer2: Timer?
-    var startTime2: Double = 0
-    var time: Double = 0
-    var elapsed: Double = 0
-    var status: Bool = false
     
     func start() {
         
