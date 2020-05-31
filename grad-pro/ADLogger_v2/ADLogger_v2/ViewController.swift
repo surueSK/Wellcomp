@@ -10,9 +10,10 @@ import UIKit
  
 class ViewController: UIViewController {
  
+    @IBOutlet var timerHour: UILabel!
     @IBOutlet var timerMinute: UILabel!
     @IBOutlet var timerSecond: UILabel!
-    @IBOutlet var timerMSec: UILabel!
+   // @IBOutlet var timerMSec: UILabel!
     
     weak var timer: Timer!
     var startTime = Date()
@@ -43,10 +44,10 @@ class ViewController: UIViewController {
     @IBAction func stopTimer(_ sender : Any) {
         if timer != nil{
             timer.invalidate()
-            
+            timerHour.text = "00"
             timerMinute.text = "00"
             timerSecond.text = "00"
-            timerMSec.text = "00"
+            //timerMSec.text = "00"
         }
     }
     
@@ -59,16 +60,16 @@ class ViewController: UIViewController {
         // currentTime/60 の余り
         let second = (Int)(fmod(currentTime, 60))
         // floor 切り捨て、小数点以下を取り出して *100
-        let msec = (Int)((currentTime - floor(currentTime))*100)
+        //let msec = (Int)((currentTime - floor(currentTime))*100)
         
         // %02d： ２桁表示、0で埋める
         let sMinute = String(format:"%02d", minute)
         let sSecond = String(format:"%02d", second)
-        let sMsec = String(format:"%02d", msec)
+        //let sMsec = String(format:"%02d", msec)
         
         timerMinute.text = sMinute
         timerSecond.text = sSecond
-        timerMSec.text = sMsec
+        //timerMSec.text = sMsec
         
     }
     

@@ -12,41 +12,41 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ADLogger_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQC-Va-pZa">
-                                <rect key="frame" x="273" y="300" width="54.5" height="53"/>
+                                <rect key="frame" x="273" y="273" width="54.5" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2JP-RG-hFI">
-                                <rect key="frame" x="179" y="299" width="56" height="54"/>
+                                <rect key="frame" x="179" y="272" width="56" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bb-2O-vrE">
-                                <rect key="frame" x="85" y="299" width="56" height="54"/>
+                                <rect key="frame" x="85" y="272" width="56" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xc-J1-uFd">
-                                <rect key="frame" x="154" y="299" width="12" height="54"/>
+                                <rect key="frame" x="154" y="272" width="12" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7UH-Ol-rw6">
-                                <rect key="frame" x="248" y="299" width="12" height="54"/>
+                                <rect key="frame" x="248" y="272" width="12" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2py-NO-oNV">
-                                <rect key="frame" x="118" y="405.5" width="178" height="85"/>
+                                <rect key="frame" x="118" y="378.5" width="178" height="85"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="61"/>
                                 <state key="normal" title="START"/>
                                 <connections>
@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eb4-dz-uc7">
-                                <rect key="frame" x="147.5" y="541" width="119" height="85"/>
+                                <rect key="frame" x="147.5" y="514" width="119" height="85"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="61"/>
                                 <state key="normal" title="LOG"/>
                                 <connections>
@@ -84,9 +84,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="iE3-VB-fit"/>
                     <connections>
-                        <outlet property="timerMSec" destination="yQC-Va-pZa" id="YgI-9x-sME"/>
-                        <outlet property="timerMinute" destination="8bb-2O-vrE" id="BVf-F3-XXf"/>
-                        <outlet property="timerSecond" destination="2JP-RG-hFI" id="GyR-gl-azu"/>
+                        <outlet property="timerHour" destination="8bb-2O-vrE" id="oLD-t9-w51"/>
+                        <outlet property="timerMinute" destination="2JP-RG-hFI" id="qyL-Gd-3yY"/>
+                        <outlet property="timerSecond" destination="yQC-Va-pZa" id="UU3-qs-SY5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -172,6 +172,9 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="戻る"/>
                                             </button>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" id="HzK-Ex-hPB"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
