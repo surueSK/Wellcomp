@@ -43,8 +43,12 @@ class ViewController: UIViewController {
         let alert: UIAlertController = UIAlertController(title: "計測を終了しますか？", message: "計測を終了する場合は終了ボタンを押してタスク選択", preferredStyle:  UIAlertController.Style.alert)
         
         let defaultAction1: UIAlertAction = UIAlertAction(title: "終了", style: UIAlertAction.Style.default, handler:{
-               (action: UIAlertAction!) -> Void in
-               print("記録画面へ移行")
+               (action: UIAlertAction!)  in
+               //アラートが消えるのと画面遷移が重ならないように0.5秒後に画面遷移するようにしてる
+               DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                // 0.5秒後に実行したい処理
+                 self.performSegue(withIdentifier: "toStorageView", sender: nil)
+                }
            })
         
         let defaultAction2: UIAlertAction = UIAlertAction(title: "計測に戻る", style: UIAlertAction.Style.default, handler:{
@@ -65,6 +69,11 @@ class ViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+        // MARK: - タイマー
+    
+    
+        // MARK: - 画面表示
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // 画面背景色を設定してみました
@@ -73,7 +82,7 @@ class ViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
-        timer.invalidate()
+        //timer.invalidate()
     }
     
 }
