@@ -50,7 +50,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="61"/>
                                 <state key="normal" title="START"/>
                                 <connections>
-                                    <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UR1-Ih-Fim"/>
+                                    <action selector="timerCount" destination="BYZ-38-t0r" eventType="touchUpInside" id="R8I-Id-tkV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eb4-dz-uc7">
@@ -58,7 +58,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="61"/>
                                 <state key="normal" title="LOG"/>
                                 <connections>
-                                    <action selector="stopTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WI5-0X-ycO"/>
                                     <segue destination="hSF-Pt-BGS" kind="presentation" id="MyN-dZ-Mw3"/>
                                 </connections>
                             </button>
@@ -84,6 +83,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="iE3-VB-fit"/>
                     <connections>
+                        <outlet property="timerButton" destination="2py-NO-oNV" id="92s-pg-glI"/>
                         <outlet property="timerHour" destination="8bb-2O-vrE" id="oLD-t9-w51"/>
                         <outlet property="timerMinute" destination="2JP-RG-hFI" id="qyL-Gd-3yY"/>
                         <outlet property="timerSecond" destination="yQC-Va-pZa" id="UU3-qs-SY5"/>
