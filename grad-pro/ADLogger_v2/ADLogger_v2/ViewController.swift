@@ -9,18 +9,9 @@
 import UIKit
  
 class ViewController: UIViewController {
- 
-    @IBOutlet var timerButton: UIButton!
-    @IBOutlet var timerHour: UILabel!
-    @IBOutlet var timerMinute: UILabel!
-    @IBOutlet var timerSecond: UILabel!
-   // @IBOutlet var timerMSec: UILabel!
-    
-    weak var timer: Timer!
-    var startTime = Date()
     var status: Bool = false
-    
-    @IBAction func timerCount(){
+    @IBOutlet var startButton: UIButton!
+    @IBAction func startStop(){
     // MARK: - 分岐
         
         if (status) {
@@ -31,11 +22,11 @@ class ViewController: UIViewController {
     }
     
     func start(){
-        timerButton.setTitle("STOP", for: .normal)
+        startButton.setTitle("STOP", for: .normal)
         status = true
     }
     func stop(){
-        timerButton.setTitle("START", for: .normal)
+        startButton.setTitle("START", for: .normal)
         status = false
         
     // MARK: - アラート
@@ -47,7 +38,7 @@ class ViewController: UIViewController {
                //アラートが消えるのと画面遷移が重ならないように0.5秒後に画面遷移するようにしてる
                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 // 0.5秒後に実行したい処理
-                 self.performSegue(withIdentifier: "toStorageView", sender: nil)
+                 self.performSegue(withIdentifier: "StorageView", sender: nil)
                 }
            })
         
@@ -70,7 +61,11 @@ class ViewController: UIViewController {
     }
     
         // MARK: - タイマー
-    
+    weak var timer: Timer!
+    var startTime = Date()
+    @IBOutlet var timerHour: UILabel!
+    @IBOutlet var timerMinute: UILabel!
+    @IBOutlet var timerSecond: UILabel!
     
         // MARK: - 画面表示
     
