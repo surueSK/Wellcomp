@@ -16,19 +16,26 @@ class ViewController: UIViewController {
         
         if (status) {
             stop()
+            startButton.setTitle("START", for: .normal)
         } else {
             start()
+            startButton.setTitle("STOP", for: .normal)
         }
     }
     
+    weak var timer: Timer!
+    var startTime : Double = 0
+    var elapsed: Double = 0
+
     func start(){
-        startButton.setTitle("STOP", for: .normal)
+        startTime = Date().timeIntervalSinceReferenceDate - elapsed
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         status = true
     }
     func stop(){
-        startButton.setTitle("START", for: .normal)
+        elapsed = Date().timeIntervalSinceReferenceDate - startTime
+        timer?.invalidate()
         status = false
-        
     // MARK: - アラート
         
         let alert: UIAlertController = UIAlertController(title: "計測を終了しますか？", message: "計測を終了する場合は終了ボタンを押してタスク選択", preferredStyle:  UIAlertController.Style.alert)
@@ -61,11 +68,44 @@ class ViewController: UIViewController {
     }
     
         // MARK: - タイマー
-    weak var timer: Timer!
-    var startTime = Date()
+
     @IBOutlet var timerHour: UILabel!
     @IBOutlet var timerMinute: UILabel!
     @IBOutlet var timerSecond: UILabel!
+    var time: Double = 0
+ 
+    @objc func updateCounter() {
+        
+        // Calculate total time since timer started in seconds
+        time = Date().timeIntervalSinceReferenceDate - startTime
+        
+        let hours = UInt8(time / 3600)
+        time -= (TimeInterval(hours) * 24)
+        
+        // Calculate minutes
+        let minutes = UInt8(time / 60.0)
+        time -= (TimeInterval(minutes) * 60)
+        
+        // Calculate seconds
+        let seconds = UInt8(time)
+        time -= TimeInterval(seconds)
+        
+        // Calculate milliseconds
+        //let milliseconds = UInt8(time * 100)
+        
+        // Format time vars with leading zero
+        let strHours = String(format: "%02d", hours)
+        let strMinutes = String(format: "%02d", minutes)
+        let strSeconds = String(format: "%02d", seconds)
+        //let strMilliseconds = String(format: "%02d", milliseconds)
+        
+        // Add time vars to relevant labels
+        timerHour.text = strHours
+        timerMinute.text = strMinutes
+        timerSecond.text = strSeconds
+        //labelMillisecond.text = strMilliseconds
+        
+    }
     
         // MARK: - 画面表示
     
