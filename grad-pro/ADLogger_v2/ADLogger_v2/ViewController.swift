@@ -78,12 +78,15 @@ class ViewController: UIViewController {
         
         // Calculate total time since timer started in seconds
         time = Date().timeIntervalSinceReferenceDate - startTime
-        
+        let hours = Int(time)/3600
+        let minutes = Int(time)/60 % 60
+        let seconds = Int(time) % 60
+        /*
         let hours = UInt8(time / 3600)
         time -= (TimeInterval(hours) * 24)
         
         // Calculate minutes
-        let minutes = UInt8(time / 60.0)
+        let minutes = UInt8(time / 60)
         time -= (TimeInterval(minutes) * 60)
         
         // Calculate seconds
@@ -92,6 +95,7 @@ class ViewController: UIViewController {
         
         // Calculate milliseconds
         //let milliseconds = UInt8(time * 100)
+        */
         
         // Format time vars with leading zero
         let strHours = String(format: "%02d", hours)
