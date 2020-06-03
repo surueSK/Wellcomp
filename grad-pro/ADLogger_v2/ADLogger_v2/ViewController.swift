@@ -28,7 +28,8 @@ class ViewController: UIViewController {
     var elapsed: Double = 0
 
     func start(){
-        startTime = Date().timeIntervalSinceReferenceDate - elapsed
+        timer?.invalidate()
+        startTime = Date().timeIntervalSinceReferenceDate //- elapsed
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         status = true
     }
@@ -36,6 +37,12 @@ class ViewController: UIViewController {
         elapsed = Date().timeIntervalSinceReferenceDate - startTime
         timer?.invalidate()
         status = false
+        
+    func restart(){
+        startTime = Date().timeIntervalSinceReferenceDate - elapsed
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+        status = true
+        }
     // MARK: - アラート
         
         let alert: UIAlertController = UIAlertController(title: "計測を終了しますか？", message: "計測を終了する場合は終了ボタンを押してタスク選択", preferredStyle:  UIAlertController.Style.alert)
@@ -51,7 +58,7 @@ class ViewController: UIViewController {
         
         let defaultAction2: UIAlertAction = UIAlertAction(title: "計測に戻る", style: UIAlertAction.Style.default, handler:{
             (action: UIAlertAction!) -> Void in
-            self.start()
+            restart()
             self.startButton.setTitle("STOP", for: .normal)
             print("計測に戻る")
         })
@@ -59,9 +66,10 @@ class ViewController: UIViewController {
            // キャンセルボタン
         let cancelAction: UIAlertAction = UIAlertAction(title: "Reset", style: UIAlertAction.Style.cancel, handler:{
                (action: UIAlertAction!) -> Void in
-            self.timerHour.text = "00"
-            self.timerMinute.text = "00"
-            self.timerSecond.text = "00"
+                self.timer?.invalidate()
+                self.timerHour.text = "00"
+                self.timerMinute.text = "00"
+                self.timerSecond.text = "00"
                print("Reset")
            })
 
