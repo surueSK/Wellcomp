@@ -29,7 +29,7 @@ class ViewController: UIViewController {
 
     func start(){
         timer?.invalidate()
-        startTime = Date().timeIntervalSinceReferenceDate //- elapsed
+        startTime = Date().timeIntervalSinceReferenceDate
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         status = true
     }
@@ -60,7 +60,6 @@ class ViewController: UIViewController {
             (action: UIAlertAction!) -> Void in
             restart()
             self.startButton.setTitle("STOP", for: .normal)
-            print("計測に戻る")
         })
         
            // キャンセルボタン
@@ -70,7 +69,6 @@ class ViewController: UIViewController {
                 self.timerHour.text = "00"
                 self.timerMinute.text = "00"
                 self.timerSecond.text = "00"
-               print("Reset")
            })
 
            alert.addAction(cancelAction)
@@ -94,34 +92,16 @@ class ViewController: UIViewController {
         let hours = Int(time)/3600
         let minutes = Int(time)/60 % 60
         let seconds = Int(time) % 60
-        /*
-        let hours = UInt8(time / 3600)
-        time -= (TimeInterval(hours) * 24)
-        
-        // Calculate minutes
-        let minutes = UInt8(time / 60)
-        time -= (TimeInterval(minutes) * 60)
-        
-        // Calculate seconds
-        let seconds = UInt8(time)
-        time -= TimeInterval(seconds)
-        
-        // Calculate milliseconds
-        //let milliseconds = UInt8(time * 100)
-        */
         
         // Format time vars with leading zero
         let strHours = String(format: "%02d", hours)
         let strMinutes = String(format: "%02d", minutes)
         let strSeconds = String(format: "%02d", seconds)
-        //let strMilliseconds = String(format: "%02d", milliseconds)
         
         // Add time vars to relevant labels
         timerHour.text = strHours
         timerMinute.text = strMinutes
         timerSecond.text = strSeconds
-        //labelMillisecond.text = strMilliseconds
-        
     }
     
         // MARK: - 画面表示
