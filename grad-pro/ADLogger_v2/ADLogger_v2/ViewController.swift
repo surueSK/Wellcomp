@@ -51,12 +51,17 @@ class ViewController: UIViewController {
         
         let defaultAction2: UIAlertAction = UIAlertAction(title: "計測に戻る", style: UIAlertAction.Style.default, handler:{
             (action: UIAlertAction!) -> Void in
+            self.start()
+            self.startButton.setTitle("STOP", for: .normal)
             print("計測に戻る")
         })
         
            // キャンセルボタン
         let cancelAction: UIAlertAction = UIAlertAction(title: "Reset", style: UIAlertAction.Style.cancel, handler:{
                (action: UIAlertAction!) -> Void in
+            self.timerHour.text = "00"
+            self.timerMinute.text = "00"
+            self.timerSecond.text = "00"
                print("Reset")
            })
 
@@ -121,7 +126,7 @@ class ViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
-        //timer.invalidate()
+        timer?.invalidate()
     }
     
 }

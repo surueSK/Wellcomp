@@ -16,17 +16,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4a-id-nrU">
-                                <rect key="frame" x="145.5" y="497" width="123" height="72"/>
+                                <rect key="frame" x="156.5" y="497" width="101" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="計測1"/>
+                                <state key="normal" title="計測"/>
                                 <connections>
                                     <segue destination="mwM-7i-uPw" kind="show" id="IvH-np-Gtu"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdY-Tq-DA9">
-                                <rect key="frame" x="142" y="582" width="130" height="72"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="計測2"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADLogger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZG-eA-V4F">
                                 <rect key="frame" x="77.5" y="412" width="259" height="72"/>
@@ -35,7 +30,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eb4-dz-uc7">
-                                <rect key="frame" x="158" y="667" width="98" height="72"/>
+                                <rect key="frame" x="158" y="593" width="98" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="LOG"/>
                                 <connections>
@@ -48,14 +43,12 @@
                             <constraint firstItem="eb4-dz-uc7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="02y-oS-6C3"/>
                             <constraint firstItem="eb4-dz-uc7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HmO-H8-9hO"/>
                             <constraint firstItem="uZG-eA-V4F" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OiR-TE-nVD"/>
-                            <constraint firstItem="eb4-dz-uc7" firstAttribute="top" secondItem="uZG-eA-V4F" secondAttribute="bottom" constant="183" id="YnN-zb-AKg"/>
+                            <constraint firstItem="eb4-dz-uc7" firstAttribute="top" secondItem="uZG-eA-V4F" secondAttribute="bottom" constant="109" id="fh4-Jy-All"/>
                             <constraint firstItem="uZG-eA-V4F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iDN-8L-OMM"/>
                             <constraint firstItem="h4a-id-nrU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iMf-2f-k1u"/>
                             <constraint firstItem="uZG-eA-V4F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="la9-2a-dGL"/>
-                            <constraint firstItem="VdY-Tq-DA9" firstAttribute="top" secondItem="uZG-eA-V4F" secondAttribute="bottom" constant="98" id="oR3-2c-jar"/>
                             <constraint firstItem="eb4-dz-uc7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rHc-1h-2uC"/>
                             <constraint firstItem="h4a-id-nrU" firstAttribute="top" secondItem="uZG-eA-V4F" secondAttribute="bottom" constant="13" id="sFg-zA-2Uq"/>
-                            <constraint firstItem="VdY-Tq-DA9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zMJ-c1-Lip"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -128,7 +121,6 @@
         <!--View Controller-->
         <scene sceneID="1Qq-XU-OCU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yFU-JD-uKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="hSF-Pt-BGS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YRH-JY-cf4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -210,6 +202,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="77L-q8-FLe"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yFU-JD-uKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1892.753623188406" y="118.52678571428571"/>
         </scene>
