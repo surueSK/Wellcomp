@@ -37,6 +37,14 @@
                                     <segue destination="hSF-Pt-BGS" kind="show" id="Pju-7l-6GT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88V-0g-LSX">
+                                <rect key="frame" x="147" y="684" width="120" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="HELP"/>
+                                <connections>
+                                    <segue destination="E84-RL-nqi" kind="show" id="H13-kH-fY2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -47,8 +55,10 @@
                             <constraint firstItem="uZG-eA-V4F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iDN-8L-OMM"/>
                             <constraint firstItem="h4a-id-nrU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iMf-2f-k1u"/>
                             <constraint firstItem="uZG-eA-V4F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="la9-2a-dGL"/>
+                            <constraint firstItem="88V-0g-LSX" firstAttribute="top" secondItem="uZG-eA-V4F" secondAttribute="bottom" constant="200" id="oHF-Ul-ypG"/>
                             <constraint firstItem="eb4-dz-uc7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rHc-1h-2uC"/>
                             <constraint firstItem="h4a-id-nrU" firstAttribute="top" secondItem="uZG-eA-V4F" secondAttribute="bottom" constant="13" id="sFg-zA-2Uq"/>
+                            <constraint firstItem="88V-0g-LSX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tjH-fe-Xzv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -223,6 +233,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMw-Py-Rc3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4zL-2J-oYC">
+            <objects>
+                <viewController id="E84-RL-nqi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1xx-EO-qhd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELP一覧" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmt-Y6-4I1">
+                                <rect key="frame" x="43" y="111" width="177" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KI-5I-jaL">
+                                <rect key="frame" x="43" y="172" width="213" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="アプリ使用方法"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Krj-Wf-0oj">
+                                <rect key="frame" x="43" y="233" width="273" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="実験方法マニュアル"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJR-mU-blX">
+                                <rect key="frame" x="43" y="293" width="185" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="CONTACT ME"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oJR-mU-blX" firstAttribute="leading" secondItem="cAg-Nk-Mhi" secondAttribute="leading" constant="43" id="IVd-iD-r3T"/>
+                            <constraint firstItem="Krj-Wf-0oj" firstAttribute="top" secondItem="4KI-5I-jaL" secondAttribute="bottom" constant="13" id="Iel-EI-00Z"/>
+                            <constraint firstItem="oJR-mU-blX" firstAttribute="top" secondItem="Krj-Wf-0oj" secondAttribute="bottom" constant="12" id="JVm-cD-Xte"/>
+                            <constraint firstItem="dmt-Y6-4I1" firstAttribute="leading" secondItem="cAg-Nk-Mhi" secondAttribute="leading" constant="43" id="Lze-jQ-2EV"/>
+                            <constraint firstItem="dmt-Y6-4I1" firstAttribute="top" secondItem="cAg-Nk-Mhi" secondAttribute="top" constant="23" id="Ntu-e6-U9A"/>
+                            <constraint firstItem="4KI-5I-jaL" firstAttribute="leading" secondItem="cAg-Nk-Mhi" secondAttribute="leading" constant="43" id="aaS-HN-1zj"/>
+                            <constraint firstItem="Krj-Wf-0oj" firstAttribute="leading" secondItem="cAg-Nk-Mhi" secondAttribute="leading" constant="43" id="d7K-Pe-DII"/>
+                            <constraint firstItem="4KI-5I-jaL" firstAttribute="top" secondItem="dmt-Y6-4I1" secondAttribute="bottom" constant="13" id="hPQ-bZ-FXs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cAg-Nk-Mhi"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Otg-Ik-VC8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FMw-gv-Ok2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="854"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zcp-u3-8VN">
