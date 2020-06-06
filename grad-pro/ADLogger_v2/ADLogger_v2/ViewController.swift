@@ -50,9 +50,9 @@ class ViewController: UIViewController {
         let defaultAction1: UIAlertAction = UIAlertAction(title: "終了", style: UIAlertAction.Style.default, handler:{
                (action: UIAlertAction!)  in
                //アラートが消えるのと画面遷移が重ならないように0.5秒後に画面遷移するようにしてる
-               DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+               DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 // 0.5秒後に実行したい処理
-                 self.performSegue(withIdentifier: "toStorageView", sender: nil)
+                 self.performSegue(withIdentifier: "toListADLView", sender: nil)
                 }
            })
         

@@ -114,10 +114,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="新規追加"/>
                             </button>
+                            <connections>
+                                <action selector="test:" destination="O2K-tX-Ty4" id="CNI-q1-bLc"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gxf-pW-au8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="O2K-tX-Ty4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1892.753623188406" y="853.79464285714278"/>
         </scene>
@@ -391,7 +395,7 @@
                         <outlet property="timerHour" destination="h1Q-1d-j45" id="eZb-KE-fF3"/>
                         <outlet property="timerMinute" destination="mGg-HK-bi8" id="gid-Zb-PeG"/>
                         <outlet property="timerSecond" destination="t38-TE-1bW" id="UQn-QU-7zX"/>
-                        <segue destination="TZT-F0-f4t" kind="push" identifier="toStorageView" id="8Ng-HP-yLc"/>
+                        <segue destination="TZT-F0-f4t" kind="push" identifier="toListADLView" id="8Ng-HP-yLc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PYS-09-HMj" sceneMemberID="firstResponder"/>
