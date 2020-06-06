@@ -16,6 +16,7 @@
 		DAAC61CD24761FEE0027F53C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAC61CB24761FEE0027F53C /* LaunchScreen.storyboard */; };
 		DAAC61D824761FEF0027F53C /* ADLogger_v2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC61D724761FEF0027F53C /* ADLogger_v2Tests.swift */; };
 		DAAC61E324761FEF0027F53C /* ADLogger_v2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC61E224761FEF0027F53C /* ADLogger_v2UITests.swift */; };
+		DAD506DB248B817900838FAD /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD506DA248B817900838FAD /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		DAAC61DE24761FEF0027F53C /* ADLogger_v2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADLogger_v2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAC61E224761FEF0027F53C /* ADLogger_v2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADLogger_v2UITests.swift; sourceTree = "<group>"; };
 		DAAC61E424761FEF0027F53C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAD506DA248B817900838FAD /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				DAAC61BD24761FE80027F53C /* AppDelegate.swift */,
 				DAAC61BF24761FE80027F53C /* SceneDelegate.swift */,
 				DAAC61C124761FE80027F53C /* ViewController.swift */,
+				DAD506DA248B817900838FAD /* ListViewController.swift */,
 				DAAC61C324761FE80027F53C /* Main.storyboard */,
 				DAAC61C924761FEE0027F53C /* Assets.xcassets */,
 				DAAC61CB24761FEE0027F53C /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 				DAAC61C824761FE80027F53C /* ADLogger_v2.xcdatamodeld in Sources */,
 				DAAC61C224761FE80027F53C /* ViewController.swift in Sources */,
 				DAAC61BE24761FE80027F53C /* AppDelegate.swift in Sources */,
+				DAD506DB248B817900838FAD /* ListViewController.swift in Sources */,
 				DAAC61C024761FE80027F53C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
