@@ -22,7 +22,7 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
     // セルの中身を設定
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // セルを取得する
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "timercell", for: indexPath)
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath)
         // セルに値を設定する
         cell.textLabel!.text = todoItem[indexPath.row]
         return cell
