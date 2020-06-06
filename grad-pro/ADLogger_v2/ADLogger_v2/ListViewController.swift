@@ -54,8 +54,13 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
             textField = alertTextField
 
         }
-        
-        
+           // キャンセルボタン
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Reset", style: UIAlertAction.Style.cancel, handler:{
+               (action: UIAlertAction!) -> Void in
+               
+           })
+
+        alert.addAction(cancelAction)
         alert.addAction(action)
        present(alert, animated: true, completion: nil)
 
