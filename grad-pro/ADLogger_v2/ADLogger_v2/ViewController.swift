@@ -52,7 +52,7 @@ class ViewController: UIViewController {
                //アラートが消えるのと画面遷移が重ならないように0.5秒後に画面遷移するようにしてる
                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 // 0.5秒後に実行したい処理
-                 self.performSegue(withIdentifier: "StorageView", sender: nil)
+                 self.performSegue(withIdentifier: "toStorageView", sender: nil)
                 }
            })
         
