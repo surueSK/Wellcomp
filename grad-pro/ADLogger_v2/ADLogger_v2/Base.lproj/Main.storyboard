@@ -113,12 +113,18 @@
                                 <rect key="frame" x="302" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="新規追加"/>
+                                <connections>
+                                    <action selector="newListButtonPressed:" destination="TZT-F0-f4t" eventType="touchUpInside" id="Gyc-hL-hzD"/>
+                                </connections>
                             </button>
                             <connections>
                                 <action selector="test:" destination="O2K-tX-Ty4" id="CNI-q1-bLc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="newListButton" destination="Ahj-VB-zdR" id="ju9-0V-ZFZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gxf-pW-au8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="O2K-tX-Ty4" userLabel="Exit" sceneMemberID="exit"/>

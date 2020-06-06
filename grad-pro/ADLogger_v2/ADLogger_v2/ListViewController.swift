@@ -8,10 +8,60 @@
 
 import UIKit
 
-class ListViewController: UIViewController {
-    @IBOutlet var button:UIButton?
+class ListViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     
+    // MARK: - Table基本設定
+    
+    // テーブルに表示するデータの準備
+    var todoItem : [String] = []
+    
+    // テーブルの行数を指定
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return todoItem.count
+    }
+    // セルの中身を設定
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // セルを取得する
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "timercell", for: indexPath)
+        // セルに値を設定する
+        cell.textLabel!.text = todoItem[indexPath.row]
+        return cell
+       
+    }
+    // MARK: - Table機能追加
+    
+    @IBOutlet var newListButton:UIButton!
+    @IBAction func newListButtonPressed(_ sender: Any) {
 
+     // MARK: - アラート
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "タスクの追加", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "追加", style: .default) { (action) in
+            print(textField.text!)
+            
+            self.todoItem.append(textField.text!)
+            textField.text = ""
+            UserDefaults.standard.set( self.todoItem ,forKey: "mycell" )
+            print("array: \(self.todoItem)")
+            //self.tableView.reloadData()
+        }
+        
+        alert.addTextField { (alertTextField) in
+            
+            alertTextField.placeholder = "新しいアイテム"
+            textField = alertTextField
+
+        }
+        
+        
+        alert.addAction(action)
+       present(alert, animated: true, completion: nil)
+
+    }
+    
+    // MARK: - 画面表示
     override func viewDidLoad() {
         super.viewDidLoad()
 
