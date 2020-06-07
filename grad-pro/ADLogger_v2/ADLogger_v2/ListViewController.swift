@@ -13,18 +13,18 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
     // MARK: - Table基本設定
     
     // テーブルに表示するデータの準備
-    var todoItem : [String] = []
+    var taskItem : [String] = []
     
     // テーブルの行数を指定
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return todoItem.count
+        return taskItem.count
     }
     // セルの中身を設定
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // セルを取得する
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath)
         // セルに値を設定する
-        cell.textLabel!.text = todoItem[indexPath.row]
+        cell.textLabel!.text = taskItem[indexPath.row]
         return cell
        
     }
@@ -41,10 +41,10 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
         let action = UIAlertAction(title: "追加", style: .default) { (action) in
             print(textField.text!)
             
-            self.todoItem.append(textField.text!)
+            self.taskItem.append(textField.text!)
             textField.text = ""
-            UserDefaults.standard.set( self.todoItem ,forKey: "mycell" )
-            print("array: \(self.todoItem)")
+            UserDefaults.standard.set( self.taskItem ,forKey: "mycell" )
+            print("array: \(self.taskItem)")
             //self.tableView.reloadData()
         }
         
