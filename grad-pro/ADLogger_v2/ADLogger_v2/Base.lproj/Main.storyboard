@@ -135,10 +135,10 @@
             </objects>
             <point key="canvasLocation" x="1892.753623188406" y="853.79464285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Cal View Controller-->
         <scene sceneID="1Qq-XU-OCU">
             <objects>
-                <viewController id="hSF-Pt-BGS" sceneMemberID="viewController">
+                <viewController id="hSF-Pt-BGS" customClass="CalViewController" customModule="ADLogger_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YRH-JY-cf4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
