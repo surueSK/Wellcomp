@@ -45,7 +45,7 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
             textField.text = ""
             UserDefaults.standard.set( self.taskItem ,forKey: "mycell" )
             print("array: \(self.taskItem)")
-            //self.tableView.reloadData()
+            super.viewDidLoad()
         }
         
         alert.addTextField { (alertTextField) in
@@ -69,19 +69,14 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
     // MARK: - 画面表示
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        if UserDefaults.standard.object(forKey: "mycell") != nil{
+            taskItem = UserDefaults.standard.object(forKey: "mycell") as! [String]
+        }
+        
+        //tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "timercell")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
-    */
-
 }
