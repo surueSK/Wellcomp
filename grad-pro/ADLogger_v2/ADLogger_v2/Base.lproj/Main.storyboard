@@ -412,5 +412,57 @@
             </objects>
             <point key="canvasLocation" x="1048" y="854"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="ovW-tN-aLI">
+            <objects>
+                <viewController id="osu-gc-Fzx" customClass="ViewController" customModule="ADLogger_v2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ep7-HT-dj4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mJ-Nz-grv">
+                                <rect key="frame" x="156.5" y="497" width="101" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="計測"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADLogger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6e-oI-EJz">
+                                <rect key="frame" x="77.5" y="412" width="259" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epu-tZ-cd8">
+                                <rect key="frame" x="158" y="593" width="98" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="LOG"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lA9-8P-438">
+                                <rect key="frame" x="147" y="684" width="120" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="HELP"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9mJ-Nz-grv" firstAttribute="centerX" secondItem="Ep7-HT-dj4" secondAttribute="centerX" id="2I8-Hc-6hB"/>
+                            <constraint firstItem="Epu-tZ-cd8" firstAttribute="top" secondItem="U6e-oI-EJz" secondAttribute="bottom" constant="109" id="DLa-rg-dPy"/>
+                            <constraint firstItem="lA9-8P-438" firstAttribute="top" secondItem="U6e-oI-EJz" secondAttribute="bottom" constant="200" id="DzL-J4-tHB"/>
+                            <constraint firstItem="Epu-tZ-cd8" firstAttribute="centerX" secondItem="Ep7-HT-dj4" secondAttribute="centerX" id="KGL-df-F9n"/>
+                            <constraint firstItem="9mJ-Nz-grv" firstAttribute="top" secondItem="U6e-oI-EJz" secondAttribute="bottom" constant="13" id="ZeM-As-W5v"/>
+                            <constraint firstItem="Epu-tZ-cd8" firstAttribute="centerX" secondItem="Ep7-HT-dj4" secondAttribute="centerX" id="bli-BH-N4K"/>
+                            <constraint firstItem="lA9-8P-438" firstAttribute="centerX" secondItem="Ep7-HT-dj4" secondAttribute="centerX" id="cB3-gJ-hO3"/>
+                            <constraint firstItem="U6e-oI-EJz" firstAttribute="centerY" secondItem="Ep7-HT-dj4" secondAttribute="centerY" id="d8a-Q0-QfP"/>
+                            <constraint firstItem="U6e-oI-EJz" firstAttribute="centerX" secondItem="Ep7-HT-dj4" secondAttribute="centerX" id="pT8-ht-Jjx"/>
+                            <constraint firstItem="U6e-oI-EJz" firstAttribute="centerX" secondItem="Ep7-HT-dj4" secondAttribute="centerX" id="uF2-3c-ZBK"/>
+                            <constraint firstItem="Epu-tZ-cd8" firstAttribute="centerX" secondItem="Ep7-HT-dj4" secondAttribute="centerX" id="zYv-xS-0mk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sBo-Aa-jAk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="z0z-zi-iLn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ojl-SV-DeG" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2632" y="119"/>
+        </scene>
     </scenes>
 </document>
