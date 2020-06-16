@@ -2,6 +2,16 @@
 
 sukeによる卒論プロジェクト
 
+## 説明
+
+基本的には「ADLogger_v2」の説明を行います。一緒に「grad-pro」に格納されている「ADLoggerv1」および「todos」は前身となる未完アプリケーションです。
+
+## 個人情報について
+
+個人情報に関しては別紙参照の事。
+
+（以下未編集）
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
