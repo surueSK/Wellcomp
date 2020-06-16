@@ -1,6 +1,6 @@
-# Project Title
+# 卒論プロジェクト
 
-One Paragraph of project description goes here
+sukeによる卒論プロジェクト
 
 ## Getting Started
 
