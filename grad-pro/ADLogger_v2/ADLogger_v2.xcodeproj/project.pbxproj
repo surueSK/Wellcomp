@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DA0366AB248DC82F009E58AD /* CalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0366AA248DC82F009E58AD /* CalViewController.swift */; };
-		DA0366AF249BA4CD009E58AD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0366AE249BA4CD009E58AD /* LoginViewController.swift */; };
 		DAAC61BE24761FE80027F53C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC61BD24761FE80027F53C /* AppDelegate.swift */; };
 		DAAC61C024761FE80027F53C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC61BF24761FE80027F53C /* SceneDelegate.swift */; };
 		DAAC61C224761FE80027F53C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC61C124761FE80027F53C /* ViewController.swift */; };
@@ -40,7 +39,6 @@
 
 /* Begin PBXFileReference section */
 		DA0366AA248DC82F009E58AD /* CalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalViewController.swift; sourceTree = "<group>"; };
-		DA0366AE249BA4CD009E58AD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DAAC61BA24761FE80027F53C /* ADLogger_v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADLogger_v2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAC61BD24761FE80027F53C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAAC61BF24761FE80027F53C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 				DAD506DA248B817900838FAD /* ListViewController.swift */,
 				DA0366AA248DC82F009E58AD /* CalViewController.swift */,
 				DAAC61C324761FE80027F53C /* Main.storyboard */,
-				DA0366AE249BA4CD009E58AD /* LoginViewController.swift */,
 				DAAC61C924761FEE0027F53C /* Assets.xcassets */,
 				DAAC61CB24761FEE0027F53C /* LaunchScreen.storyboard */,
 				DAAC61CE24761FEE0027F53C /* Info.plist */,
@@ -271,7 +268,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA0366AF249BA4CD009E58AD /* LoginViewController.swift in Sources */,
 				DAAC61C824761FE80027F53C /* ADLogger_v2.xcdatamodeld in Sources */,
 				DA0366AB248DC82F009E58AD /* CalViewController.swift in Sources */,
 				DAAC61C224761FE80027F53C /* ViewController.swift in Sources */,
