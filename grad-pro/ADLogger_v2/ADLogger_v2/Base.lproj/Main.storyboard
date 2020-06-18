@@ -2405,10 +2405,10 @@ Cg
             </objects>
             <point key="canvasLocation" x="2822" y="854"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="Mog-ha-ton">
             <objects>
-                <viewController id="z3Y-Rt-dQA" customClass="ViewController" customModule="ADLogger_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="z3Y-Rt-dQA" customClass="LoginViewController" customModule="ADLogger_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZeB-sI-GPF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2424,6 +2424,7 @@ Cg
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="OK"/>
                                 <connections>
+                                    <action selector="Login" destination="z3Y-Rt-dQA" eventType="touchUpInside" id="xS1-Ny-7uj"/>
                                     <segue destination="8lm-nj-a4A" kind="show" id="efM-iX-RnH"/>
                                 </connections>
                             </button>
@@ -2445,6 +2446,10 @@ Cg
                         <viewLayoutGuide key="safeArea" id="Ubn-KU-QA7"/>
                     </view>
                     <navigationItem key="navigationItem" id="qW9-yW-Liu"/>
+                    <connections>
+                        <outlet property="LoginButton" destination="CNw-CY-lxD" id="dSy-kX-9wr"/>
+                        <outlet property="a" destination="ufs-b7-UqH" id="IcA-5I-iGy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFg-Og-rjb" sceneMemberID="firstResponder"/>
             </objects>
