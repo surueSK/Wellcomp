@@ -87,27 +87,20 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
         cell?.accessoryType = .checkmark
         
         //ここからアラート
-        let title = "保存完了"
-        let message = "ご協力有難うございます"
-        let okText = "ok"
-
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        let okayButton = UIAlertAction(title: okText, style: UIAlertAction.Style.cancel, handler: nil)
-        alert.addAction(okayButton)
-
-        present(alert, animated: true, completion: nil)
+        let alert: UIAlertController = UIAlertController(title: "保存完了", message: "ご協力有難うございました", preferredStyle:  UIAlertController.Style.alert)
         
-        //ここまでアラート
-        /*
-        let _: UIAlertAction = UIAlertAction(title: "終了", style: UIAlertAction.Style.default, handler:{
+        let defaultAction1: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
                (action: UIAlertAction!)  in
                //アラートが消えるのと画面遷移が重ならないように0.5秒後に画面遷移するようにしてる
                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 // 0.5秒後に実行したい処理
-                 self.performSegue(withIdentifier: "toListViewController", sender: nil)
+                 self.navigationController?.popViewController(animated: true)
                 }
            })
-        */
+        
+           alert.addAction(defaultAction1)
+        
+        present(alert, animated: true, completion: nil)
         
     }
     
