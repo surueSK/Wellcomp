@@ -11,7 +11,7 @@ import UIKit
 class ListViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - Table基本設定
-    
+     @IBOutlet var tableView : UITableView!
     // テーブルに表示するデータの準備
     var taskItem : [String] = []
     
@@ -28,6 +28,7 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
         return cell
        
     }
+    
     // MARK: - Table機能追加
     
     @IBOutlet var newListButton:UIButton!
@@ -45,7 +46,7 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
             textField.text = ""
             UserDefaults.standard.set( self.taskItem ,forKey: "mycell" )
             print("array: \(self.taskItem)")
-            super.viewDidLoad()
+            self.tableView.reloadData()
         }
         
         alert.addTextField { (alertTextField) in
@@ -63,8 +64,7 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
         alert.addAction(cancelAction)
         alert.addAction(action)
        present(alert, animated: true, completion: nil)
-        super.viewDidLoad()
-
+   
     }
     
     // MARK: - テーブルミニ機能たち
@@ -86,7 +86,7 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
         // チェックマークを入れる
         cell?.accessoryType = .checkmark
         
-        //ここからアラート
+        /*//ここからアラート
         let alert: UIAlertController = UIAlertController(title: "保存完了", message: "ご協力有難うございました", preferredStyle:  UIAlertController.Style.alert)
         
         let defaultAction1: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
@@ -101,7 +101,7 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
            alert.addAction(defaultAction1)
         
         present(alert, animated: true, completion: nil)
-        
+        */
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
@@ -121,7 +121,7 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
             taskItem = UserDefaults.standard.object(forKey: "mycell") as! [String]
         }
         
-        //tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "timercell")
+       
     }
     
     override func viewDidAppear(_ animated: Bool) {

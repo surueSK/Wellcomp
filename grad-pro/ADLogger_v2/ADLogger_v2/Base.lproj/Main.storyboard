@@ -169,6 +169,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="newListButton" destination="Ahj-VB-zdR" id="ju9-0V-ZFZ"/>
+                        <outlet property="tableView" destination="hIt-79-H57" id="ACT-ZK-6Fl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gxf-pW-au8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
