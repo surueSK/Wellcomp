@@ -63,9 +63,64 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
         alert.addAction(cancelAction)
         alert.addAction(action)
        present(alert, animated: true, completion: nil)
+        super.viewDidLoad()
 
     }
     
+    // MARK: - テーブルミニ機能たち
+    
+    // スワイプでのアイテム削除機能　てかこの機能はあとで消すかも
+     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        // アイテム削除処理
+        taskItem.remove(at: indexPath.row)
+        let indexPaths = [indexPath]
+        tableView.deleteRows(at: indexPaths, with: .automatic)
+        
+       
+     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at:indexPath)
+        
+        // チェックマークを入れる
+        cell?.accessoryType = .checkmark
+        
+        //ここからアラート
+        let title = "保存完了"
+        let message = "ご協力有難うございます"
+        let okText = "ok"
+
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        let okayButton = UIAlertAction(title: okText, style: UIAlertAction.Style.cancel, handler: nil)
+        alert.addAction(okayButton)
+
+        present(alert, animated: true, completion: nil)
+        
+        //ここまでアラート
+        /*
+        let _: UIAlertAction = UIAlertAction(title: "終了", style: UIAlertAction.Style.default, handler:{
+               (action: UIAlertAction!)  in
+               //アラートが消えるのと画面遷移が重ならないように0.5秒後に画面遷移するようにしてる
+               DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                // 0.5秒後に実行したい処理
+                 self.performSegue(withIdentifier: "toListViewController", sender: nil)
+                }
+           })
+        */
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at:indexPath)
+        
+        // チェックマークを外す
+        cell?.accessoryType = .none
+       
+    }
+
+    
+
     // MARK: - 画面表示
     override func viewDidLoad() {
         super.viewDidLoad()
