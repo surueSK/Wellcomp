@@ -11,7 +11,7 @@ import UIKit
 class ListViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - Table基本設定
-    
+     @IBOutlet var tableView : UITableView!
     // テーブルに表示するデータの準備
     var taskItem : [String] = []
     
@@ -28,12 +28,26 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
         return cell
        
     }
+    
     // MARK: - Table機能追加
     
     @IBOutlet var newListButton:UIButton!
     @IBAction func newListButtonPressed(_ sender: Any) {
 
      // MARK: - アラート
+        
+        //ここからアラート
+        let alert2: UIAlertController = UIAlertController(title: "保存完了", message: "ご協力有難うございました", preferredStyle:  UIAlertController.Style.alert)
+        
+        let defaultAction2: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+               (action: UIAlertAction!)  in
+               //アラートが消えるのと画面遷移が重ならないように0.5秒後に画面遷移するようにしてる
+               DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                // 0.5秒後に実行したい処理(計測に戻る)
+                 //self.navigationController?.popViewController(animated: true)
+                }
+           })
+        
         var textField = UITextField()
         
         let alert = UIAlertController(title: "タスクの追加", message: "", preferredStyle: .alert)
@@ -45,7 +59,9 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
             textField.text = ""
             UserDefaults.standard.set( self.taskItem ,forKey: "mycell" )
             print("array: \(self.taskItem)")
-            super.viewDidLoad()
+            self.tableView.reloadData()
+            alert2.addAction(defaultAction2)
+            self.present(alert2, animated: true, completion: nil)
         }
         
         alert.addTextField { (alertTextField) in
@@ -63,9 +79,56 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
         alert.addAction(cancelAction)
         alert.addAction(action)
        present(alert, animated: true, completion: nil)
-
+   
     }
     
+    // MARK: - テーブルミニ機能たち
+    
+    // スワイプでのアイテム削除機能　てかこの機能はあとで消すかも
+     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        // アイテム削除処理
+        taskItem.remove(at: indexPath.row)
+        let indexPaths = [indexPath]
+        tableView.deleteRows(at: indexPaths, with: .automatic)
+        
+       
+     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at:indexPath)
+        
+        // チェックマークを入れる
+        cell?.accessoryType = .checkmark
+        
+        //ここからアラート
+        let alert: UIAlertController = UIAlertController(title: "保存完了", message: "ご協力有難うございました", preferredStyle:  UIAlertController.Style.alert)
+        
+        let defaultAction1: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+               (action: UIAlertAction!)  in
+               //アラートが消えるのと画面遷移が重ならないように0.5秒後に画面遷移するようにしてる
+               DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                // 0.5秒後に実行したい処理(計測に戻る)
+                 //self.navigationController?.popViewController(animated: true)
+                }
+           })
+        
+           alert.addAction(defaultAction1)
+        
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at:indexPath)
+        
+        // チェックマークを外す
+        cell?.accessoryType = .none
+       
+    }
+
+    
+
     // MARK: - 画面表示
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +136,7 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
             taskItem = UserDefaults.standard.object(forKey: "mycell") as! [String]
         }
         
-        //tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "timercell")
+       
     }
     
     override func viewDidAppear(_ animated: Bool) {

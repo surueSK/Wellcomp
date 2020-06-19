@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'ADLogger_v2' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ADLogger_v2
+   pod 'Parse'
+  target 'ADLogger_v2Tests' do
+    inherit! :search_paths
+    # Pods for testing
+   pod 'Parse'
+  end
+
+  target 'ADLogger_v2UITests' do
+    inherit! :search_paths  
+    # Pods for testing
+   pod 'Parse'
+  end
+
+end
