@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        //Back4App追加実装
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = "FXsl08fNYAKiuVHwRpPQpkCTFfCa5J5ZJXETIUm2"
+            $0.clientKey = "APIfKgqUisP6MQ8NDmYyYg14pUWoeeATaa8ZCADF"
+            $0.server = "https://parseapi.back4app.com"
+        }
+        Parse.initialize(with: configuration)
+        saveInstallationObject()
+        //↑Back4App追加実装
         // Override point for customization after application launch.
         return true
     }
@@ -76,6 +86,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+        // MARK: - Back4App用追加機能
+    
+    func saveInstallationObject(){
+            if let installation = PFInstallation.current(){
+                installation.saveInBackground {
+                    (success: Bool, error: Error?) in
+                    if (success) {
+                        print("You have successfully connected your app to Back4App!")
+                    } else {
+                        if let myError = error{
+                            print(myError.localizedDescription)
+                        }else{
+                            print("Uknown error")
+                        }
+                    }
+                }
+            }
     }
 
 }
