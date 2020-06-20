@@ -13,7 +13,7 @@ import Parse
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         //Back4App追加実装
@@ -23,12 +23,62 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.server = "https://parseapi.back4app.com"
         }
         Parse.initialize(with: configuration)
-        saveInstallationObject()
+        //saveInstallationObject()
         //↑Back4App追加実装
         // Override point for customization after application launch.
         return true
     }
 
+    func startPushNotifications(){
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge, .carPlay ]) {
+            (granted, error) in
+            print("Permission granted: \(granted)")
+            guard granted else { return }
+            self.getNotificationSettings()
+        }
+    }
+    func getNotificationSettings() {
+        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+            print("Notification settings: \(settings)")
+            guard settings.authorizationStatus == .authorized else { return }
+            DispatchQueue.main.async {
+                UIApplication.shared.registerForRemoteNotifications()
+            }
+        }
+    }
+    
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        createInstallationOnParse(deviceTokenData: deviceToken)
+    }
+
+    func application(_ application: UIApplication,
+                     didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("Failed to register: \(error)")
+    }
+    
+    func createInstallationOnParse(deviceTokenData:Data){
+        if let installation = PFInstallation.current(){
+            installation.setDeviceTokenFrom(deviceTokenData)
+            installation.setObject(["News"], forKey: "channels")
+            if let userId = PFUser.current()?.objectId {
+                installation.setObject(userId, forKey: "userId")
+            }
+            installation.saveInBackground {
+                (success: Bool, error: Error?) in
+                if (success) {
+                    print("You have successfully saved your push installation to Back4App!")
+                } else {
+                    if let myError = error{
+                        print("Error saving parse installation \(myError.localizedDescription)")
+                    }else{
+                        print("Uknown error")
+                    }
+                }
+            }
+        }
+    }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

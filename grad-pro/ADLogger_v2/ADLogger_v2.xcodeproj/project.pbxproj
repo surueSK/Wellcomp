@@ -12,6 +12,7 @@
 		D28CDD0C5009277876E5D5DD /* Pods_ADLogger_v2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE516429DAE85C586D1B277 /* Pods_ADLogger_v2UITests.framework */; };
 		DA0366AB248DC82F009E58AD /* CalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0366AA248DC82F009E58AD /* CalViewController.swift */; };
 		DA0366B1249CEAFC009E58AD /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0366B0249CEAFC009E58AD /* SignViewController.swift */; };
+		DA0366B7249CF782009E58AD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0366B6249CF782009E58AD /* Extensions.swift */; };
 		DAAC61BE24761FE80027F53C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC61BD24761FE80027F53C /* AppDelegate.swift */; };
 		DAAC61C024761FE80027F53C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC61BF24761FE80027F53C /* SceneDelegate.swift */; };
 		DAAC61C224761FE80027F53C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC61C124761FE80027F53C /* ViewController.swift */; };
@@ -52,6 +53,7 @@
 		CCE516429DAE85C586D1B277 /* Pods_ADLogger_v2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADLogger_v2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0366AA248DC82F009E58AD /* CalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalViewController.swift; sourceTree = "<group>"; };
 		DA0366B0249CEAFC009E58AD /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
+		DA0366B6249CF782009E58AD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DAAC61BA24761FE80027F53C /* ADLogger_v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADLogger_v2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAC61BD24761FE80027F53C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAAC61BF24761FE80027F53C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				DA0366AA248DC82F009E58AD /* CalViewController.swift */,
 				DA0366B0249CEAFC009E58AD /* SignViewController.swift */,
 				DAAC61C324761FE80027F53C /* Main.storyboard */,
+				DA0366B6249CF782009E58AD /* Extensions.swift */,
 				DAAC61C924761FEE0027F53C /* Assets.xcassets */,
 				DAAC61CB24761FEE0027F53C /* LaunchScreen.storyboard */,
 				DAAC61CE24761FEE0027F53C /* Info.plist */,
@@ -440,6 +443,7 @@
 				DA0366B1249CEAFC009E58AD /* SignViewController.swift in Sources */,
 				DAAC61C824761FE80027F53C /* ADLogger_v2.xcdatamodeld in Sources */,
 				DA0366AB248DC82F009E58AD /* CalViewController.swift in Sources */,
+				DA0366B7249CF782009E58AD /* Extensions.swift in Sources */,
 				DAAC61C224761FE80027F53C /* ViewController.swift in Sources */,
 				DAAC61BE24761FE80027F53C /* AppDelegate.swift in Sources */,
 				DAD506DB248B817900838FAD /* ListViewController.swift in Sources */,

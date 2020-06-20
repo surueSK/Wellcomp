@@ -81,9 +81,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCB-bA-fqI">
-                                <rect key="frame" x="158" y="653" width="98" height="72"/>
+                                <rect key="frame" x="133.5" y="653" width="147" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="LOG"/>
+                                <state key="normal" title="ADLog"/>
                                 <connections>
                                     <segue destination="hSF-Pt-BGS" kind="show" id="vXR-IY-ffZ"/>
                                 </connections>
