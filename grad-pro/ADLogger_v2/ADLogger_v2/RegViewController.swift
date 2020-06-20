@@ -43,7 +43,7 @@ class RegViewController: UIViewController {
         }
         func loadHomeScreen(){
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let loggedInViewController = storyBoard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            let loggedInViewController = storyBoard.instantiateViewController(withIdentifier: "ViewController") as! UINavigationController
             self.present(loggedInViewController, animated: true, completion: nil)
         }
 
