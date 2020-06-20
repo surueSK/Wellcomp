@@ -19,8 +19,8 @@ class SignViewController: UIViewController {
         super.viewDidLoad()
         signInUsernameField.text = ""
         signInPasswordField.text = ""
-        signUpUsernameField.text = ""
-        signUpPasswordField.text = ""
+        //signUpUsernameField.text = ""
+        //signUpPasswordField.text = ""
         // Do any additional setup after loading the view.
     }
     
