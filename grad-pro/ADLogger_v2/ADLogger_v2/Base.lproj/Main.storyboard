@@ -92,6 +92,9 @@
                                 <rect key="frame" x="145.5" y="733" width="123" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="LOG OUT"/>
+                                <connections>
+                                    <action selector="logoutOfApp:" destination="8lm-nj-a4A" eventType="touchUpInside" id="t7h-AR-R1E"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -2446,6 +2449,9 @@ Cg
                                 <rect key="frame" x="167.5" y="427" width="79" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="LOG IN"/>
+                                <connections>
+                                    <action selector="signIn:" destination="4T6-DH-yey" eventType="touchUpInside" id="e0v-2L-SZd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHC-Zm-xZa">
                                 <rect key="frame" x="114.5" y="491" width="185" height="42"/>
@@ -2474,6 +2480,10 @@ Cg
                         <viewLayoutGuide key="safeArea" id="egO-U6-mCq"/>
                     </view>
                     <navigationItem key="navigationItem" id="G2Z-Vd-fkS"/>
+                    <connections>
+                        <outlet property="signInPasswordField" destination="EWP-UV-pu9" id="iSR-8G-M16"/>
+                        <outlet property="signInUsernameField" destination="oaK-MV-OXQ" id="aje-da-NoE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="alP-ng-EhZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2513,6 +2523,9 @@ Cg
                                 <rect key="frame" x="150" y="427" width="114" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="REGISTER"/>
+                                <connections>
+                                    <action selector="signUp:" destination="TmZ-7q-Q31" eventType="touchUpInside" id="kIY-Km-onx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -2531,6 +2544,10 @@ Cg
                         <viewLayoutGuide key="safeArea" id="1Tf-bY-a2R"/>
                     </view>
                     <navigationItem key="navigationItem" id="L6V-cE-b9Z"/>
+                    <connections>
+                        <outlet property="signUpPasswordField" destination="gc5-qn-zmm" id="Q3z-8H-bag"/>
+                        <outlet property="signUpUsernameField" destination="VZl-tI-7dP" id="O5L-sQ-4Eo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cYX-qf-5oe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
