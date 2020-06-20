@@ -88,25 +88,15 @@
                                     <segue destination="hSF-Pt-BGS" kind="show" id="vXR-IY-ffZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hya-pd-4ks">
-                                <rect key="frame" x="145.5" y="733" width="123" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="LOG OUT"/>
-                                <connections>
-                                    <action selector="logoutOfApp:" destination="8lm-nj-a4A" eventType="touchUpInside" id="t7h-AR-R1E"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="h6W-gh-M0W" firstAttribute="centerX" secondItem="pgx-HH-0t5" secondAttribute="centerX" id="2kl-MW-Fu1"/>
                             <constraint firstItem="lCB-bA-fqI" firstAttribute="top" secondItem="0qW-U5-vJG" secondAttribute="bottom" constant="219" id="K2A-JY-sU4"/>
-                            <constraint firstItem="hya-pd-4ks" firstAttribute="top" secondItem="0qW-U5-vJG" secondAttribute="bottom" constant="354" id="LQ8-zd-2HL"/>
                             <constraint firstItem="h6W-gh-M0W" firstAttribute="top" secondItem="0qW-U5-vJG" secondAttribute="bottom" constant="123" id="ML4-pP-Q5r"/>
                             <constraint firstItem="0qW-U5-vJG" firstAttribute="centerY" secondItem="pgx-HH-0t5" secondAttribute="centerY" constant="-105" id="Riv-hX-sur"/>
                             <constraint firstItem="h6W-gh-M0W" firstAttribute="centerX" secondItem="pgx-HH-0t5" secondAttribute="centerX" id="S5z-7H-Val"/>
                             <constraint firstItem="0qW-U5-vJG" firstAttribute="centerX" secondItem="pgx-HH-0t5" secondAttribute="centerX" id="T2c-GD-uup"/>
-                            <constraint firstItem="hya-pd-4ks" firstAttribute="centerX" secondItem="pgx-HH-0t5" secondAttribute="centerX" id="T5U-SM-ACP"/>
                             <constraint firstItem="0qW-U5-vJG" firstAttribute="centerX" secondItem="pgx-HH-0t5" secondAttribute="centerX" id="TTM-S7-0uq"/>
                             <constraint firstItem="h6W-gh-M0W" firstAttribute="centerX" secondItem="pgx-HH-0t5" secondAttribute="centerX" id="dN8-1n-V53"/>
                             <constraint firstItem="lCB-bA-fqI" firstAttribute="centerX" secondItem="pgx-HH-0t5" secondAttribute="centerX" id="qwS-vu-V21"/>
@@ -947,7 +937,7 @@ Mail：rinri@sfc.keio.ac.jp
         <!--Sign View Controller-->
         <scene sceneID="fTG-UA-gfa">
             <objects>
-                <viewController storyboardIdentifier="SignViewController" id="4T6-DH-yey" customClass="SignViewController" customModule="ADLogger_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4T6-DH-yey" customClass="SignViewController" customModule="ADLogger_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bb0-eP-NH4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -122,7 +122,9 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         appDelegate?.startPushNotifications()
     }
-        // MARK: - ログイン関連
+    
+   // MARK: - ログイン関連
+    /*
     @IBAction func logoutOfApp(_ sender: UIButton) {
         let sv = UIViewController.displaySpinner(onView: self.view)
         PFUser.logOutInBackground { (error: Error?) in
@@ -139,7 +141,7 @@ class ViewController: UIViewController {
             }
         }
     }
-    
+*/
     func displayMessage(message:String) {
         let alertView = UIAlertController(title: "Error!", message: message, preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
@@ -154,7 +156,7 @@ class ViewController: UIViewController {
     
     func loadLoginScreen(){
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyBoard.instantiateViewController(withIdentifier: "SignViewController") as! SignViewController
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
         self.present(viewController, animated: true, completion: nil)
     }
 }
