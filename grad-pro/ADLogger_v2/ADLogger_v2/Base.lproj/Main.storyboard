@@ -61,7 +61,7 @@
         <!--View Controller-->
         <scene sceneID="hjp-7e-sjF">
             <objects>
-                <viewController id="8lm-nj-a4A" customClass="ViewController" customModule="ADLogger_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="8lm-nj-a4A" customClass="ViewController" customModule="ADLogger_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pgx-HH-0t5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -947,7 +947,7 @@ Mail：rinri@sfc.keio.ac.jp
         <!--Sign View Controller-->
         <scene sceneID="fTG-UA-gfa">
             <objects>
-                <viewController id="4T6-DH-yey" customClass="SignViewController" customModule="ADLogger_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignViewController" id="4T6-DH-yey" customClass="SignViewController" customModule="ADLogger_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bb0-eP-NH4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
