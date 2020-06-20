@@ -2,7 +2,7 @@
 //  SignViewController.swift
 //  ADLogger_v2
 //
-//  Created by 助川友理 on 2020/06/19.
+//  Created by 助川友理 on 2020/06/20.
 //  Copyright © 2020 助川友理. All rights reserved.
 //
 
@@ -12,8 +12,6 @@ import Parse
 class SignViewController: UIViewController {
     @IBOutlet fileprivate var signInUsernameField: UITextField!
     @IBOutlet fileprivate var signInPasswordField: UITextField!
-    @IBOutlet fileprivate var signUpUsernameField: UITextField!
-    @IBOutlet fileprivate var signUpPasswordField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,23 +52,6 @@ class SignViewController: UIViewController {
         }
     }
 
-    @IBAction func signUp(_ sender: UIButton) {
-        let user = PFUser()
-        user.username = signUpUsernameField.text
-        user.password = signUpPasswordField.text
-        let sv = UIViewController.displaySpinner(onView: self.view)
-        
-        user.signUpInBackground { (success, error) in
-            UIViewController.removeSpinner(spinner: sv)
-            if success{
-                self.loadHomeScreen()
-            }else{
-                if let descrip = error?.localizedDescription{
-                    self.displayErrorMessage(message: descrip)
-                }
-            }
-        }
-    }
 
     func displayErrorMessage(message:String) {
         let alertView = UIAlertController(title: "Error!", message: message, preferredStyle: .alert)

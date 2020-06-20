@@ -26,7 +26,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="LOG IN"/>
                                 <connections>
-                                    <segue destination="4T6-DH-yey" kind="show" id="vcR-zF-quX"/>
+                                    <segue destination="4T6-DH-yey" kind="show" id="LTr-IP-Uv3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88V-0g-LSX">
@@ -979,7 +979,7 @@ Mail：rinri@sfc.keio.ac.jp
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="LOG IN"/>
                                 <connections>
-                                    <action selector="signIn:" destination="4T6-DH-yey" eventType="touchUpInside" id="e0v-2L-SZd"/>
+                                    <action selector="signIn:" destination="4T6-DH-yey" eventType="touchUpInside" id="DzQ-yJ-tXv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHC-Zm-xZa">
@@ -987,7 +987,7 @@ Mail：rinri@sfc.keio.ac.jp
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="REGISTERATION"/>
                                 <connections>
-                                    <segue destination="TmZ-7q-Q31" kind="show" id="MpV-UU-deH"/>
+                                    <segue destination="TmZ-7q-Q31" kind="show" id="u9T-11-aOQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1010,18 +1010,18 @@ Mail：rinri@sfc.keio.ac.jp
                     </view>
                     <navigationItem key="navigationItem" id="G2Z-Vd-fkS"/>
                     <connections>
-                        <outlet property="signInPasswordField" destination="EWP-UV-pu9" id="iSR-8G-M16"/>
-                        <outlet property="signInUsernameField" destination="oaK-MV-OXQ" id="aje-da-NoE"/>
+                        <outlet property="signInPasswordField" destination="EWP-UV-pu9" id="zR9-rO-g1z"/>
+                        <outlet property="signInUsernameField" destination="oaK-MV-OXQ" id="p6l-rK-oGq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="alP-ng-EhZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1895.6521739130437" y="118.52678571428571"/>
         </scene>
-        <!--Sign View Controller-->
+        <!--Reg View Controller-->
         <scene sceneID="SMg-Gr-wmN">
             <objects>
-                <viewController id="TmZ-7q-Q31" customClass="SignViewController" customModule="ADLogger_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TmZ-7q-Q31" customClass="RegViewController" customModule="ADLogger_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0A4-5q-xjO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1053,7 +1053,7 @@ Mail：rinri@sfc.keio.ac.jp
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="REGISTER"/>
                                 <connections>
-                                    <action selector="signUp:" destination="TmZ-7q-Q31" eventType="touchUpInside" id="kIY-Km-onx"/>
+                                    <action selector="signUp:" destination="TmZ-7q-Q31" eventType="touchUpInside" id="5b3-UX-6kK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1074,8 +1074,8 @@ Mail：rinri@sfc.keio.ac.jp
                     </view>
                     <navigationItem key="navigationItem" id="L6V-cE-b9Z"/>
                     <connections>
-                        <outlet property="signUpPasswordField" destination="gc5-qn-zmm" id="Q3z-8H-bag"/>
-                        <outlet property="signUpUsernameField" destination="VZl-tI-7dP" id="O5L-sQ-4Eo"/>
+                        <outlet property="signUpPasswordField" destination="gc5-qn-zmm" id="fFp-Fq-ZQk"/>
+                        <outlet property="signUpUsernameField" destination="VZl-tI-7dP" id="jXW-5o-NXg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cYX-qf-5oe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
