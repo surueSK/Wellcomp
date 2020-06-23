@@ -1,16 +1,11 @@
 from flask import *
-
-import pymysql
+import pymysql.cursors
 
 pymysql.install_as_MySQLdb()
-
-
 app = Flask(__name__)
 
-conn = pymysql.connect(host="localhost", user="root",
-                       passwd="Password", db="user")
-cursor = conn.cursor()
-# 'select Name, Continent, Population, LifeExpectancy, GNP from Country');
+cursor = pymysql.connect(host="localhost", user="root",
+                       passwd="MySQLのパスワード", db="test").cursor()
 cursor.execute(
     'SELECT * FROM members;')
 result = cursor.fetchall()
@@ -23,4 +18,4 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(port=8888)
+    app.run(port=3000)

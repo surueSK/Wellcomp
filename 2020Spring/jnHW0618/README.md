@@ -1,27 +1,15 @@
-# kadai08
+# jn-lecture 06/18 説明
+* 必要に応じてMySQL, Python(flask, pymysql)を使える状態にする事
+* app.pyのパスワードは自分のパスワードに変更する事
 
-## MariaDB(or MySQL) setup
+## MySQL側の準備
+以下実行
 
-    install MariaDB or MySQL then excute commands bellow
-    
-    create table members (id int, name varchar(255),kg varchar(255));
-    
-    create table members (id int, name varchar(255),kg varchar(255));
-    
-    INSERT INTO members (name, kg) VALUES ("tatsuru","d-hacks" );
-    
-    UPDATE members SET id=1 WHERE name="tatsuru";
+    CREATE DATABASE test;
+    USE test;
+    create table members (id int, login_name varchar(255),kg varchar(255));    
+    INSERT INTO members (id, login_name, kg) VALUES (1,"suke","WellComp" );
 
-## Installation
-
-1.Install flask and pyMySQL on pip3
-
-2.Download the file and excute
-
-3.Change MySQL name and password on python file
-
-## Result
-
-send get request to http://127.0.0.1:8888/ then you'll get
+## 出力結果 (http://127.0.0.1:3000/ )
 
 `{"id": 1,"login_name": "suke","kg": "WellComp"}`
