@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Parse
  
 class ViewController: UIViewController {
+    let appDelegate: AppDelegate? = UIApplication.shared.delegate as? AppDelegate
     var status: Bool = false
     @IBOutlet var startButton: UIButton!
     @IBAction func startStop(){
@@ -113,8 +115,48 @@ class ViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.didReceiveMemoryWarning()
         super.viewWillDisappear(true)
         timer?.invalidate()
     }
+    override func viewDidAppear(_ animated: Bool) {
+        appDelegate?.startPushNotifications()
+    }
     
+   // MARK: - ログイン関連
+    /*
+    @IBAction func logoutOfApp(_ sender: UIButton) {
+        let sv = UIViewController.displaySpinner(onView: self.view)
+        PFUser.logOutInBackground { (error: Error?) in
+            UIViewController.removeSpinner(spinner: sv)
+            if (error == nil){
+                self.loadLoginScreen()
+            }else{
+                if let descrip = error?.localizedDescription{
+                    self.displayMessage(message: descrip)
+                }else{
+                    self.displayMessage(message: "error logging out")
+                }
+
+            }
+        }
+    }
+*/
+    func displayMessage(message:String) {
+        let alertView = UIAlertController(title: "Error!", message: message, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+        }
+        alertView.addAction(OKAction)
+        if let presenter = alertView.popoverPresentationController {
+            presenter.sourceView = self.view
+            presenter.sourceRect = self.view.bounds
+        }
+        self.present(alertView, animated: true, completion:nil)
+    }
+    
+    func loadLoginScreen(){
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        self.present(viewController, animated: true, completion: nil)
+    }
 }
