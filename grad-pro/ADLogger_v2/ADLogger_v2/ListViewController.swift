@@ -100,10 +100,9 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        parseObject["username"] = PFUser.self
-        parseObject["taskname"] = self.taskItem //多分Arrayになるからもう少し情報が必要だよ！！
-        parseObject["tasktime"] = ViewController.updateCounter //多分何か追加しないと動かないよ！！
-        
+        parseObject["username"] = "A string"
+        parseObject["taskname"] = "A string"
+        parseObject["tasktime"] = 1
         // Saves the new object.
         parseObject.saveInBackground {
           (success: Bool, error: Error?) in
