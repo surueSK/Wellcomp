@@ -36,8 +36,7 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
     @IBAction func newListButtonPressed(_ sender: Any) {
 
      // MARK: - アラート
-        
-        //ここからアラート
+    //アラート2用
         let alert2: UIAlertController = UIAlertController(title: "保存完了", message: "ご協力有難うございました", preferredStyle:  UIAlertController.Style.alert)
         
         let defaultAction2: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
@@ -50,7 +49,7 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
            })
         
         var textField = UITextField()
-        
+  //アラート1用
         let alert = UIAlertController(title: "タスクの追加", message: "", preferredStyle: .alert)
         
         let action = UIAlertAction(title: "追加", style: .default) { (action) in
@@ -61,7 +60,7 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
             UserDefaults.standard.set( self.taskItem ,forKey: "mycell" )
             print("array: \(self.taskItem)")
             self.tableView.reloadData()
-            alert2.addAction(defaultAction2)
+            alert2.addAction(defaultAction2) //アラート2を行う
             self.present(alert2, animated: true, completion: nil)
         }
         
@@ -95,16 +94,13 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
         
        
      }
-
+        // MARK: - 選択されたテーブルカラムの機能
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at:indexPath)
-        
         // チェックマークを入れる
-        cell?.accessoryType = .checkmark
-        
+        //let cell = tableView.cellForRow(at:indexPath)
+        //cell?.accessoryType = .checkmark
         //ここからアラート
         let alert: UIAlertController = UIAlertController(title: "保存完了", message: "ご協力有難うございました", preferredStyle:  UIAlertController.Style.alert)
-        
         let defaultAction1: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
                (action: UIAlertAction!)  in
                //アラートが消えるのと画面遷移が重ならないように0.5秒後に画面遷移するようにしてる
@@ -113,23 +109,17 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
                  //self.navigationController?.popViewController(animated: true)
                 }
            })
-        
            alert.addAction(defaultAction1)
-        
         present(alert, animated: true, completion: nil)
         
     }
-    
+        // MARK: - 選択されていないテーブルカラムの機能
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at:indexPath)
-        
         // チェックマークを外す
-        cell?.accessoryType = .none
+        //let cell = tableView.cellForRow(at:indexPath)
+        //cell?.accessoryType = .none
        
     }
-
-    
-
     // MARK: - 画面表示
     override func viewDidLoad() {
         super.viewDidLoad()
