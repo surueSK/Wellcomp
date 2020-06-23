@@ -10,7 +10,5 @@ port: 3000 (http://localhost:3000/)
 response:
 ```
 {"login_name" : "suke",
-"name" : "Yuri Sukegawa",
-"age" : "21",
 "kg" : "WellComp"}
 ```

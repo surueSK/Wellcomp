@@ -12,10 +12,8 @@ def app(environ, start_response):
   start_response(status, headers)
 
   return [json.dumps(
-  {"login_name" : "suke",
-  "name" : "Yuri Sukegawa",
-  "age" : "21",
-  "kg" : "WellComp"}
+{"login_name" : "suke",
+"kg" : "WellComp"}
   ).encode("utf-8")]
 
 with make_server('', 3000, app) as httpd:
