@@ -15,6 +15,7 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
      @IBOutlet var tableView : UITableView!
     // テーブルに表示するデータの準備
     var taskItem : [String] = []
+    var times :Int = 0
     
     // テーブルの行数を指定
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -102,7 +103,7 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
 
         parseObject["username"] = "tasknameposttest"//データの受け渡しが必要疑惑isある
         parseObject["taskname"] = taskItem[indexPath.row]
-        parseObject["tasktime"] = 1//ViewController.updateCounter //多分何か追加しないと動かないよ！！
+        parseObject["tasktime"] = times
         
         // Saves the new object.
         parseObject.saveInBackground {

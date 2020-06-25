@@ -123,6 +123,13 @@ class ViewController: UIViewController {
         appDelegate?.startPushNotifications()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toListViewController" {
+            let nextVC = segue.destination as! ListViewController
+            nextVC.times = Int(time)
+        }
+    }
+    
    // MARK: - ログイン関連
     /*
     @IBAction func logoutOfApp(_ sender: UIButton) {
