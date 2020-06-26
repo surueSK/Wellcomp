@@ -5,8 +5,9 @@ app = Flask(__name__)
 @app.route('/')
 def index():
   title = 'タイトル'
-  message = '本メッセージ及び下記のリストはapp.pyからindex.htmlに反映させています。'
-  return render_template('index.html', title=title, message=message)
+  message = '本メッセージ及びリスト、辞書型配列はapp.pyからindex.htmlに反映させています。'
+  shikoku_list = ['愛媛県', '高知県', '徳島県', '香川県']
+  return render_template('index.html', title=title, message=message,shikoku=shikoku_list)
 
 if __name__ == '__main__':
   app.run(debug=True)
