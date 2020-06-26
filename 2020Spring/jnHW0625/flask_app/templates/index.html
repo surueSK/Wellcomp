@@ -1,5 +1,11 @@
 {% extends "layout.html" %}
 {% block content %}
-<h1>テンプレート継承</h1>
-<p>index.htmlは、layout.htmlを継承しています。</p>
+<head>
+<title>{{ title }}</title>
+</head>
+<body>
+	<h1>テンプレート継承について</h1>
+		<p>{{ message }}</p>
+	<p>また、このHTMLはhead部分に関してlayout.htmlを継承しています。</p>
+</body>
 {% endblock %}
