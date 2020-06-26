@@ -6,13 +6,17 @@
 <body>
 	<h1>テンプレート継承について</h1>
 		<p>{{ message }}</p>
+
 	<h2>リスト</h2>
-		<p>{{ shikoku[0] }}</p>
-    <p>{{ shikoku[1] }}</p>
-    <p>{{ shikoku[2] }}</p>
-    <p>{{ shikoku[3] }}</p>
+	{% for i in shikoku %}
+	<p>{{ i }}</p>
+	{% endfor %}
+
 	<h2>辞書型配列</h2>
+	  <p>オレンジ：{{ fruit.orange }}</p>
+    <p>りんご：{{ fruit.apple }}</p>
 
 	<p>また、このHTMLはhead部分の大部分をlayout.htmlから継承しています。</p>
+	
 </body>
 {% endblock %}
