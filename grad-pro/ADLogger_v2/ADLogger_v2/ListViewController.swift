@@ -15,6 +15,8 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
      @IBOutlet var tableView : UITableView!
     // テーブルに表示するデータの準備
     var taskItem : [String] = []
+    var times :Int = 0
+    var username = SignViewController.init().uname
     
     // テーブルの行数を指定
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -100,9 +102,9 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        parseObject["username"] = PFUser.current() //なおこれではない筈
-        parseObject["taskname"] = taskItem //多分Arrayになるからもう少し情報が必要だよ！！
-        parseObject["tasktime"] = ViewController.updateCounter //多分何か追加しないと動かないよ！！
+        parseObject["username"] = username
+        parseObject["taskname"] = taskItem[indexPath.row]
+        parseObject["tasktime"] = times
         
         // Saves the new object.
         parseObject.saveInBackground {
