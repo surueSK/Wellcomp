@@ -4,6 +4,10 @@
 * 必要に応じてMySQL, Python(flask, pymysql)を使える状態にする事
 * app.pyのパスワードは自分のパスワードに変更する事
 
+## 参考サイト
+* 【随時更新】Flaskのjinja2テンプレートエンジンのチートシート
+https://tanuhack.com/jinja2-cheetsheet/
+
 ## 参考にしていきたいサイトたち
 
 * Visual Studioを使ったFlaskアプリ開発の基本
