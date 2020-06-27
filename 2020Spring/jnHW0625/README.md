@@ -7,6 +7,8 @@
 ## 参考サイト
 * 【随時更新】Flaskのjinja2テンプレートエンジンのチートシート
 https://tanuhack.com/jinja2-cheetsheet/
+* flaskでボタンで遷移したい
+https://qiita.com/Ninagawa_Izumi/items/2d565915ebf63c9db397
 
 ## 参考にしていきたいサイトたち
 

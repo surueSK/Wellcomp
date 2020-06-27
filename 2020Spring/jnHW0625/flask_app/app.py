@@ -17,5 +17,14 @@ def index():
   fruit=fruit_dict
   )
 
+@app.route('/addnew')
+def add():
+  title = 'タイトル'
+  return render_template(
+   'addnew.html',
+    title=title
+   )
+
+
 if __name__ == '__main__':
   app.run(debug=True)
