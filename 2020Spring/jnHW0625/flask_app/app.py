@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-  title = 'タイトル'
+  title = 'ホーム'
   message = '本メッセージ及びリスト、辞書型配列はapp.pyからindex.htmlに反映させています。'
   shikoku_list = ['愛媛県', '高知県', '徳島県', '香川県']
   fruit_dict = {'orange':100, 'apple':200}
@@ -19,10 +19,12 @@ def index():
 
 @app.route('/addnew')
 def add():
-  title = 'タイトル'
+  title = '新規追加フォーム'
+  message = '本メッセージはapp.pyからaddnew.htmlに反映させています。'
   return render_template(
    'addnew.html',
-    title=title
+    title=title,
+    message=message
    )
 
 
