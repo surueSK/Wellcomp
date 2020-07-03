@@ -17,6 +17,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADLogger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZG-eA-V4F">
                                 <rect key="frame" x="78" y="307" width="258.5" height="72"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -58,19 +59,23 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="118.52678571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Time View Controller-->
         <scene sceneID="hjp-7e-sjF">
             <objects>
-                <viewController id="8lm-nj-a4A" customClass="ViewController" customModule="ADLogger_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8lm-nj-a4A" customClass="TimeViewController" customModule="ADLogger_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pgx-HH-0t5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADLogger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qW-U5-vJG">
-                                <rect key="frame" x="77.5" y="307" width="259" height="72"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="実験開始" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qW-U5-vJG">
+                                <rect key="frame" x="86.5" y="307" width="241" height="72"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Kea-Vh-8l4" appends="YES" id="Zgn-D5-5hH"/>
+                                </connections>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6W-gh-M0W">
                                 <rect key="frame" x="136" y="502" width="142" height="72"/>
@@ -104,8 +109,16 @@
                         <viewLayoutGuide key="safeArea" id="bkW-a1-igF"/>
                     </view>
                     <navigationItem key="navigationItem" id="ThO-nR-KV8"/>
+                    <connections>
+                        <outlet property="startLabel" destination="0qW-U5-vJG" id="a9e-5i-kIs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dg8-08-nLo" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Kea-Vh-8l4">
+                    <connections>
+                        <action selector="labelTap:" destination="8lm-nj-a4A" id="eYt-bp-Jmu"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3731.884057971015" y="118.52678571428571"/>
         </scene>

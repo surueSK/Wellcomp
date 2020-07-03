@@ -23,6 +23,7 @@
 		DAAC61CD24761FEE0027F53C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAC61CB24761FEE0027F53C /* LaunchScreen.storyboard */; };
 		DAAC61D824761FEF0027F53C /* ADLogger_v2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC61D724761FEF0027F53C /* ADLogger_v2Tests.swift */; };
 		DAAC61E324761FEF0027F53C /* ADLogger_v2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC61E224761FEF0027F53C /* ADLogger_v2UITests.swift */; };
+		DAC5E62724AEFA540088B4AA /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC5E62624AEFA540088B4AA /* TimeViewController.swift */; };
 		DAD506DB248B817900838FAD /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD506DA248B817900838FAD /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		DAAC61DE24761FEF0027F53C /* ADLogger_v2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADLogger_v2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAC61E224761FEF0027F53C /* ADLogger_v2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADLogger_v2UITests.swift; sourceTree = "<group>"; };
 		DAAC61E424761FEF0027F53C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAC5E62624AEFA540088B4AA /* TimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
 		DAD506DA248B817900838FAD /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		E71DF26847BE6BD480D1C10F /* Pods-ADLogger_v2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADLogger_v2UITests.debug.xcconfig"; path = "Target Support Files/Pods-ADLogger_v2UITests/Pods-ADLogger_v2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +162,7 @@
 				DAAC61C324761FE80027F53C /* Main.storyboard */,
 				DA23848E249DF5750062EDB6 /* SignViewController.swift */,
 				DA0366B6249CF782009E58AD /* Extensions.swift */,
+				DAC5E62624AEFA540088B4AA /* TimeViewController.swift */,
 				DAAC61C924761FEE0027F53C /* Assets.xcassets */,
 				DAAC61CB24761FEE0027F53C /* LaunchScreen.storyboard */,
 				DAAC61CE24761FEE0027F53C /* Info.plist */,
@@ -444,6 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAAC61C824761FE80027F53C /* ADLogger_v2.xcdatamodeld in Sources */,
+				DAC5E62724AEFA540088B4AA /* TimeViewController.swift in Sources */,
 				DA0366AB248DC82F009E58AD /* CalViewController.swift in Sources */,
 				DA0366B7249CF782009E58AD /* Extensions.swift in Sources */,
 				DA23848F249DF5750062EDB6 /* SignViewController.swift in Sources */,
