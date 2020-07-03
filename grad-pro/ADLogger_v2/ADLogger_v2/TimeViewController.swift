@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class TimeViewController: UIViewController {
     var status: Bool = false
