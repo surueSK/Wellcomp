@@ -25,6 +25,8 @@ class SignViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         let currentUser = PFUser.current()
         if currentUser != nil {
+            UserDefaults.standard.object(forKey: "userName")
+            print(UserDefaults.standard.object(forKey: "userName") as Any)
             loadHomeScreen()
         }
     }
@@ -45,7 +47,8 @@ class SignViewController: UIViewController {
             if user != nil {
                 self.loadHomeScreen()
                 //ユーザー名をUDに保存
-                UserDefaults.standard.set(self.signInUsernameField.text, forKey: "userName")
+                let ud = UserDefaults.self
+                ud.standard.set(self.signInUsernameField.text, forKey: "userName")
             }else{
                 if let descrip = error?.localizedDescription{
                     self.displayErrorMessage(message: (descrip))

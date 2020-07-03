@@ -11,19 +11,17 @@ import Parse
 
 class TimeViewController: UIViewController {
     var status: Bool = false
-    @IBOutlet weak var startLabel: UILabel!
-    
-    @IBAction func labelTap(_ sender: Any) {
-        if (status) {
-        startLabel.text = "実験開始"
-        status = true
-        } else {
-        startLabel.text = "実験終了"
-        status = false
-        }
-    }
 
     /*後々使うかもと思ったのでコードだけ残しておく
+     
+     if (status) {
+     startLabel.text = "実験開始"
+     status = true
+     } else {
+     startLabel.text = "実験終了"
+     status = false
+     }
+     
     var countNum = 0
     var timerRunning = false
     var timer = Timer()

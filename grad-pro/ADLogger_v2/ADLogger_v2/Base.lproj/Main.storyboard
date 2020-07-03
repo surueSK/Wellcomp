@@ -67,15 +67,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="実験開始" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qW-U5-vJG">
-                                <rect key="frame" x="86.5" y="307" width="241" height="72"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" ADLogger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qW-U5-vJG">
+                                <rect key="frame" x="71.5" y="307" width="271" height="72"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Kea-Vh-8l4" appends="YES" id="Zgn-D5-5hH"/>
-                                </connections>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6W-gh-M0W">
                                 <rect key="frame" x="136" y="502" width="142" height="72"/>
@@ -93,6 +90,12 @@
                                     <segue destination="hSF-Pt-BGS" kind="show" id="vXR-IY-ffZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxt-ik-d15">
+                                <rect key="frame" x="108" y="425" width="199" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="テスト用ボタン"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -109,16 +112,8 @@
                         <viewLayoutGuide key="safeArea" id="bkW-a1-igF"/>
                     </view>
                     <navigationItem key="navigationItem" id="ThO-nR-KV8"/>
-                    <connections>
-                        <outlet property="startLabel" destination="0qW-U5-vJG" id="a9e-5i-kIs"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dg8-08-nLo" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Kea-Vh-8l4">
-                    <connections>
-                        <action selector="labelTap:" destination="8lm-nj-a4A" id="eYt-bp-Jmu"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3731.884057971015" y="118.52678571428571"/>
         </scene>
