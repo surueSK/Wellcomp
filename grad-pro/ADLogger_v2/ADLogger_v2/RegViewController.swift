@@ -34,6 +34,8 @@ class RegViewController: UIViewController {
         override func viewDidAppear(_ animated: Bool) {
             let currentUser = PFUser.current()
             if currentUser != nil {
+                UserDefaults.standard.object(forKey: "userName")
+                print(UserDefaults.standard.object(forKey: "userName") as Any)
                 loadHomeScreen()
             }
         }
