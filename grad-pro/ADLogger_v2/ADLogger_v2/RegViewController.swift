@@ -57,6 +57,8 @@ class RegViewController: UIViewController {
                 UIViewController.removeSpinner(spinner: sv)
                 if success{
                     self.loadHomeScreen()
+                    let ud = UserDefaults.self
+                    ud.standard.set(self.signUpUsernameField.text, forKey: "userName")
                 }else{
                     if let descrip = error?.localizedDescription{
                         self.displayErrorMessage(message: descrip)
