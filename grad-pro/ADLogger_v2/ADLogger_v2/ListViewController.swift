@@ -38,7 +38,7 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
 
      // MARK: - アラート
     //アラート2用
-        let alert2: UIAlertController = UIAlertController(title: "保存完了", message: "ご協力有難うございました", preferredStyle:  UIAlertController.Style.alert)
+        let alert2: UIAlertController = UIAlertController(title: "新規追加", message: "該当タスクを押して保存をしてください", preferredStyle:  UIAlertController.Style.alert)
         
         let defaultAction2: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
                (action: UIAlertAction!)  in
