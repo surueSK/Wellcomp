@@ -11,30 +11,16 @@ import Parse
 
 class TimeViewController: UIViewController {
     var status: Bool = false
-
-    /*後々使うかもと思ったのでコードだけ残しておく
-     
-     if (status) {
-     startLabel.text = "実験開始"
-     status = true
-     } else {
-     startLabel.text = "実験終了"
-     status = false
-     }
-     
-    var countNum = 0
-    var timerRunning = false
-    var timer = Timer()
-    
-    @IBOutlet weak var timeDisplay: UILabel!
-    @objc func updateDisplay(){
-        countNum += 1
-        let ms = countNum % 100
-        let s = (countNum - ms) / 100 % 60
-        let m = (countNum - s - ms) / 6000 % 3600
-        timeDisplay.text = String(format: "%02d:%02d.%02d", m,s,ms)
- */
-    
+/*
+    @IBOutlet var startButton: UIButton!
+    @IBAction func startStop(){
+        if (status) {
+            self.performSegue(withIdentifier: "toListViewController", sender: nil)
+        } else {
+            startButton.setTitle("STOP", for: .normal)
+        }
+    }
+    */
 
     override func viewDidLoad() {
         super.viewDidLoad()
