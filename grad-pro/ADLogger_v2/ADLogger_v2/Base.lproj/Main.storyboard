@@ -394,7 +394,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">　本アプリケーションが収集する活動データは、「センサデータ」および「アンケート回答データ」に大別されます。 センサデータとして、例えば実験参加者の位置情報（GPS、Wi-Fi、Bluetooth）、デバイスのバッテリー状態、移動手段（車、自転車、歩行）、デバイスの使用状態（通話、メッセージ、スクリーン、通知、キーボード、マウスの操作履歴）、天気、カレンダーイベント、環境音（特徴量のみ）、ネットワーク接続状態、カメラ画像 (撮影時には実験参加者に明示的に通知)等をふくむデータを収集します。 またアンケート回答データとして、アプリケーションに搭載されたExperimental Sampling Method (ESM) 機構を用いて、実験参加者の各種の状態 (例: 顔表情、心理状態、感情) や実験参加者が観察できる外界の事象 (例: 現在実験参加者がいる場所の混雑度) に関するアンケート調査を行います。 収集したこれらの活動データのアップロードは、定期的に自動で行います。</mutableString>
+                                        <string key="content">　本アプリケーションが収集する活動データは、「センサデータ」および「アンケート回答データ」に大別されます。 センサデータとして、例えば実験参加者の位置情報（GPS、Wi-Fi、Bluetooth）、デバイスのバッテリー状態、移動手段（車、自転車、歩行）、デバイスの使用状態（通話、メッセージ、スクリーン、通知、キーボード、マウスの操作履歴）、天気、カレンダーイベント、環境音（特徴量のみ）、ネットワーク接続状態、カメラ画像 (撮影時には実験参加者に明示的に通知)等をふくむデータを収集します。 またアンケート回答データとして、アプリケーションに搭載されたExperimental Sampling Method (ESM) 機構を用いて、実験参加者の各種の状態 (例: 顔表情、心理状態、感情) や実験参加者が観察できる外界の事象 (例: 現在実験参加者がいる場所の混雑度) に関するアンケート調査を行います。 収集したこれらの活動データのアップロードは、定期的に自動で行います。</string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="18" name="YuKyo_Yoko-Medium"/>
@@ -530,7 +530,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">　本実験から取得したデータは慶應義塾大学中澤研究室の管理するサーバに暗号化した状態で保存します。取得したデータや個人情報は、研究目的以外には使用しません。データには番号付けを行うとともに匿名化しますので、専門学会、学術専門誌、学内研究会等を通じて研究発表をする際も個人情報は守秘されます。 サーバに保存されたデータは、研究が終了してから10年後までに破棄します。なお、研究上新たな課題が生じ、取得データの有用性が追加的に認められ、かつ倫理委員会の許可が得られた場合にはその限りではありません。 データの共有は、秘密保持契約（NDA）を結んだ大学とのみ行います。</mutableString>
+                                        <string key="content">　本実験から取得したデータは慶應義塾大学中澤研究室の管理するサーバに暗号化した状態で保存します。取得したデータや個人情報は、研究目的以外には使用しません。データには番号付けを行うとともに匿名化しますので、専門学会、学術専門誌、学内研究会等を通じて研究発表をする際も個人情報は守秘されます。 サーバに保存されたデータは、研究が終了してから10年後までに破棄します。なお、研究上新たな課題が生じ、取得データの有用性が追加的に認められ、かつ倫理委員会の許可が得られた場合にはその限りではありません。 データの共有は、秘密保持契約（NDA）を結んだ大学とのみ行います。</string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="18" name="YuKyo_Yoko-Medium"/>
@@ -570,7 +570,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">　本研究主催者は、本アプリおよびサービスを、実験参加者にインターネットを経由して提供します。インターネットに接続するためのあらゆる機器、通信手段、ソフトウェア等は、実験参加者が自らの責任と費用において、適切に設置及び操作しなければなりません。同操作等について本研究主催者は一切の責任を負いません。 実験参加者は、実験参加者のインターネット接続環境等によって、本サービスを利用又は閲覧するために通信費等が別途必要となることに同意し、同通信費等の一切を同実験参加者が負担するものとします。 実験参加者は、実験参加者のインターネット接続環境等によって、本サービスの一部を閲覧又は利用できない可能性があることを予め了承するものとします。</mutableString>
+                                        <string key="content">　本研究主催者は、本アプリおよびサービスを、実験参加者にインターネットを経由して提供します。インターネットに接続するためのあらゆる機器、通信手段、ソフトウェア等は、実験参加者が自らの責任と費用において、適切に設置及び操作しなければなりません。同操作等について本研究主催者は一切の責任を負いません。 実験参加者は、実験参加者のインターネット接続環境等によって、本サービスを利用又は閲覧するために通信費等が別途必要となることに同意し、同通信費等の一切を同実験参加者が負担するものとします。 実験参加者は、実験参加者のインターネット接続環境等によって、本サービスの一部を閲覧又は利用できない可能性があることを予め了承するものとします。</string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="18" name="YuKyo_Yoko-Medium"/>
@@ -590,7 +590,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">　実験参加者は、以下の行為を行ってはならないものとします。
+                                        <string key="content">　実験参加者は、以下の行為を行ってはならないものとします。
 ・個人使用目的のために本アプリをインストールする場合を除き、本アプリの一部又は全部を複製する行為
 ・本アプリを修正、変更、逆アセンブル、逆コンパイル、リバースエンジニアリング等の改変をする行為
 ・本アプリ及びその使用権を第三者に販売・貸与・譲渡・配布、又は再許諾権の設定若しくは担保に供する行為
@@ -598,7 +598,7 @@
 ・本アプリの提供に支障をきたす行為
 ・他人の権利の侵害や他人の誹謗中傷を行うコンテンツを含む、公序良俗に反する行為その他法令に違反する行為
 ・本規約に違反する行為その他本研究主催者が不適当と判断する行為
-　実験参加者が本規約に違反し、本研究主催者が損害を被った場合、その損害の全部又は一部を実験参加者に負担していただくことがあります。</mutableString>
+　実験参加者が本規約に違反し、本研究主催者が損害を被った場合、その損害の全部又は一部を実験参加者に負担していただくことがあります。</string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="18" name="YuKyo_Yoko-Medium"/>
@@ -637,12 +637,12 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">　本研究主催者は、以下の事由により、実験参加者に事前の通知なく、一時的に本サービスの提供を停止することができるものとします。本サービスの停止による直接又は間接に生じた実験参加者又は第三者の損失や損害について、本研究主催者は、その内容、態様の如何に係わらず一切の責任を負わないものとします。
+                                        <string key="content">　本研究主催者は、以下の事由により、実験参加者に事前の通知なく、一時的に本サービスの提供を停止することができるものとします。本サービスの停止による直接又は間接に生じた実験参加者又は第三者の損失や損害について、本研究主催者は、その内容、態様の如何に係わらず一切の責任を負わないものとします。
 ・本サービスの稼動状態を良好に保つため、本研究主催者のシステム保守、点検、修理などを行う場合
 ・火災、停電による本サービスの提供ができなくなった場合
 ・天変地異などにより、本サービスの提供ができなくなった場合
 ・その他、運用上または技術上、本サービス提供の一時的な停止を必要とした場合
-　本研究主催者は、前項の理由により本サービスの一時停止を行った場合において、本サービスの継続的な提供が困難だと判断した場合、実験参加者に対して通知を行わず本サービスを終了することができるものとします。</mutableString>
+　本研究主催者は、前項の理由により本サービスの一時停止を行った場合において、本サービスの継続的な提供が困難だと判断した場合、実験参加者に対して通知を行わず本サービスを終了することができるものとします。</string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="18" name="YuKyo_Yoko-Medium"/>
@@ -881,10 +881,24 @@ Cg
                                 <rect key="frame" x="34" y="102" width="346" height="692"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="実験の流れと注意事項 ">
+                                    <fragment content="実験方法マニュアル ">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="36" name="YuKyo_Yoko-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="ログインについて ">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="24" name="YuKyo_Yoko-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="本実験は登録の際ユーザー名は原則学籍番号にする様お願い致します。 ">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="18" name="YuKyo_Yoko-Medium"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -924,21 +938,7 @@ Cg
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=" ①本項目に記載した実験の流れを確認した上で、予備実験・本実験共通で行う行動を決める。">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="18" name="YuKyo_Yoko-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="（日常的に行う動作が望ましい。下記注意事項も参照の事）">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="18" name="YuKyo_Yoko-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" ②予備実験の被験日時を決定し、実験者に報告する。（5日以上が望ましい。） ">
+                                    <fragment content=" ①本項目に記載した実験の流れを確認した上で、予備実験・本実験共通で行う行動を決める。（下記補足も参照の事） ②予備実験の被験日時を決定し、学籍番号と被験日時を実験者に報告する。（5日以上が望ましい。） ">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="18" name="YuKyo_Yoko-Medium"/>
@@ -983,15 +983,7 @@ Cg
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=" ">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="24" name="YuKyo_Yoko-Medium"/>
-                                            <font key="NSOriginalFont" size="24" name="YuKyo_Yoko-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="本実験">
+                                    <fragment content=" 本実験">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="24" name="YuKyo_Yoko-Medium"/>
@@ -1027,45 +1019,87 @@ Cg
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="10分程度のインタビューをzoomにて行います。">
+                                    <fragment content="10分程度のインタビューをzoomにて行います。大まかな質問項目は下記の通りです。 ・時間管理に対する苦手意識の変化 ・「余白時間」に対する認識の変化 ・アプリの有用性/改善点等  ">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="18" name="YuKyo_Yoko-Medium"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="大まか">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="18" name="YuKyo_Yoko-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="な質問項目は下記の通りです。 ・時間管理に対する苦手意識の変化 ・「余白時間」に対する認識の変化 ・アプリの有用性/改善点等  ">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="18" name="YuKyo_Yoko-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="注意事項について ">
+                                    <fragment content="補足">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="24" name="YuKyo_Yoko-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="本実験は下記に従い実施致します。">
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="24" name="YuKyo_Yoko-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="実験で用いる「行動」について">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="18" name="YuKyo_Yoko-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="24" name="YuKyo_Yoko-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="・日常的に使う動作である事 ">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="18" name="YuKyo_Yoko-Medium"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=" 実験準備①">
+                                    <fragment content="・">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="24" name="YuKyo_Yoko-Medium"/>
+                                            <font key="NSFont" size="18" name="YuKyo_Yoko-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="3タスク以上である事 ・合計が30~1時間程度である事 ">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="18" name="YuKyo_Yoko-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="行動・時間が足りない場合 ">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="18" name="YuKyo_Yoko-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="日常的に使う動作を適宜追加する">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="18" name="YuKyo_Yoko-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="18" name="YuKyo_Yoko-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="(例)掃除、皿洗い、洗濯物、着替え、髪を溶かす、飲み物を飲む等">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="18" name="YuKyo_Yoko-Medium"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -1074,13 +1108,6 @@ Cg
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="24" name="YuKyo_Yoko-Medium"/>
                                             <font key="NSOriginalFont" size="24" name="YuKyo_Yoko-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="s">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="18" name="YuKyo_Yoko-Medium"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
@@ -1173,9 +1200,9 @@ Cg
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJR-mU-blX">
-                                <rect key="frame" x="43" y="293" width="213" height="48"/>
+                                <rect key="frame" x="43" y="293" width="324" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="アプリ操作説明"/>
+                                <state key="normal" title="アプリ操作説明(未完成)"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAo-uF-uhL">
                                 <rect key="frame" x="43" y="353" width="213" height="48"/>
