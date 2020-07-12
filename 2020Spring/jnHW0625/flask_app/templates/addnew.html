@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+<head>
+<title>{{ title }}</title>
+</head>
+<body>
+ <h1>新規追加画面について</h1>
+ <p>{{ message }}</p>
+  <div>
+   <label for="name">A:</label>
+   <input type="text" id="name" name="name" placeholder="A"><br>
+   <label for="name">B:</label>
+   <input type="text" id="name" name="name" placeholder="B"><br>
+   <label for="name">C:</label>
+   <input type="text" id="name" name="name" placeholder="C"><br>
+   <label for="name">D:</label>
+   <input type="text" id="name" name="name" placeholder="D"><br>
+  </div>
+  <div>
+   <input type="submit" value="送信">
+   <input type="submit" value="戻る">
+  </div>
+</body>
+{% endblock %}

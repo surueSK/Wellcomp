@@ -1,5 +1,23 @@
 {% extends "layout.html" %}
 {% block content %}
-<h1>テンプレート継承</h1>
-<p>index.htmlは、layout.htmlを継承しています。</p>
+<head>
+<title>{{ title }}</title>
+</head>
+<body>
+	<h1>テンプレート継承について</h1>
+		<p>{{ message }}</p>
+
+	<h2>リスト</h2>
+	{% for i in shikoku %}
+	<p>{{ i }}</p>
+	{% endfor %}
+
+	<h2>辞書型配列</h2>
+	  <p>オレンジ：{{ fruit.orange }}</p>
+    <p>りんご：{{ fruit.apple }}</p>
+
+	<p>また、このHTMLはhead部分の大部分をlayout.htmlから継承しています。</p>
+
+　	<a href="/addnew"><input type="submit" value="入力フォームページへ" ></a>
+</body>
 {% endblock %}

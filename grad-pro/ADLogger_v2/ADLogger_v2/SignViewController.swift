@@ -12,7 +12,6 @@ import Parse
 class SignViewController: UIViewController {
     @IBOutlet fileprivate var signInUsernameField: UITextField!
     @IBOutlet fileprivate var signInPasswordField: UITextField!
-    var uname = UserDefaults.standard.object(forKey: "userName")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +25,8 @@ class SignViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         let currentUser = PFUser.current()
         if currentUser != nil {
+            UserDefaults.standard.object(forKey: "userName")
+            print(UserDefaults.standard.object(forKey: "userName") as Any)
             loadHomeScreen()
         }
     }
@@ -45,9 +46,9 @@ class SignViewController: UIViewController {
             UIViewController.removeSpinner(spinner: sv)
             if user != nil {
                 self.loadHomeScreen()
-                let ud = UserDefaults.standard
                 //ユーザー名をUDに保存
-                ud.set(self.signInUsernameField.text, forKey: "userName")
+                let ud = UserDefaults.self
+                ud.standard.set(self.signInUsernameField.text, forKey: "userName")
             }else{
                 if let descrip = error?.localizedDescription{
                     self.displayErrorMessage(message: (descrip))

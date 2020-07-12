@@ -1,12 +1,12 @@
 # jn-lecture 06/25 説明
 
-グルワをする前に手慣らしでそれっぽいアプリを気合いで作ってみる
-* 必要に応じてMySQL, Python(flask, pymysql)を使える状態にする事
-* app.pyのパスワードは自分のパスワードに変更する事
+グルワをする前に手慣らしでそれっぽいアプリを途中まで作って必要な機能を学ぶ
 
 ## 参考サイト
 * 【随時更新】Flaskのjinja2テンプレートエンジンのチートシート
 https://tanuhack.com/jinja2-cheetsheet/
+* flaskでボタンで遷移したい
+https://qiita.com/Ninagawa_Izumi/items/2d565915ebf63c9db397
 
 ## 参考にしていきたいサイトたち
 

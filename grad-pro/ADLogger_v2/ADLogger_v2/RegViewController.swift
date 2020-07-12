@@ -34,6 +34,8 @@ class RegViewController: UIViewController {
         override func viewDidAppear(_ animated: Bool) {
             let currentUser = PFUser.current()
             if currentUser != nil {
+                UserDefaults.standard.object(forKey: "userName")
+                print(UserDefaults.standard.object(forKey: "userName") as Any)
                 loadHomeScreen()
             }
         }
@@ -57,6 +59,8 @@ class RegViewController: UIViewController {
                 UIViewController.removeSpinner(spinner: sv)
                 if success{
                     self.loadHomeScreen()
+                    let ud = UserDefaults.self
+                    ud.standard.set(self.signUpUsernameField.text, forKey: "userName")
                 }else{
                     if let descrip = error?.localizedDescription{
                         self.displayErrorMessage(message: descrip)
