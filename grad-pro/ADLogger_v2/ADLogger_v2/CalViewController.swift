@@ -10,23 +10,51 @@ import UIKit
 import Parse
 
 class CalViewController: UIViewController {
+        // MARK: - Table基本設定
+    @IBOutlet var tableView : UITableView!
+   /*
+    // テーブルに表示するデータの準備
+    var calItem : [String] = []
+    var times :Int = 0
+    
+    // テーブルの行数を指定
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return calItem.count
+    }
+    // セルの中身を設定
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // セルを取得する
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "calCell", for: indexPath)
+        // セルに値を設定する
+        cell.textLabel!.text = calItem[indexPath.row]
+        return cell
+       
+    }
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+          if let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as? CustomCell {
+              return cell
+          }
+          return UITableViewCell()
+     }
+    */
     // MARK: - 選択されたテーブルカラムの機能
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         // チェックマークを入れる
-        //let cell = tableView.cellForRow(at:indexPath)
-        //cell?.accessoryType = .checkmark
+        let cell = tableView.cellForRow(at:indexPath)
+        cell?.accessoryType = .checkmark
+    }
             // MARK: - 選択されていないテーブルカラムの機能
         func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
             // チェックマークを外す
-            //let cell = tableView.cellForRow(at:indexPath)
-            //cell?.accessoryType = .none
+        let cell = tableView.cellForRow(at:indexPath)
+        cell?.accessoryType = .none
            
         }
-    }
     // MARK: - 画面表示
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
 
         // Do any additional setup after loading the view.
     }
