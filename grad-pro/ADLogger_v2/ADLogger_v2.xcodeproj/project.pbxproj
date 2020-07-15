@@ -24,8 +24,6 @@
 		DAAC61D824761FEF0027F53C /* ADLogger_v2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC61D724761FEF0027F53C /* ADLogger_v2Tests.swift */; };
 		DAAC61E324761FEF0027F53C /* ADLogger_v2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC61E224761FEF0027F53C /* ADLogger_v2UITests.swift */; };
 		DAC5E62724AEFA540088B4AA /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC5E62624AEFA540088B4AA /* TimeViewController.swift */; };
-		DAC5E62C24BC7D890088B4AA /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC5E62A24BC7D880088B4AA /* TableViewCell.swift */; };
-		DAC5E62D24BC7D890088B4AA /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAC5E62B24BC7D880088B4AA /* TableViewCell.xib */; };
 		DAD506DB248B817900838FAD /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD506DA248B817900838FAD /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,8 +75,6 @@
 		DAC5E62624AEFA540088B4AA /* TimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
 		DAC5E62824BAA7E70088B4AA /* ADLogger_v2Debug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ADLogger_v2Debug.entitlements; sourceTree = "<group>"; };
 		DAC5E62924BAB12A0088B4AA /* ADLogger_v2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ADLogger_v2.entitlements; sourceTree = "<group>"; };
-		DAC5E62A24BC7D880088B4AA /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		DAC5E62B24BC7D880088B4AA /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		DAD506DA248B817900838FAD /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		E71DF26847BE6BD480D1C10F /* Pods-ADLogger_v2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADLogger_v2UITests.debug.xcconfig"; path = "Target Support Files/Pods-ADLogger_v2UITests/Pods-ADLogger_v2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,8 +162,6 @@
 				DAAC61C124761FE80027F53C /* ViewController.swift */,
 				DAD506DA248B817900838FAD /* ListViewController.swift */,
 				DA0366AA248DC82F009E58AD /* CalViewController.swift */,
-				DAC5E62A24BC7D880088B4AA /* TableViewCell.swift */,
-				DAC5E62B24BC7D880088B4AA /* TableViewCell.xib */,
 				DA238492249DF92E0062EDB6 /* RegViewController.swift */,
 				DAAC61C324761FE80027F53C /* Main.storyboard */,
 				DA23848E249DF5750062EDB6 /* SignViewController.swift */,
@@ -310,7 +304,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAAC61CD24761FEE0027F53C /* LaunchScreen.storyboard in Resources */,
-				DAC5E62D24BC7D890088B4AA /* TableViewCell.xib in Resources */,
 				DAAC61CA24761FEE0027F53C /* Assets.xcassets in Resources */,
 				DAAC61C524761FE80027F53C /* Main.storyboard in Resources */,
 			);
@@ -463,7 +456,6 @@
 				DA0366B7249CF782009E58AD /* Extensions.swift in Sources */,
 				DA23848F249DF5750062EDB6 /* SignViewController.swift in Sources */,
 				DAAC61C224761FE80027F53C /* ViewController.swift in Sources */,
-				DAC5E62C24BC7D890088B4AA /* TableViewCell.swift in Sources */,
 				DAAC61BE24761FE80027F53C /* AppDelegate.swift in Sources */,
 				DAD506DB248B817900838FAD /* ListViewController.swift in Sources */,
 				DA238493249DF92E0062EDB6 /* RegViewController.swift in Sources */,
