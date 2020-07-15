@@ -9,6 +9,9 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
+    
+    @IBOutlet var aveMinute: UILabel!
+    @IBOutlet var aveSecond: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

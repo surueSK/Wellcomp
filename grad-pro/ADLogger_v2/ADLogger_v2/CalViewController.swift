@@ -12,10 +12,9 @@ import Parse
 class CalViewController: UIViewController {
         // MARK: - Table基本設定
     @IBOutlet var tableView : UITableView!
-   /*
+
     // テーブルに表示するデータの準備
     var calItem : [String] = []
-    var times :Int = 0
     
     // テーブルの行数を指定
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,13 +29,7 @@ class CalViewController: UIViewController {
         return cell
        
     }
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-          if let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as? CustomCell {
-              return cell
-          }
-          return UITableViewCell()
-     }
-    */
+
     // MARK: - 選択されたテーブルカラムの機能
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -54,7 +47,14 @@ class CalViewController: UIViewController {
     // MARK: - 画面表示
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
+        
+            if UserDefaults.standard.object(forKey: "mycell") != nil{
+                calItem = UserDefaults.standard.object(forKey: "mycell") as! [String]
+            }
+            
+            tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "timercell")
+        }
+        
 
         // Do any additional setup after loading the view.
     }
@@ -70,4 +70,4 @@ class CalViewController: UIViewController {
     }
     */
 
-}
+
