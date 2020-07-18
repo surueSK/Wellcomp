@@ -12,7 +12,7 @@ import Parse
 class CalViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
         // MARK: - Table基本設定
     @IBOutlet var tableView : UITableView!
-    
+    let array:[String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,36 +27,38 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
         }
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            // 一つのsectionの中に入れるCellの数を決める。
+                // 一つのsectionの中に入れるCellの数を決める。
+                
+                return array.count // 上に定義した配列arrayの要素数
+            }
             
-            return 50
+            
+            func numberOfSections(in tableView: UITableView) -> Int { // sectionの数を決める
+                return 1
+            }
+            
+            func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+                // Cellの高さを決める
+                
+                return 50
+            }
+            
+            
+            func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+                // Cellの内容を決める（超重要）
+                
+                let cell = tableView.dequeueReusableCell(withIdentifier: "calCell", for: indexPath)
+                //ここで先ほど指定した『beginnerCell』を呼んでる。
+         
+                cell.textLabel?.text = array[indexPath.row] // indexPath.rowはセルの番号
+                
+                return cell
+                
+            }
+            
+            
+           
         }
-        
-        
-        func numberOfSections(in tableView: UITableView) -> Int { // sectionの数を決める
-            return 1
-        }
-        
-        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            // Cellの高さを決める
-            
-            return 50
-        }
-        
-        
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            // Cellの内容を決める（超重要）
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "calCell", for: indexPath)
-            //ここで先ほど指定した『beginnerCell』を呼んでる。
-            cell.textLabel?.text = "swift"
-            
-            return cell
-            
-        }
-
-        // Do any additional setup after loading the view.
-    }
     
 
     /*
