@@ -36,11 +36,11 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
                 return 1
             }
             
-            func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            //func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
                 // Cellの高さを決める
                 
-                return 50
-            }
+                //return 50
+            //}
             
             
             func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
