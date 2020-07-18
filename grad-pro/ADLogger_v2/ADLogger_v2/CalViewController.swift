@@ -17,7 +17,6 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
     override func viewDidLoad() {
         tableView.delegate = self
         tableView.dataSource = self
-        _ = UINib(nibName: "TableViewCell", bundle: nil)
       tableView.register (UINib(nibName: "TableViewCell", bundle: nil),forCellReuseIdentifier:"calCell")
     }
         override func didReceiveMemoryWarning() {
@@ -36,13 +35,6 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
                 return 1
             }
             
-            //func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-                // Cellの高さを決める
-                
-                //return 50
-            //}
-            
-            
             func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
                 // Cellの内容を決める（超重要）
                 
@@ -57,9 +49,21 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
                 return cell!
                 
             }
-            
-            
-           
+            // MARK: - 読み出し
+    func read() {
+        let query = PFQuery(className:"tasktime")
+             //キャッシュに溜める
+        query.cachePolicy = PFCachePolicy.networkElseCache
+        query.order(byDescending: "createdAt")
+        query.whereKey("user", contains: UserDefaults.standard.object(forKey:"userName") as? String)
+        query.findObjectsInBackground { (objects, error) -> Void in
+       if error == nil {
+        
+        self.tableView.reloadData()
+       } else {
+           //エラーあり
+        print(error as Any)
+            }
         }
     
 
@@ -72,5 +76,6 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
         // Pass the selected object to the new view controller.
     }
     */
-
-
+        
+    }
+}
