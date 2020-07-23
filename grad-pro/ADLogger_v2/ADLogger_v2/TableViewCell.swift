@@ -9,12 +9,7 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
-    @IBOutlet weak var label: UILabel!
     
-    func cellnumber(cell: IndexPath){
-      self.label.text = String((cell.row)+1)
-    }
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

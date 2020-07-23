@@ -12,12 +12,13 @@ import Parse
 class CalViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
         // MARK: - Table基本設定
     @IBOutlet var tableView : UITableView!
-    let array:[String] = ["A"]
+    var array:[String] = ["A","B"]
     
     override func viewDidLoad() {
         tableView.delegate = self
         tableView.dataSource = self
       tableView.register (UINib(nibName: "TableViewCell", bundle: nil),forCellReuseIdentifier:"calCell")
+        read()
     }
         override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
@@ -26,8 +27,7 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
                 // 一つのsectionの中に入れるCellの数を決める。
-                return 10
-                //return array.count // 上に定義した配列arrayの要素数
+                return array.count // 上に定義した配列arrayの要素数
             }
             
             
@@ -44,7 +44,7 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
                 //表示するセルの内容.セルに表示するデータの制御 ( 選択数はこれを使う : 何個セル出すの )
                 //ここで先ほど指定した『beginnerCell』を呼んでる。
          
-                //cell?.textLabel?.text = array[indexPath.row] // indexPath.rowはセルの番号
+                cell?.textLabel?.text = array[indexPath.row] // indexPath.rowはセルの番号
                 
                 return cell!
                 
@@ -55,11 +55,11 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
              //キャッシュに溜める
         query.cachePolicy = PFCachePolicy.networkElseCache
         query.order(byDescending: "createdAt")
-        query.whereKey("user", contains: UserDefaults.standard.object(forKey:"userName") as? String)
+        query.whereKey("username", contains: UserDefaults.standard.object(forKey:"userName") as? String)
         query.findObjectsInBackground { (objects, error) -> Void in
-       if error == nil {
-        
-        self.tableView.reloadData()
+            if error == nil {
+                print(objects as Any)
+                self.tableView.reloadData()
        } else {
            //エラーあり
         print(error as Any)
