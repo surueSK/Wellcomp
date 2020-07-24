@@ -60,10 +60,11 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
             if error == nil {
                 if let returnedobjects = objects{
                     for objects in returnedobjects{
-                        print(objects["taskname"] as! String)
-                        print(objects["tasktime"] as! Int)
-                        self.tableView.reloadData()
                         //print(objects as Any)
+                        //print(objects["tasktime"] as! Int)
+                        print(objects["taskname"] as! String)
+                        
+                        self.tableView.reloadData()
                     }
                 }
        } else {
