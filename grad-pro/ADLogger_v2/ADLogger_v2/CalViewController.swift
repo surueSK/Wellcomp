@@ -13,6 +13,7 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
         // MARK: - Table基本設定
     @IBOutlet var tableView : UITableView!
     var array:[String] = []
+    var dicTTime:[String:Int] = ["ダミー":1]
     
     override func viewDidLoad() {
         tableView.delegate = self
@@ -39,12 +40,8 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
                 // Cellの内容を決める（超重要）
                 
                 let cell = tableView.dequeueReusableCell(withIdentifier: "calCell", for: indexPath)as? TableViewCell
-                
-                //tableView.dequeueReusableCell(withIdentifier: "再利用セル", for: 何個セル出すの) as! カスタムセルクラス
-                //表示するセルの内容.セルに表示するデータの制御 ( 選択数はこれを使う : 何個セル出すの )
-                //ここで先ほど指定した『beginnerCell』を呼んでる。
          
-                cell?.textLabel?.text = array[indexPath.row] // indexPath.rowはセルの番号
+                cell?.textLabel?.text = array[indexPath.row] // indexPath.rowはセルの番号 ここが肝？
                 
                 return cell!
                 
@@ -62,6 +59,9 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
                     for objects in returnedobjects{
                         //print(objects as Any)
                         //print(objects["tasktime"] as! Int)
+                        self.dicTTime.updateValue(objects["tasktime"] as! Int, forKey: objects["taskname"] as! String)
+                        print(self.dicTTime)
+                        
                         self.array.append(objects["taskname"] as! String)
                         self.tableView.reloadData()
                     }

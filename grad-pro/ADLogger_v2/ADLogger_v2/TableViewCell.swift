@@ -10,6 +10,10 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
     
+    @IBOutlet weak var aveHour: UILabel!
+    @IBOutlet weak var aveMin: UILabel!
+    @IBOutlet weak var aveSec: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
