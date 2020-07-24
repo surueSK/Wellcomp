@@ -12,7 +12,7 @@ import Parse
 class CalViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
         // MARK: - Table基本設定
     @IBOutlet var tableView : UITableView!
-    var array:[String] = ["A","B"]
+    var array:[String] = []
     
     override func viewDidLoad() {
         tableView.delegate = self
@@ -62,8 +62,7 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
                     for objects in returnedobjects{
                         //print(objects as Any)
                         //print(objects["tasktime"] as! Int)
-                        print(objects["taskname"] as! String)
-                        
+                        self.array.append(objects["taskname"] as! String)
                         self.tableView.reloadData()
                     }
                 }
