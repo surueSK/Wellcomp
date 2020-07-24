@@ -49,7 +49,7 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
                 return cell!
                 
             }
-            // MARK: - 読み出し
+            // MARK: - 読み出し(READ)
     func read() {
         let query = PFQuery(className:"tasktime")
              //キャッシュに溜める
@@ -58,11 +58,17 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
         query.whereKey("username", contains: UserDefaults.standard.object(forKey:"userName") as? String)
         query.findObjectsInBackground { (objects, error) -> Void in
             if error == nil {
-                print(objects as Any)
-                self.tableView.reloadData()
+                if let returnedobjects = objects{
+                    for objects in returnedobjects{
+                        print(objects["taskname"] as! String)
+                        print(objects["tasktime"] as! Int)
+                        self.tableView.reloadData()
+                        //print(objects as Any)
+                    }
+                }
        } else {
            //エラーあり
-        print(error as Any)
+                print(error as Any)
             }
         }
     
