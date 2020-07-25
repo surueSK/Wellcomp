@@ -40,7 +40,7 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
                 
                 let cell = tableView.dequeueReusableCell(withIdentifier: "calCell", for: indexPath)as? TableViewCell
          
-                cell?.textLabel?.text = [String](dic.keys)[indexPath.row] // indexPath.rowはセルの番号 ここが肝？
+                cell?.textLabel?.text = [String](dic.keys)[indexPath.row] // indexPath.rowはセルの番号
                 
                 return cell!
                 
@@ -56,13 +56,23 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
             if error == nil {
                 
                 if let returnedobjects = objects{
+                    
                     for objects in returnedobjects{
                         
-                        self.dic.updateValue([objects["tasktime"] as! Int], forKey: objects["taskname"] as! String)
-                        print(self.dic)
-
-                        self.tableView.reloadData()
+                        if (self.dic[objects["taskname"] as! String] == nil){
+                            self.dic.updateValue([objects["tasktime"] as! Int], forKey: objects["taskname"] as! String)
+                        }else{
+                            self.dic[objects["taskname"] as! String]?.append(objects["tasktime"] as! Int)
+                        }
                     }
+                    
+                    print(self.dic)
+                    /*
+                    for (key,value) in self.dic {
+                        print("\(key):\(value)")
+                    }
+                    */
+                    self.tableView.reloadData()
                 }
                 
        } else {
