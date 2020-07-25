@@ -12,8 +12,7 @@ import Parse
 class CalViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
         // MARK: - Table基本設定
     @IBOutlet var tableView : UITableView!
-    var array:[String] = []
-    var dicTTime:[String:[Int]] = [:]
+    var dic:[String:[Int]] = [:]
     
     override func viewDidLoad() {
         tableView.delegate = self
@@ -28,7 +27,7 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
                 // 一つのsectionの中に入れるCellの数を決める。
-                return array.count // 上に定義した配列arrayの要素数
+                return dic.count // 上に定義した配列arrayの要素数
             }
             
             
@@ -41,7 +40,7 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
                 
                 let cell = tableView.dequeueReusableCell(withIdentifier: "calCell", for: indexPath)as? TableViewCell
          
-                cell?.textLabel?.text = array[indexPath.row] // indexPath.rowはセルの番号 ここが肝？
+                cell?.textLabel?.text = [String](dic.keys)[indexPath.row] // indexPath.rowはセルの番号 ここが肝？
                 
                 return cell!
                 
@@ -59,10 +58,9 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
                 if let returnedobjects = objects{
                     for objects in returnedobjects{
                         
-                        self.dicTTime.updateValue([objects["tasktime"] as! Int], forKey: objects["taskname"] as! String)
-                        print(self.dicTTime)
-                        
-                        self.array.append(objects["taskname"] as! String)
+                        self.dic.updateValue([objects["tasktime"] as! Int], forKey: objects["taskname"] as! String)
+                        print(self.dic)
+
                         self.tableView.reloadData()
                     }
                 }
