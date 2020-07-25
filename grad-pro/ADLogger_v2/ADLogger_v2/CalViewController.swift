@@ -13,7 +13,7 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
         // MARK: - Table基本設定
     @IBOutlet var tableView : UITableView!
     var array:[String] = []
-    var dicTTime:[String:Int] = ["ダミー":1]
+    var dicTTime:[String:[Int]] = [:]
     
     override func viewDidLoad() {
         tableView.delegate = self
@@ -55,17 +55,18 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
         query.whereKey("username", contains: UserDefaults.standard.object(forKey:"userName") as? String)
         query.findObjectsInBackground { (objects, error) -> Void in
             if error == nil {
+                
                 if let returnedobjects = objects{
                     for objects in returnedobjects{
-                        //print(objects as Any)
-                        //print(objects["tasktime"] as! Int)
-                        self.dicTTime.updateValue(objects["tasktime"] as! Int, forKey: objects["taskname"] as! String)
+                        
+                        self.dicTTime.updateValue([objects["tasktime"] as! Int], forKey: objects["taskname"] as! String)
                         print(self.dicTTime)
                         
                         self.array.append(objects["taskname"] as! String)
                         self.tableView.reloadData()
                     }
                 }
+                
        } else {
            //エラーあり
                 print(error as Any)
