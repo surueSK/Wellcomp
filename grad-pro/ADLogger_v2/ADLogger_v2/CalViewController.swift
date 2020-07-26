@@ -13,6 +13,7 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
         // MARK: - Table基本設定
     @IBOutlet var tableView : UITableView!
     var dic:[String:[Int]] = [:]
+    var aveTime: [Int] = []
     
     override func viewDidLoad() {
         tableView.delegate = self
@@ -37,10 +38,8 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
             
             func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
                 // Cellの内容を決める（超重要）
-                
                 let cell = tableView.dequeueReusableCell(withIdentifier: "calCell", for: indexPath)as? TableViewCell
-         
-                cell?.textLabel?.text = [String](dic.keys)[indexPath.row] + "　:　" + "00" + ":" + "00" + ":" + "00"// indexPath.rowはセルの番号
+                cell?.textLabel?.text = "\([String](dic.keys)[indexPath.row]) ： \(aveTime[indexPath.row]/3600):\(aveTime[indexPath.row]/60 % 60):\(aveTime[indexPath.row] % 60)"
                 return cell!
                 
             }
@@ -63,9 +62,8 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
                         }
                     
                     }
-                    self.tableView.reloadData()
                     self.ave()
-                
+                    self.tableView.reloadData()
                 }
                 
        } else {
@@ -73,14 +71,13 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
             }
         }
     }
-        // MARK: - 計算など
+        // MARK: - 平均の計算
         func ave(){
             for task in dic {
                 let result: Int = task.value.reduce(0) { $0 + $1 }
-                print(result/task.value.count)
-                print(task.value)
+                aveTime.append(result/task.value.count)
             }
-        }
+    }
     
 
     /*
