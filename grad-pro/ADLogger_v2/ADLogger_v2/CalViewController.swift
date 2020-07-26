@@ -40,21 +40,18 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
                 
                 let cell = tableView.dequeueReusableCell(withIdentifier: "calCell", for: indexPath)as? TableViewCell
          
-                cell?.textLabel?.text = [String](dic.keys)[indexPath.row] // indexPath.rowはセルの番号
-                
+                cell?.textLabel?.text = [String](dic.keys)[indexPath.row] + "　:　" + "00" + ":" + "00" + ":" + "00"// indexPath.rowはセルの番号
                 return cell!
                 
             }
             // MARK: - 読み出し(READ)
     func read() {
         let query = PFQuery(className:"tasktime")
-             //キャッシュに溜める
         query.cachePolicy = PFCachePolicy.networkElseCache
         query.order(byDescending: "createdAt")
         query.whereKey("username", contains: UserDefaults.standard.object(forKey:"userName") as? String)
         query.findObjectsInBackground { (objects, error) -> Void in
             if error == nil {
-                
                 if let returnedobjects = objects{
                     
                     for objects in returnedobjects{
@@ -64,20 +61,24 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
                         }else{
                             self.dic[objects["taskname"] as! String]?.append(objects["tasktime"] as! Int)
                         }
-                    }
                     
-                    print(self.dic)
-                    /*
-                    for (key,value) in self.dic {
-                        print("\(key):\(value)")
                     }
-                    */
                     self.tableView.reloadData()
+                    self.ave()
+                
                 }
                 
        } else {
-           //エラーあり
-                print(error as Any)
+                print(error as Any)//エラー有
+            }
+        }
+    }
+        // MARK: - 計算など
+        func ave(){
+            for task in dic {
+                let result: Int = task.value.reduce(0) { $0 + $1 }
+                print(result/task.value.count)
+                print(task.value)
             }
         }
     
@@ -91,6 +92,4 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
         // Pass the selected object to the new view controller.
     }
     */
-        
-    }
 }
