@@ -319,7 +319,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="77L-q8-FLe"/>
                     <connections>
+                        <outlet property="bHour" destination="Br7-Z7-SBl" id="OFj-w8-LkI"/>
+                        <outlet property="bMin" destination="mv4-Yf-6KK" id="GXV-d1-y6P"/>
+                        <outlet property="bSec" destination="vgZ-Oy-ayB" id="wO1-XA-1ep"/>
                         <outlet property="tableView" destination="GPM-VY-kgD" id="g00-Vw-nKa"/>
+                        <outlet property="totalHour" destination="Q00-VL-KIh" id="zmp-pX-meJ"/>
+                        <outlet property="totalMin" destination="VDg-5v-pjz" id="jY3-te-Zy0"/>
+                        <outlet property="totalSec" destination="mGb-Ua-d0B" id="3f4-X4-GAu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFU-JD-uKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

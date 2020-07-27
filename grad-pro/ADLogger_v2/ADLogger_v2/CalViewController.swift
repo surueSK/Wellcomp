@@ -11,9 +11,19 @@ import Parse
 
 class CalViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     // MARK: - Table基本設定
+    
+    @IBOutlet weak var totalHour: UILabel!
+    @IBOutlet weak var totalMin: UILabel!
+    @IBOutlet weak var totalSec: UILabel!
+    
+    @IBOutlet weak var bHour: UILabel!
+    @IBOutlet weak var bMin: UILabel!
+    @IBOutlet weak var bSec: UILabel!
+    
     @IBOutlet var tableView : UITableView!
     var dic:[String:[Int]] = [:]
     var aveTime: [Int] = []
+    var maxTime: [Int] = []
     
     override func viewDidLoad() {
         tableView.delegate = self
@@ -88,6 +98,9 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
 
         // チェックマークを入れる
         cell?.accessoryType = .checkmark
+        print(maxTime[indexPath.row])
+        print(aveTime[indexPath.row])
+        print(maxTime[indexPath.row] - aveTime[indexPath.row])
     }
 
     // セルの選択が外れた時に呼び出される
@@ -101,7 +114,7 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
     func maxima(){
         for task in dic{
             let max = task.value.max()! as Int
-            print(max)
+            maxTime.append(max)
         }
         
     }
