@@ -85,7 +85,8 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
     
     // MARK: - テーブルミニ機能たち
     
-    // スワイプでのアイテム削除機能　てかこの機能はあとで消すかも
+    // スワイプでのアイテム削除機能(デバッグ用)
+    /*
      func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         // アイテム削除処理
@@ -95,6 +96,7 @@ class ListViewController: UIViewController,UITableViewDataSource, UITableViewDel
         
        
      }
+ */
         // MARK: - 選択されたテーブルカラムの機能
     
     var parseObject = PFObject(className:"tasktime")
