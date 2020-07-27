@@ -10,7 +10,7 @@ import UIKit
 import Parse
 
 class CalViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
-        // MARK: - Table基本設定
+    // MARK: - Table基本設定
     @IBOutlet var tableView : UITableView!
     var dic:[String:[Int]] = [:]
     var aveTime: [Int] = []
@@ -18,7 +18,9 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
     override func viewDidLoad() {
         tableView.delegate = self
         tableView.dataSource = self
-      tableView.register (UINib(nibName: "TableViewCell", bundle: nil),forCellReuseIdentifier:"calCell")
+        tableView.register (UINib(nibName: "TableViewCell", bundle: nil),forCellReuseIdentifier:"calCell")
+        // trueで複数選択、falseで単一選択
+        tableView.allowsMultipleSelection = true
         read()
     }
         override func didReceiveMemoryWarning() {
@@ -43,7 +45,7 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
                 return cell!
                 
             }
-            // MARK: - 読み出し(READ)
+    // MARK: - 読み出し(READ)
     func read() {
         let query = PFQuery(className:"tasktime")
         query.cachePolicy = PFCachePolicy.networkElseCache
@@ -63,6 +65,7 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
                     
                     }
                     self.ave()
+                    self.maxima()//仮
                     self.tableView.reloadData()
                 }
                 
@@ -71,16 +74,37 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
             }
         }
     }
-        // MARK: - 平均の計算
-        func ave(){
-            for task in dic {
-                let result: Int = task.value.reduce(0) { $0 + $1 }
-                aveTime.append(result/task.value.count)
+    // MARK: - 平均の計算
+    func ave(){
+        for task in dic {
+            let result: Int = task.value.reduce(0) { $0 + $1 }
+            aveTime.append(result/task.value.count)
             }
     }
-    
+    // MARK: - 合計値
+    // セルが選択された時に呼び出される
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at:indexPath)
 
-    /*
+        // チェックマークを入れる
+        cell?.accessoryType = .checkmark
+    }
+
+    // セルの選択が外れた時に呼び出される
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at:indexPath)
+
+        // チェックマークを外す
+        cell?.accessoryType = .none
+    }
+
+    func maxima(){
+        for task in dic{
+            let max = task.value.max()! as Int
+            print(max)
+        }
+        
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -88,5 +112,4 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
 }
