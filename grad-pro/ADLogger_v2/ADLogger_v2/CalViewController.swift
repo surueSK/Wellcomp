@@ -24,6 +24,7 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
     var dic:[String:[Int]] = [:]
     var aveTime: [Int] = []
     var maxTime: [Int] = []
+    var cTime: [Int] = []
     
     override func viewDidLoad() {
         tableView.delegate = self
@@ -98,9 +99,12 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
 
         // チェックマークを入れる
         cell?.accessoryType = .checkmark
-        print(maxTime[indexPath.row])
-        print(aveTime[indexPath.row])
-        print(maxTime[indexPath.row] - aveTime[indexPath.row])
+        //print(maxTime[indexPath.row] - aveTime[indexPath.row])
+        cTime.append(maxTime[indexPath.row])
+        let sum = cTime.reduce(0, +)
+        totalHour.text = String(sum/3600)
+        totalMin.text = String(sum/60 % 60)
+        totalSec.text = String(sum % 60)
     }
 
     // セルの選択が外れた時に呼び出される
@@ -109,6 +113,11 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
 
         // チェックマークを外す
         cell?.accessoryType = .none
+        cTime.append(-maxTime[indexPath.row])
+        let sum = cTime.reduce(0, +)
+        totalHour.text = String(sum/3600)
+        totalMin.text = String(sum/60 % 60)
+        totalSec.text = String(sum % 60)
     }
 
     func maxima(){
