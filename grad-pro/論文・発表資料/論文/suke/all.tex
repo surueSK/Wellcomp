@@ -1,0 +1,64 @@
+\documentclass[report]{jsbook}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{okumacro}
+\usepackage{fancybox,ascmac}
+\usepackage{sty/algorithm}
+\usepackage{sty/algorithmic}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{sty/jlisting}
+\usepackage{url}
+\usepackage{color}
+\usepackage[noreplace]{otf}
+\usepackage{comment}
+
+\lstset{
+	language={Java},
+	basicstyle={\small},
+	breaklines={true},
+	frame=tRBl,
+	framesep=5pt,
+}
+
+%\usepackage{url}
+
+\setcounter{tocdepth}{2}
+
+%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\input{title.tex}
+\frontmatter
+\input{abstract_ja.tex}
+
+\setlength{\baselineskip}{13pt}
+\input{abstract_en.tex}
+
+\setlength{\baselineskip}{16pt}
+\tableofcontents
+\listoffigures
+\listoftables
+
+\mainmatter
+\input{1.tex}
+\input{2.tex}
+\input{3.tex}
+\input{4.tex}
+\input{5.tex}
+%\input{6.tex}
+\input{7.tex}
+\input{8.tex}
+\input{thanks.tex}
+
+\bibliographystyle{junsrt}
+\bibliography{bib.bib}
+
+\appendix
+%\def\thesection{付録\Alph{section}}
+\input{append1.tex}
+\end{document}
