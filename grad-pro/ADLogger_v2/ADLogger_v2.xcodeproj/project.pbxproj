@@ -23,6 +23,7 @@
 		DAAC61CD24761FEE0027F53C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAC61CB24761FEE0027F53C /* LaunchScreen.storyboard */; };
 		DAAC61D824761FEF0027F53C /* ADLogger_v2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC61D724761FEF0027F53C /* ADLogger_v2Tests.swift */; };
 		DAAC61E324761FEF0027F53C /* ADLogger_v2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC61E224761FEF0027F53C /* ADLogger_v2UITests.swift */; };
+		DAC4240324DE586C007B0A85 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC4240224DE586C007B0A85 /* SettingTableViewController.swift */; };
 		DAC5E62724AEFA540088B4AA /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC5E62624AEFA540088B4AA /* TimeViewController.swift */; };
 		DAD506DB248B817900838FAD /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD506DA248B817900838FAD /* ListViewController.swift */; };
 		DAE8789B24C2C30A0020F17A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE8789924C2C30A0020F17A /* TableViewCell.swift */; };
@@ -74,6 +75,7 @@
 		DAAC61DE24761FEF0027F53C /* ADLogger_v2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADLogger_v2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAC61E224761FEF0027F53C /* ADLogger_v2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADLogger_v2UITests.swift; sourceTree = "<group>"; };
 		DAAC61E424761FEF0027F53C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAC4240224DE586C007B0A85 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		DAC5E62624AEFA540088B4AA /* TimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
 		DAC5E62824BAA7E70088B4AA /* ADLogger_v2Debug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ADLogger_v2Debug.entitlements; sourceTree = "<group>"; };
 		DAC5E62924BAB12A0088B4AA /* ADLogger_v2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ADLogger_v2.entitlements; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				DA23848E249DF5750062EDB6 /* SignViewController.swift */,
 				DA0366B6249CF782009E58AD /* Extensions.swift */,
 				DAE8789924C2C30A0020F17A /* TableViewCell.swift */,
+				DAC4240224DE586C007B0A85 /* SettingTableViewController.swift */,
 				DAE8789A24C2C30A0020F17A /* TableViewCell.xib */,
 				DAC5E62624AEFA540088B4AA /* TimeViewController.swift */,
 				DAAC61C924761FEE0027F53C /* Assets.xcassets */,
@@ -457,6 +460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAC4240324DE586C007B0A85 /* SettingTableViewController.swift in Sources */,
 				DAAC61C824761FE80027F53C /* ADLogger_v2.xcdatamodeld in Sources */,
 				DAC5E62724AEFA540088B4AA /* TimeViewController.swift in Sources */,
 				DA0366AB248DC82F009E58AD /* CalViewController.swift in Sources */,
