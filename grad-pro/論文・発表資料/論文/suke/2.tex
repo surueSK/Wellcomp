@@ -17,7 +17,7 @@
 \end{center}
 \end{table}
 
-Claessens et al. は，先行研究の定義を俯瞰した上で，時間管理を"目標を達成するために時間を効果的に使用する行動"と定義し時間管理の行動を更に以下の3つに分類した\cite{Claessens2007}(~\ref{tb:Claessens}参照)．
+Claessens et al. は，先行研究の定義を俯瞰した上で，時間管理を"目標を達成するために時間を効果的に使用する行動"と定義し時間管理の行動を更に以下の3つに分類した\cite{Claessens2007}(表 ~\ref{tb:Claessens}参照)．
 
 \begin{table}[htb]
 \begin{center}
@@ -33,7 +33,7 @@ Claessens et al. は，先行研究の定義を俯瞰した上で，時間管理
 
 \section{先行研究について}
 時間管理研究は大きく分けて時間管理がもたらす効果の研究と時間管理能力に関する研究の2種類に分けられる．
-前者は更に以下の3つに分類が可能である．(表~\ref{tb:senko})
+前者は更に以下の3つに分類が可能である．(表~\ref{tb:senko}参照)
 \begin{table}[htb]
 \begin{center}
   \begin{tabular}{|l|l|} \hline
@@ -59,8 +59,42 @@ T_{E} = (O + 4M + P) ÷ 6
 \section{日常生活動作について}
 日常生活動作(Activities of Daily Living；ADL)とは，人が日常生活において繰り返す，身の回りの活動や動作のことである．具体的には，身の回りの動作(食事，更衣，整容，排泄，入浴の各動作)，移動動作，その他生活関連動作(家事動作，交通機関の利用等)を指す\cite{Sakai2003}．
 
-\section{アプリケーションに関して}
-今日日常生活動作を対象にした時間管理に関するiOSアプリケーションが開発されている．例えば，「たすくま」はタスクシュート式\footnote{タスクシュートは大橋悦夫が開発した管理手法であり，1日の仕事を直列に並べ，見積時間を出すと終了時刻を自動予測するシステムを用いて行われる．}のタスク管理アプリである\cite{Taskuma}．「たすくま」はタスク毎の時間を記録すると，予測タスクの自動生成が行われ，日常生活動作を始めとしたルーティンワークの予測が行われる．ルーチンタイマーは複数タスクを「ルーチン」として登録し，設定した所要時間をもとに一つ一つアナウンスされるアプリケーションである\cite{RoutineTimer}．ルーチンタイマーの導入によって対象のルーティンワークの可視化や登録したタスク別終了予定時刻の把握が可能である．
+\section{システムに関して}
+今日，日常生活動作を基調とし，身近な時間管理をサポートするシステムが複数開発されている．私は現在開発されたアプリケーションの種類を以下の3種類に分類した．(表 ~\ref{tb:app}参照)
+
+\begin{table}[htb]
+\begin{center}
+  \begin{tabular}{|l|l|} \hline
+   1 & タイムログ \\ \hline
+   2 & ルーチン補助 \\ \hline
+   3 & ストップウォッチ \\ \hline
+  \end{tabular}
+  \caption{時間管理ツールの分類}
+  \label{tb:app}
+\end{center}
+\end{table}
+
+1つ目のタイムログに関しては日毎のタスクをなるべく多く記録・計測を行い，一日の時間の使い方を可視化する事を目的としているものである．
+このシステムの先行事例には たすくま\cite{Taskuma} や toggl\cite{toggl} (図~\ref{fig:toggl}参照)が挙げられる．
+\\
+\begin{figure}[ht]
+\begin{center}
+\begin{tabular}{c}
+
+  	\begin{minipage}[b]{0.5\linewidth}
+	\begin{center}
+		\fbox{\includegraphics[width=10cm]{images/2/toggl.png}}
+		\caption{togglによるログの可視化}
+		\label{fig:toggl}
+	\end{center}
+  	\end{minipage}
+\end{tabular}
+\end{center}
+\end{figure}
+\\
+
+2つ目のルーチン補助に関しては，自分がこれから行いたいルーチンをリマインド音などを用いてコントロールするものである．
+このシステムの先行事例には自分でやる事を設定する ルーチンタイマー\cite{RoutineTimer} (図~\ref{fig:routine}参照)やポモドーロテクニック\cite{pomodoro} に則ったリマインドアプリなどがある．
 
 \begin{figure}[ht]
 \begin{center}
@@ -68,24 +102,32 @@ T_{E} = (O + 4M + P) ÷ 6
 
   	\begin{minipage}[b]{0.5\linewidth}
 	\begin{center}
-		\fbox{\includegraphics[width=5cm]{images/2/routine1.png}}
-		\caption{ルーティンワークカウントダウン}
-		\label{fig:goal_alert}
+		\fbox{\includegraphics[width=5cm]{images/2/routine.png}}
+		\caption{ルーチンタイマーの行動設定例}
+		\label{fig:routine}
 	\end{center}
   	\end{minipage}
-
-  	\begin{minipage}[b]{0.5\linewidth}
-	\begin{center}
-		\fbox{\includegraphics[width=5cm]{images/2/routine2.png}}
-		\caption{ルーティンワークカウントダウン}
-		\label{fig:top_goal}
-	\end{center}
-  	\end{minipage}
-
 \end{tabular}
 \end{center}
 \end{figure}
 
+
+3つ目のストップウォッチに関しては，ストップウォッチを主機能として時間把握に役立てようとするものであり，用途・目的は様々である．
+例えば時間の流れをイラストで表現するもの(ねずみタイマー\cite{MouseTimer}(図~\ref{fig:mouse}参照))や時間把握の精度をミニゲームに昇華させたもの\cite{JUSTTIME}，ストップウォッチとメモ帳を組み合わせたもの\cite{StopNote}などが挙げられる．
+\begin{figure}[ht]
+\begin{center}
+\begin{tabular}{c}
+
+  	\begin{minipage}[b]{0.5\linewidth}
+	\begin{center}
+		\fbox{\includegraphics[width=5cm]{images/2/mouse.png}}
+		\caption{ねずみタイマーによる経過時間の可視化}
+		\label{fig:mouse}
+	\end{center}
+  	\end{minipage}
+\end{tabular}
+\end{center}
+\end{figure}
 
 \section{まとめ}
 本章では，本研究における関連研究を整理し，問題意識を洗い出した．
