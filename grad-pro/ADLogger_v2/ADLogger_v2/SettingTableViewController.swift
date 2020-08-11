@@ -15,10 +15,8 @@ class SettingTableViewController: UITableViewController {
     @IBAction func TCChanged(_ sender: UISwitch) {
         
         if sender.isOn{
-            self.TClabel.text = "タイマー文字透明化 (ON)"
             userDefaults.set(true, forKey: "TCValue")
         }else{
-            self.TClabel.text = "タイマー文字透明化 (OFF)"
             userDefaults.set(false, forKey: "TCValue")
         }
         //ViewController().timerHour.textColor = sender.isOn ? UIColor.blue : UIColor.blue
