@@ -15,15 +15,9 @@ class SettingTableViewController: UITableViewController {
     @IBAction func TCChanged(_ sender: UISwitch) {
         
         if sender.isOn{
-            ViewController().timerHour.textColor = UIColor.white
-            ViewController().timerMinute.textColor = UIColor.white
-            ViewController().timerSecond.textColor = UIColor.white
             self.TClabel.text = "タイマー文字透明化 (ON)"
             userDefaults.set(true, forKey: "TCValue")
         }else{
-            ViewController().timerHour.textColor = UIColor.black
-            ViewController().timerMinute.textColor = UIColor.black
-            ViewController().timerSecond.textColor = UIColor.black
             self.TClabel.text = "タイマー文字透明化 (OFF)"
             userDefaults.set(false, forKey: "TCValue")
         }

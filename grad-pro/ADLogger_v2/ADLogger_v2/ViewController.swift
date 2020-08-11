@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     let appDelegate: AppDelegate? = UIApplication.shared.delegate as? AppDelegate
     var status: Bool = false
     @IBOutlet var startButton: UIButton!
+    @IBOutlet var timerHour: UILabel!
+    @IBOutlet var timerMinute: UILabel!
+    @IBOutlet var timerSecond: UILabel!
     @IBAction func startStop(){
     // MARK: - 分岐
         
@@ -80,11 +83,25 @@ class ViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-        // MARK: - タイマー
-
-    @IBOutlet var timerHour: UILabel!
-    @IBOutlet var timerMinute: UILabel!
-    @IBOutlet var timerSecond: UILabel!
+        // MARK: - 色替え
+    
+    func changeColor(){
+        let TCBool = UserDefaults.standard.object(forKey: "TCValue")
+        if (TCBool as! Int != 0) {
+            print("yes")
+            self.timerHour.isHidden = true
+            self.timerMinute.isHidden = true
+            self.timerSecond.isHidden = true
+            
+        }else{
+            print("no")
+            self.timerHour.isHidden = false
+            self.timerMinute.isHidden = false
+            self.timerSecond.isHidden = false
+        }
+    }
+       // MARK: - タイマー
+    
     var time: Double = 0
  
     @objc func updateCounter() {
@@ -110,6 +127,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        changeColor()
         // 画面背景色を設定してみました
         //self.view.backgroundColor = UIColor(red:0.9,green:1.0,blue:0.9,alpha:1.0)
     }
