@@ -46,7 +46,14 @@ class SettingTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        switch section {
+        case 0: // 「設定」のセクション
+          return 2
+        case 1: // 「その他」のセクション
+          return 1
+        default: // ここが実行されることはないはず
+          return 0
+        }
     }
 
     /*

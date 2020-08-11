@@ -1280,6 +1280,25 @@ Cg
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="trn-rO-Rgf" id="kkC-r5-zhN">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JyD-k4-NY4">
+                                                    <rect key="frame" x="340" y="6" width="51" height="32"/>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADLogger(ON)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcW-hl-vRf">
+                                                    <rect key="frame" x="20" y="11" width="115" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="JyD-k4-NY4" secondAttribute="trailing" constant="25" id="35d-pa-gAw"/>
+                                                <constraint firstItem="JyD-k4-NY4" firstAttribute="top" secondItem="kkC-r5-zhN" secondAttribute="topMargin" constant="-5" id="KuZ-nL-T03"/>
+                                                <constraint firstItem="hcW-hl-vRf" firstAttribute="top" secondItem="kkC-r5-zhN" secondAttribute="topMargin" id="Qzd-kz-8B7"/>
+                                                <constraint firstItem="JyD-k4-NY4" firstAttribute="centerY" secondItem="hcW-hl-vRf" secondAttribute="centerY" id="SH8-IY-xbU"/>
+                                                <constraint firstItem="JyD-k4-NY4" firstAttribute="centerY" secondItem="kkC-r5-zhN" secondAttribute="centerY" id="ul1-D5-1dC"/>
+                                                <constraint firstItem="hcW-hl-vRf" firstAttribute="leading" secondItem="kkC-r5-zhN" secondAttribute="leadingMargin" id="wHd-wT-CW6"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>

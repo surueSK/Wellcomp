@@ -89,15 +89,15 @@ class ViewController: UIViewController {
         let TCBool = UserDefaults.standard.object(forKey: "TCValue")
         if (TCBool as! Int != 0) {
             print("yes")
-            self.timerHour.isHidden = true
-            self.timerMinute.isHidden = true
-            self.timerSecond.isHidden = true
+            //self.timerHour.isHidden = true
+            //self.timerMinute.isHidden = true
+            //self.timerSecond.isHidden = true
             
         }else{
             print("no")
-            self.timerHour.isHidden = false
-            self.timerMinute.isHidden = false
-            self.timerSecond.isHidden = false
+            //self.timerHour.isHidden = false
+            //self.timerMinute.isHidden = false
+            //self.timerSecond.isHidden = false
         }
     }
        // MARK: - タイマー
