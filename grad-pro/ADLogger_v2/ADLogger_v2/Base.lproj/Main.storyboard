@@ -87,7 +87,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="ADLog"/>
                                 <connections>
-                                    <segue destination="hSF-Pt-BGS" kind="show" id="vXR-IY-ffZ"/>
+                                    <action selector="toADLogger:" destination="8lm-nj-a4A" eventType="touchUpInside" id="ncc-Vw-gJe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -106,6 +106,10 @@
                         <viewLayoutGuide key="safeArea" id="bkW-a1-igF"/>
                     </view>
                     <navigationItem key="navigationItem" id="ThO-nR-KV8"/>
+                    <connections>
+                        <outlet property="ADLogger" destination="lCB-bA-fqI" id="gjG-em-mc9"/>
+                        <segue destination="hSF-Pt-BGS" kind="show" identifier="toLog" id="2Zg-cD-OHi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dg8-08-nLo" sceneMemberID="firstResponder"/>
             </objects>
