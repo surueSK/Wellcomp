@@ -10,8 +10,25 @@ import UIKit
 import Parse
 
 class TimeViewController: UIViewController {
+    
+    
+    @IBOutlet weak var ADLogger: UIButton!
+    @IBAction func toADLogger(_ sender: UIButton) {
+        let ADBool = UserDefaults.standard.object(forKey: "ADValue")
+        if (ADBool as! Int != 0) {
+            print("yes")
+            self.performSegue(withIdentifier: "toLog", sender: nil)
+        }else{
+            print("no")
+        }
+        
+        
+    }
+    
+    
+    /*
     var status: Bool = false
-/*
+
     @IBOutlet var startButton: UIButton!
     @IBAction func startStop(){
         if (status) {
