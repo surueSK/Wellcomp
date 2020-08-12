@@ -26,6 +26,7 @@ class ViewController: UIViewController {
             start()
             startButton.setTitle("STOP", for: .normal)
         }
+        changeColor() //文字色
     }
     
     weak var timer: Timer!
@@ -89,15 +90,15 @@ class ViewController: UIViewController {
         let TCBool = UserDefaults.standard.object(forKey: "TCValue")
         if (TCBool as! Int != 0) {
             print("yes")
-            //self.timerHour.isHidden = true
-            //self.timerMinute.isHidden = true
-            //self.timerSecond.isHidden = true
+            self.timerHour.isHidden = true
+            self.timerMinute.isHidden = true
+            self.timerSecond.isHidden = true
             
         }else{
             print("no")
-            //self.timerHour.isHidden = false
-            //self.timerMinute.isHidden = false
-            //self.timerSecond.isHidden = false
+            self.timerHour.isHidden = false
+            self.timerMinute.isHidden = false
+            self.timerSecond.isHidden = false
         }
     }
        // MARK: - タイマー
@@ -127,7 +128,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        changeColor()
         // 画面背景色を設定してみました
         //self.view.backgroundColor = UIColor(red:0.9,green:1.0,blue:0.9,alpha:1.0)
     }
