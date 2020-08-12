@@ -1255,7 +1255,7 @@ Cg
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uWr-LR-rGm">
                                                     <rect key="frame" x="340" y="6" width="51" height="31"/>
                                                     <connections>
-                                                        <action selector="TCChanged:" destination="BZh-lW-LPU" eventType="valueChanged" id="baX-k2-vdW"/>
+                                                        <action selector="TCChanged:" destination="BZh-lW-LPU" eventType="valueChanged" id="Lrc-w5-aBY"/>
                                                     </connections>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイマー文字透明化" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="772-Te-Ejz">
@@ -1283,6 +1283,9 @@ Cg
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JyD-k4-NY4">
                                                     <rect key="frame" x="340" y="6" width="51" height="32"/>
+                                                    <connections>
+                                                        <action selector="ADChanged:" destination="BZh-lW-LPU" eventType="valueChanged" id="kCW-LR-3SG"/>
+                                                    </connections>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADLogger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcW-hl-vRf">
                                                     <rect key="frame" x="20" y="11" width="77" height="22"/>
@@ -1323,8 +1326,8 @@ Cg
                     </tableView>
                     <navigationItem key="navigationItem" id="Yuy-8Y-ZhZ"/>
                     <connections>
-                        <outlet property="TClabel" destination="772-Te-Ejz" id="wCN-zi-GKM"/>
-                        <outlet property="TimerColor" destination="uWr-LR-rGm" id="v9c-Ph-Dya"/>
+                        <outlet property="ADLogger" destination="JyD-k4-NY4" id="V8d-DT-f7V"/>
+                        <outlet property="TimerColor" destination="uWr-LR-rGm" id="7np-ig-J1L"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OxV-bZ-Fm2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1546,9 +1549,9 @@ Cg
                     <navigationItem key="navigationItem" id="aQD-dD-PBf"/>
                     <connections>
                         <outlet property="startButton" destination="w6k-zS-v04" id="JZu-ai-gXD"/>
-                        <outlet property="timerHour" destination="h1Q-1d-j45" id="eZb-KE-fF3"/>
-                        <outlet property="timerMinute" destination="mGg-HK-bi8" id="gid-Zb-PeG"/>
-                        <outlet property="timerSecond" destination="t38-TE-1bW" id="UQn-QU-7zX"/>
+                        <outlet property="timerHour" destination="h1Q-1d-j45" id="KaG-XE-MFj"/>
+                        <outlet property="timerMinute" destination="mGg-HK-bi8" id="yXm-OQ-RbK"/>
+                        <outlet property="timerSecond" destination="t38-TE-1bW" id="79M-NY-Grv"/>
                         <segue destination="TZT-F0-f4t" kind="push" identifier="toListViewController" id="8Ng-HP-yLc"/>
                     </connections>
                 </viewController>

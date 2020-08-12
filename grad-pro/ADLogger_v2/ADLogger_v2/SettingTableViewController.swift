@@ -10,8 +10,9 @@ import UIKit
 
 class SettingTableViewController: UITableViewController {
     @IBOutlet weak var TimerColor: UISwitch!
-    @IBOutlet weak var TClabel:UILabel!
+    @IBOutlet weak var ADLogger: UISwitch!
     let userDefaults = UserDefaults.standard
+    // MARK: - タイマー文字透明化
     @IBAction func TCChanged(_ sender: UISwitch) {
         
         if sender.isOn{
@@ -22,11 +23,24 @@ class SettingTableViewController: UITableViewController {
         //ViewController().timerHour.textColor = sender.isOn ? UIColor.blue : UIColor.blue
     }
     
+    // MARK: - ADLogger
+    @IBAction func ADChanged(_ sender: UISwitch) {
+        
+        if sender.isOn{
+            userDefaults.set(true, forKey: "ADValue")
+        }else{
+            userDefaults.set(false, forKey: "ADValue")
+        }
+        //ViewController().timerHour.textColor = sender.isOn ? UIColor.blue : UIColor.blue
+    }
+    // MARK: - 画面
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let switchBool = userDefaults.bool(forKey: "TCValue")
         TimerColor.setOn(switchBool, animated: false)
+        let switchBool2 = userDefaults.bool(forKey: "ADValue")
+        ADLogger.setOn(switchBool2, animated: false)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -45,7 +59,7 @@ class SettingTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         switch section {
-        case 0: // 「設定」のセクション
+        case 0: // 「実験用設定」のセクション
           return 2
         case 1: // 「その他」のセクション
           return 1
