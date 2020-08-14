@@ -1358,7 +1358,7 @@ Cg
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JyD-k4-NY4">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JyD-k4-NY4">
                                                     <rect key="frame" x="340" y="6" width="51" height="32"/>
                                                     <connections>
                                                         <action selector="ADChanged:" destination="BZh-lW-LPU" eventType="valueChanged" id="kCW-LR-3SG"/>
