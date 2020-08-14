@@ -336,6 +336,79 @@
             </objects>
             <point key="canvasLocation" x="4650.7246376811599" y="118.52678571428571"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="D69-S5-gqB">
+            <objects>
+                <viewController id="Cyr-ih-XZK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KqQ-w5-Bjc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0M-Vo-em0">
+                                <rect key="frame" x="65" y="309" width="56" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cu-v4-Pch">
+                                <rect key="frame" x="179" y="309" width="56" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8y-Zg-Gog">
+                                <rect key="frame" x="293" y="309" width="56" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsu-Hr-M8e">
+                                <rect key="frame" x="144" y="309" width="12" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epp-Jp-Ehd">
+                                <rect key="frame" x="258" y="309" width="12" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZH0-wh-vJs">
+                                <rect key="frame" x="142.5" y="415.5" width="129" height="65"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <state key="normal" title="START"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Wx-l4-XNU">
+                                <rect key="frame" x="293" y="244" width="75" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Check" image="checkmark.seal.fill" catalog="system">
+                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ZH0-wh-vJs" firstAttribute="top" secondItem="jsu-Hr-M8e" secondAttribute="bottom" constant="52.5" id="1tb-Dp-t5z"/>
+                            <constraint firstItem="ZH0-wh-vJs" firstAttribute="centerY" secondItem="KqQ-w5-Bjc" secondAttribute="centerY" id="2Zw-fK-Fmg"/>
+                            <constraint firstItem="ZH0-wh-vJs" firstAttribute="top" secondItem="Q8y-Zg-Gog" secondAttribute="bottom" constant="52.5" id="6EW-jK-JCs"/>
+                            <constraint firstItem="5Cu-v4-Pch" firstAttribute="leading" secondItem="jsu-Hr-M8e" secondAttribute="trailing" constant="23" id="CPa-FA-teg"/>
+                            <constraint firstItem="ZH0-wh-vJs" firstAttribute="top" secondItem="epp-Jp-Ehd" secondAttribute="bottom" constant="52.5" id="IIs-TH-hIt"/>
+                            <constraint firstItem="ZH0-wh-vJs" firstAttribute="top" secondItem="5Cu-v4-Pch" secondAttribute="bottom" constant="52.5" id="Pbf-Te-7i8"/>
+                            <constraint firstItem="ZH0-wh-vJs" firstAttribute="centerX" secondItem="KqQ-w5-Bjc" secondAttribute="centerX" id="XyR-rD-beB"/>
+                            <constraint firstItem="epp-Jp-Ehd" firstAttribute="leading" secondItem="5Cu-v4-Pch" secondAttribute="trailing" constant="23" id="evP-LK-ykM"/>
+                            <constraint firstItem="Q8y-Zg-Gog" firstAttribute="leading" secondItem="epp-Jp-Ehd" secondAttribute="trailing" constant="23" id="f9m-M4-QQK"/>
+                            <constraint firstItem="ZH0-wh-vJs" firstAttribute="top" secondItem="I0M-Vo-em0" secondAttribute="bottom" constant="52.5" id="gbd-y8-chr"/>
+                            <constraint firstItem="I0M-Vo-em0" firstAttribute="leading" secondItem="Nnw-P3-MOt" secondAttribute="leading" constant="65" id="oHf-JD-LBv"/>
+                            <constraint firstItem="jsu-Hr-M8e" firstAttribute="leading" secondItem="I0M-Vo-em0" secondAttribute="trailing" constant="23" id="pJy-UE-7ls"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nnw-P3-MOt"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Esd-K8-OyT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5662" y="119"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="7n3-ZY-rTp">
             <objects>
@@ -1720,4 +1793,7 @@ Cg
             <point key="canvasLocation" x="2821.739130434783" y="118.52678571428571"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="checkmark.seal.fill" catalog="system" width="128" height="122"/>
+    </resources>
 </document>

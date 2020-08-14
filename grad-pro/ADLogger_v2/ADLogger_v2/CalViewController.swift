@@ -15,6 +15,7 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
     @IBOutlet weak var totalHour: UILabel!
     @IBOutlet weak var totalMin: UILabel!
     @IBOutlet weak var totalSec: UILabel!
+    @IBOutlet weak var check: UIButton!
     
     @IBOutlet weak var bHour: UILabel!
     @IBOutlet weak var bMin: UILabel!
@@ -137,6 +138,52 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
         bMin.text = String(bSum/60 % 60)
         bSec.text = String(bSum % 60)
     }
+    // MARK: - チェック機能
+    @IBAction func BCheck(_ sender: Any) {
+        
+        let alert: UIAlertController = UIAlertController(title: "精度チェッカー", message: "現在選択されたタスクをストップウォッチで計測する事でアプリの精度を策定します", preferredStyle:  UIAlertController.Style.alert)
+
+        let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+            // ボタンが押された時の処理を書く（クロージャ実装）
+            (action: UIAlertAction!) -> Void in
+            if self.cTime.reduce(0, +) == 0 {
+                self.error()
+            }else{
+                //測定画面へGO
+            }
+        })
+        // キャンセルボタン
+        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler:{
+            // ボタンが押された時の処理を書く（クロージャ実装）
+            (action: UIAlertAction!) -> Void in
+            print("Cancel")
+        })
+
+        // ③ UIAlertControllerにActionを追加
+        alert.addAction(cancelAction)
+        alert.addAction(defaultAction)
+
+        // ④ Alertを表示
+        present(alert, animated: true, completion: nil)
+    }
+    // MARK: - チェックのエラーアラート
+    func error(){
+        let alert: UIAlertController = UIAlertController(title: "WARNING", message: "タスクが選択されていません", preferredStyle:  UIAlertController.Style.alert)
+
+    
+        // OKボタン
+        let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+            // ボタンが押された時の処理を書く（クロージャ実装）
+            (action: UIAlertAction!) -> Void in
+            print("OK")
+        })
+        
+        alert.addAction(defaultAction)
+
+        // ④ Alertを表示
+        present(alert, animated: true, completion: nil)
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
