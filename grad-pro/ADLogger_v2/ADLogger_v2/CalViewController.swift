@@ -23,7 +23,7 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
     @IBOutlet var tableView : UITableView!
     var dic:[String:[Int]] = [:]
     var aveTime: [Int] = []
-    var maxTime: [Int] = []
+    var devTime: [Int] = []
     var cTime: [Int] = []
     var bTime: [Int] = []
     
@@ -77,7 +77,7 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
                     
                     }
                     self.ave()
-                    self.maxima()//仮
+                    self.deviation()
                     self.tableView.reloadData()
                 }
                 
@@ -89,8 +89,11 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
     // MARK: - 平均の計算
     func ave(){
         for task in dic {
-            let result: Int = task.value.reduce(0) { $0 + $1 }
-            aveTime.append(result/task.value.count)
+            let sum: Int = task.value.reduce(0) { $0 + $1 }
+            let ave = sum/task.value.count
+            let max = task.value.max()! as Int
+            let min = task.value.min()! as Int
+            aveTime.append((max + 4 * ave + min)/6) //3点見積もり法
             }
     }
     // MARK: - 合計値
@@ -100,8 +103,8 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
 
         // チェックマークを入れる
         cell?.accessoryType = .checkmark
-        cTime.append(maxTime[indexPath.row])
-        bTime.append(maxTime[indexPath.row] - aveTime[indexPath.row])
+        cTime.append(aveTime[indexPath.row] + devTime[indexPath.row])
+        bTime.append(devTime[indexPath.row])
         calculate()
     }
 
@@ -111,15 +114,16 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
 
         // チェックマークを外す
         cell?.accessoryType = .none
-        cTime.append(-maxTime[indexPath.row])
-        bTime.append(-(maxTime[indexPath.row] - aveTime[indexPath.row]))
+        cTime.append(-(aveTime[indexPath.row] + devTime[indexPath.row]))
+        bTime.append(-devTime[indexPath.row])
         calculate()
     }
 
-    func maxima(){
+    func deviation(){
         for task in dic{
             let max = task.value.max()! as Int
-            maxTime.append(max)
+            let min = task.value.min()! as Int
+            devTime.append((max-min)/2) //理論面要確認！
         }
         
     }
