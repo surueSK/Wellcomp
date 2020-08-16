@@ -37,9 +37,6 @@ class SettingTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userDefaults.set(true, forKey: "TCValue")
-        userDefaults.set(false, forKey: "ADValue")
-        
         let switchBool = userDefaults.bool(forKey: "TCValue")
         TimerColor.setOn(switchBool, animated: false)
         let switchBool2 = userDefaults.bool(forKey: "ADValue")
