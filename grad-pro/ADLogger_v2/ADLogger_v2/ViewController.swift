@@ -88,7 +88,12 @@ class ViewController: UIViewController {
     
     func changeColor(){
         let TCBool = UserDefaults.standard.object(forKey: "TCValue")
-        if (TCBool as! Int != 0) {
+        if TCBool == nil {
+            print("yes")
+            self.timerHour.isHidden = true
+            self.timerMinute.isHidden = true
+            self.timerSecond.isHidden = true
+        }else if (TCBool as! Int != 0) {
             print("yes")
             self.timerHour.isHidden = true
             self.timerMinute.isHidden = true
