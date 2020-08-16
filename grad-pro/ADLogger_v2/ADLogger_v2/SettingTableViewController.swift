@@ -33,14 +33,30 @@ class SettingTableViewController: UITableViewController {
         }
         //ViewController().timerHour.textColor = sender.isOn ? UIColor.blue : UIColor.blue
     }
+    
+    func firstbool(){
+        let TCBool = UserDefaults.standard.object(forKey: "TCValue")
+        let ADBool = UserDefaults.standard.object(forKey: "ADValue")
+        
+        if TCBool == nil {
+            userDefaults.set(true, forKey: "TCValue")
+        }else{
+            let switchBool = userDefaults.bool(forKey: "TCValue")
+            TimerColor.setOn(switchBool, animated: false)
+        }
+        
+        if ADBool == nil {
+            userDefaults.set(false, forKey: "ADValue")
+        }else{
+            let switchBool2 = userDefaults.bool(forKey: "ADValue")
+            ADLogger.setOn(switchBool2, animated: false)
+        }
+    }
     // MARK: - 画面
     
     override func viewDidLoad() {
+        firstbool()
         super.viewDidLoad()
-        let switchBool = userDefaults.bool(forKey: "TCValue")
-        TimerColor.setOn(switchBool, animated: false)
-        let switchBool2 = userDefaults.bool(forKey: "ADValue")
-        ADLogger.setOn(switchBool2, animated: false)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
