@@ -21,20 +21,32 @@ ADLoggerはユーザの行動名別に経過時間を記録するiOSアプリケ
 \section{平均時間の算出方法}
 \subsection{各時間予測}
 行動別の時間の表示は前述した三点見積もり法を参考にした．
-タスク完了に要する時間の期待時間を$TE$，記録内最短時間を$O$，記録内最長時間を$P$とすると，下記の様に見積もりを行う．
+タスク完了に要する時間の期待時間を$TE$，記録内最短時間を$O$，記録内最長時間を$P$とすると，数式(\ref{TE})の様に見積もりを行う．
 尚，先行研究の項目で述べた通り三点見積もり法の再確時間は通常最頻値を採用するが，今回は少ないデータ数でも見積もりが可能となる様代替として平均値を採用した．
-\[ TE=\{ O + 4(\frac{1}{n}\displaystyle\sum_{i=1}^{n}x_{i}) + P\}/6\]
+また，表には表示されないものの各タスクは三点見積もり法の標準偏差を求め，標準偏差の3倍をかける事で信頼範囲99.7\%の値を算出する(数式(\ref{SD}))．
+\begin{equation}
+\label{TE}
+TE=\{ O + 4(\frac{1}{n}\displaystyle\sum_{i=1}^{n}x_{i}) + P\}/6
+\end{equation}
 
-また，表には表示されないものの各タスクは三点見積もり法の標準偏差を求め，標準偏差の3倍をかける事で信頼範囲99.7\%の値を算出する．
-\[ SD = (P - O)/2\]
+\begin{equation}
+\label{SD}
+SD = (P - O)/2
+\end{equation}
 
 \subsection{合計時間の算出}
 
-先ほど算出したタスク毎の$T_{E}$と$SD$を用いて，ユーザが選択したタスクの合計時間$T_{sum}$を算出する．
-数式は以下の通りとなる．
-\[ T_{sum}= \displaystyle\sum_{i=1}^{n} (TE_{i} + SD_{i})\]
-また標準偏差$SD$は，合計値の下に選択タスクの$SD$合計値$SD_{sum}$を「バッファ用時間」として算出する．
-\[ SD_{sum}= \displaystyle\sum_{i=1}^{n}  SD_{i}\]
+先ほど算出したタスク毎の$TE$と$SD$を用いて，ユーザが選択したタスクの合計時間$T_{sum}$を算出する(数式(\ref{Ts}))．
+また標準偏差$SD$は，合計値の下に選択タスクの$SD$合計値$SD_{sum}$を「バッファ用時間」として算出する(数式(\ref{Ts}))．
+\begin{equation}
+\label{Ts}
+T_{sum}= \displaystyle\sum_{i=1}^{n} (TE_{i} + SD_{i})
+\end{equation}
+
+\begin{equation}
+\label{SDs}
+SD_{sum}= \displaystyle\sum_{i=1}^{n}  SD_{i}
+\end{equation}
 %これからきちんと書こう。秒単位で計測する分最頻値を出すのが時間がかかる為便宜的に他の手法を取った事も記述しよう。
 
 
@@ -128,7 +140,7 @@ ADLoggerはユーザの行動名別に経過時間を記録するiOSアプリケ
 	\begin{minipage}[b]{0.5\linewidth}
 	\begin{center}
 		\fbox{\includegraphics[width=5cm]{images/4/log.png}}
-		\caption{ADLog画面}
+		\caption{ADLog計算出力画面例}
 		\label{fig:log}
 	\end{center}
   	\end{minipage}
