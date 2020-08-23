@@ -77,8 +77,7 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
                         }
                     
                     }
-                    self.ave()
-                    self.deviation()
+                    self.ccal()
                     self.tableView.reloadData()
                 }
                 
@@ -88,13 +87,24 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
         }
     }
     // MARK: - 平均の計算
-    func ave(){
+    func ccal(){
         for task in dic {
             let sum: Int = task.value.reduce(0) { $0 + $1 }
             let ave = sum/task.value.count
-            let max = task.value.max()! as Int
-            let min = task.value.min()! as Int
-            aveTime.append((max + 4 * ave + min)/6) //3点見積もり法
+            //let max = task.value.max()! as Int
+            //let min = task.value.min()! as Int
+            var sum2 = 0
+            //devTime.append((max-min)/2) //理論面要確認！
+            //aveTime.append((max + 4 * ave + min)/6)//3点見積もり法
+            aveTime.append(ave)
+            
+            for i in 0..<task.value.count {
+                let exp = (task.value[i]-ave)*(task.value[i]-ave)
+                sum2 = sum2+exp
+            }
+            let dev = sqrt(Double(sum2/task.value.count))
+            devTime.append(Int(dev)*3) //標準偏差をdevTimeに代入
+            
             }
     }
     // MARK: - 合計値
@@ -119,15 +129,7 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
         bTime.append(-devTime[indexPath.row])
         calculate()
     }
-
-    func deviation(){
-        for task in dic{
-            let max = task.value.max()! as Int
-            let min = task.value.min()! as Int
-            devTime.append((max-min)/2) //理論面要確認！
-        }
-        
-    }
+    
     func calculate(){
         let cSum = cTime.reduce(0, +)
         let bSum = bTime.reduce(0, +)
