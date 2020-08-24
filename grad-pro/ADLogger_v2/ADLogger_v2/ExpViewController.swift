@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ExpViewController: UIViewController {
     
@@ -17,7 +18,18 @@ class ExpViewController: UIViewController {
     @IBOutlet weak var ebutton: UIButton!
     
     @IBAction func eOK(_ sender: Any) {
-       
+        
+        //alertで1段階おく！
+        
+        let parseObject = PFObject(className:"survey")
+        parseObject["username"] = UserDefaults.standard.object(forKey:"userName")
+        parseObject["taskname"] = etname.text!
+        parseObject["tasktime"] = 1
+        
+        
+        
+        
+        
     }
     
     override func viewDidLoad() {
