@@ -155,10 +155,10 @@
             </objects>
             <point key="canvasLocation" x="1974" y="1590"/>
         </scene>
-        <!--View Controller-->
+        <!--Exp2 View Controller-->
         <scene sceneID="2Sh-Nh-IYg">
             <objects>
-                <viewController id="qsz-xE-gTa" sceneMemberID="viewController">
+                <viewController id="qsz-xE-gTa" customClass="Exp2ViewController" customModule="ADLogger_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L34-uD-q6O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -201,6 +201,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="OK"/>
                                 <connections>
+                                    <action selector="e2OK:" destination="qsz-xE-gTa" eventType="touchUpInside" id="axX-M2-34u"/>
                                     <action selector="eOK:" destination="A7W-1u-15R" eventType="touchUpInside" id="4US-a7-ySG"/>
                                 </connections>
                             </button>
@@ -225,6 +226,12 @@
                         <viewLayoutGuide key="safeArea" id="atg-RU-ZQL"/>
                     </view>
                     <navigationItem key="navigationItem" id="pA1-hB-PRS"/>
+                    <connections>
+                        <outlet property="e2button" destination="B3t-sj-5SC" id="jmR-BV-9hO"/>
+                        <outlet property="e2hour" destination="dZi-5X-ciP" id="URj-rJ-e4i"/>
+                        <outlet property="e2min" destination="JB6-Nq-7YR" id="Yc4-vK-uq6"/>
+                        <outlet property="e2sec" destination="qoU-Xr-N7Q" id="6OQ-2m-ueX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bm4-0S-3c0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

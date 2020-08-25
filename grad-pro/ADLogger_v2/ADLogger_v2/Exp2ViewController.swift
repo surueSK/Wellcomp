@@ -1,40 +1,31 @@
 //
-//  ExpViewController.swift
+//  Exp2ViewController.swift
 //  ADLogger_v2
 //
-//  Created by 助川友理 on 2020/08/24.
+//  Created by 助川友理 on 2020/08/25.
 //  Copyright © 2020 助川友理. All rights reserved.
 //
 
 import UIKit
 import Parse
 
-class ExpViewController: UIViewController {
+class Exp2ViewController: UIViewController {
     
-    @IBOutlet weak var etname: UITextField!
-    @IBOutlet weak var ehour: UITextField!
-    @IBOutlet weak var emin: UITextField!
-    @IBOutlet weak var esec: UITextField!
-    @IBOutlet weak var ebutton: UIButton!
-    
-    @IBAction func eOK(_ sender: Any) {
-        alert1()
-    }
-    
-    func alert1(){
+    @IBOutlet weak var e2hour: UITextField!
+    @IBOutlet weak var e2min: UITextField!
+    @IBOutlet weak var e2sec: UITextField!
+    @IBOutlet weak var e2button: UIButton!
+    @IBAction func e2OK(_ sender: Any) {
         let alert: UIAlertController = UIAlertController(title: "確認", message: "保存しても良いですか？", preferredStyle:  UIAlertController.Style.alert)
 
         let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
             // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in do {
-                let hour = Int(self.ehour.text!)
-                let min = Int(self.emin.text!)
-                let sec = Int(self.esec.text!)
+                let hour = Int(self.e2hour.text!)
+                let min = Int(self.e2min.text!)
+                let sec = Int(self.e2sec.text!)
                 
-                if self.etname == nil{
-                    print("nil")//なぜかうまくいかないけど一旦放置
-                    
-                }else if (hour == nil) || (min == nil) || (sec == nil){
+                if (hour == nil) || (min == nil) || (sec == nil){
                     
                     let alert: UIAlertController = UIAlertController(title: "エラー", message: "00:00:00の形式で入力してください", preferredStyle:  UIAlertController.Style.alert)
                     let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
@@ -44,18 +35,27 @@ class ExpViewController: UIViewController {
                     self.present(alert, animated: true, completion: nil)
                     
                 }else{
-                    let parseObject = PFObject(className:"survey")
+                    let parseObject = PFObject(className:"survey2")
                     let ettime = hour!*60*60 + min!*60 + sec!
                     parseObject["username"] = UserDefaults.standard.object(forKey:"userName")
-                    parseObject["taskname"] = self.etname.text!
-                    parseObject["tasktime"] = ettime
+                    parseObject["totaltime"] = ettime
                     // Saves the new object.
                     parseObject.saveInBackground {
                       (success: Bool, error: Error?) in
                       if (success) {
                         print("OK")
                         print(ettime)
-                        self.alert2()
+                        //ここじゃ無い？
+                        let alert: UIAlertController = UIAlertController(title: "保存完了", message: "ご協力有難うございます！", preferredStyle:  UIAlertController.Style.alert)
+                                           let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+                                            (action: UIAlertAction!) -> Void in do{
+                                                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                                let loggedInViewController = storyBoard.instantiateViewController(withIdentifier: "ViewController") as! UINavigationController
+                                                self.present(loggedInViewController, animated: true, completion: nil)
+                                            }
+                                           })
+                                           alert.addAction(defaultAction)
+                                           self.present(alert, animated: true, completion: nil)
                       } else {
                         print("error")
                       }
@@ -76,29 +76,6 @@ class ExpViewController: UIViewController {
 
         // ④ Alertを表示
         present(alert, animated: true, completion: nil)
-    }
-    
-    func alert2(){
-        
-        let alert: UIAlertController = UIAlertController(title: "タスク登録完了", message: "タスクを登録しました", preferredStyle:  UIAlertController.Style.alert)
-
-        let defaultAction_1: UIAlertAction = UIAlertAction(title: "次のタスク登録へ", style: UIAlertAction.Style.default, handler:{
-            (action: UIAlertAction!) -> Void in do{
-                self.loadView()
-                self.viewDidLoad()
-            }
-        })
-        let defaultAction_2: UIAlertAction = UIAlertAction(title: "総時間登録へ", style: UIAlertAction.Style.default, handler:{
-            (action: UIAlertAction!) -> Void in do{
-                self.performSegue(withIdentifier: "tosurvey2", sender: nil)
-            }
-        })
-        // ③ UIAlertControllerにActionを追加
-        alert.addAction(defaultAction_1)
-        alert.addAction(defaultAction_2)
-        // ④ Alertを表示
-        present(alert, animated: true, completion: nil)
-        
     }
     
     override func viewDidLoad() {
