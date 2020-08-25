@@ -1574,6 +1574,7 @@ Cg
                                                 <constraint firstItem="JyD-k4-NY4" firstAttribute="top" secondItem="kkC-r5-zhN" secondAttribute="topMargin" constant="-5" id="KuZ-nL-T03"/>
                                                 <constraint firstItem="hcW-hl-vRf" firstAttribute="top" secondItem="kkC-r5-zhN" secondAttribute="topMargin" id="Qzd-kz-8B7"/>
                                                 <constraint firstItem="JyD-k4-NY4" firstAttribute="centerY" secondItem="hcW-hl-vRf" secondAttribute="centerY" id="SH8-IY-xbU"/>
+                                                <constraint firstItem="JyD-k4-NY4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hcW-hl-vRf" secondAttribute="trailing" constant="8" symbolic="YES" id="csd-hc-LUZ"/>
                                                 <constraint firstItem="JyD-k4-NY4" firstAttribute="centerY" secondItem="kkC-r5-zhN" secondAttribute="centerY" id="ul1-D5-1dC"/>
                                                 <constraint firstItem="hcW-hl-vRf" firstAttribute="leading" secondItem="kkC-r5-zhN" secondAttribute="leadingMargin" id="wHd-wT-CW6"/>
                                             </constraints>
@@ -1589,6 +1590,31 @@ Cg
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zQc-wI-wcj" id="Ka7-yo-Kc8">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="バッファ時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnS-8X-6dQ">
+                                                    <rect key="frame" x="20" y="11" width="104" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="LVL-KQ-prH">
+                                                    <rect key="frame" x="296" y="6" width="98" height="33"/>
+                                                    <segments>
+                                                        <segment title="短"/>
+                                                        <segment title="中"/>
+                                                        <segment title="長"/>
+                                                    </segments>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LVL-KQ-prH" firstAttribute="centerY" secondItem="tnS-8X-6dQ" secondAttribute="centerY" id="ISS-1y-gKi"/>
+                                                <constraint firstItem="tnS-8X-6dQ" firstAttribute="centerY" secondItem="Ka7-yo-Kc8" secondAttribute="centerY" id="Kbb-bt-C5S"/>
+                                                <constraint firstItem="tnS-8X-6dQ" firstAttribute="top" secondItem="Ka7-yo-Kc8" secondAttribute="topMargin" id="cIP-dm-cqg"/>
+                                                <constraint firstItem="LVL-KQ-prH" firstAttribute="top" secondItem="Ka7-yo-Kc8" secondAttribute="topMargin" constant="-5" id="cKv-Be-rsr"/>
+                                                <constraint firstItem="tnS-8X-6dQ" firstAttribute="leading" secondItem="Ka7-yo-Kc8" secondAttribute="leadingMargin" id="nWZ-Id-aKY"/>
+                                                <constraint firstItem="LVL-KQ-prH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tnS-8X-6dQ" secondAttribute="trailing" constant="8" symbolic="YES" id="vMG-Lj-3e3"/>
+                                                <constraint firstItem="LVL-KQ-prH" firstAttribute="trailing" secondItem="Ka7-yo-Kc8" secondAttribute="trailingMargin" id="zuT-f0-BpX"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -1607,7 +1633,7 @@ Cg
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OxV-bZ-Fm2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2822" y="1590"/>
+            <point key="canvasLocation" x="2821.739130434783" y="1589.7321428571429"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4zL-2J-oYC">
