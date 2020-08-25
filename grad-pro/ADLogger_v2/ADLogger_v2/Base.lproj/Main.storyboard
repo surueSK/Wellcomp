@@ -154,6 +154,80 @@
             </objects>
             <point key="canvasLocation" x="1974" y="1590"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="2Sh-Nh-IYg">
+            <objects>
+                <viewController id="qsz-xE-gTa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L34-uD-q6O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="所要総時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRA-ao-fmR">
+                                <rect key="frame" x="131" y="430" width="152" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBh-qC-rWy">
+                                <rect key="frame" x="237.5" y="482" width="8" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JB6-Nq-7YR">
+                                <rect key="frame" x="189.5" y="477" width="35" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qoU-Xr-N7Q">
+                                <rect key="frame" x="258.5" y="477" width="35" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dZi-5X-ciP">
+                                <rect key="frame" x="120.5" y="477" width="35" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="732-K4-qN7">
+                                <rect key="frame" x="168.5" y="482" width="8" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3t-sj-5SC">
+                                <rect key="frame" x="183" y="586" width="48" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="eOK:" destination="A7W-1u-15R" eventType="touchUpInside" id="4US-a7-ySG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dZi-5X-ciP" firstAttribute="top" secondItem="yRA-ao-fmR" secondAttribute="bottom" constant="11" id="27C-Qq-OLf"/>
+                            <constraint firstItem="yRA-ao-fmR" firstAttribute="centerY" secondItem="L34-uD-q6O" secondAttribute="centerY" id="44S-kV-Luh"/>
+                            <constraint firstItem="qoU-Xr-N7Q" firstAttribute="top" secondItem="yRA-ao-fmR" secondAttribute="bottom" constant="11" id="8Ug-OF-ZJp"/>
+                            <constraint firstItem="pBh-qC-rWy" firstAttribute="top" secondItem="yRA-ao-fmR" secondAttribute="bottom" constant="16" id="8iq-hd-fDn"/>
+                            <constraint firstItem="pBh-qC-rWy" firstAttribute="leading" secondItem="JB6-Nq-7YR" secondAttribute="trailing" constant="13" id="I9C-F3-bbO"/>
+                            <constraint firstItem="732-K4-qN7" firstAttribute="leading" secondItem="dZi-5X-ciP" secondAttribute="trailing" constant="13" id="LGS-ee-eFE"/>
+                            <constraint firstItem="qoU-Xr-N7Q" firstAttribute="leading" secondItem="pBh-qC-rWy" secondAttribute="trailing" constant="13" id="S5w-5u-LSA"/>
+                            <constraint firstItem="B3t-sj-5SC" firstAttribute="top" secondItem="yRA-ao-fmR" secondAttribute="bottom" constant="120" id="SHc-Z7-m2r"/>
+                            <constraint firstItem="JB6-Nq-7YR" firstAttribute="top" secondItem="yRA-ao-fmR" secondAttribute="bottom" constant="11" id="VO9-xV-SwQ"/>
+                            <constraint firstItem="B3t-sj-5SC" firstAttribute="centerX" secondItem="L34-uD-q6O" secondAttribute="centerX" id="a8Z-FV-okB"/>
+                            <constraint firstItem="732-K4-qN7" firstAttribute="top" secondItem="yRA-ao-fmR" secondAttribute="bottom" constant="16" id="d2J-1x-5mz"/>
+                            <constraint firstItem="JB6-Nq-7YR" firstAttribute="centerX" secondItem="L34-uD-q6O" secondAttribute="centerX" id="dNZ-u4-fjV"/>
+                            <constraint firstItem="JB6-Nq-7YR" firstAttribute="leading" secondItem="732-K4-qN7" secondAttribute="trailing" constant="13" id="dWs-MV-8Ie"/>
+                            <constraint firstItem="yRA-ao-fmR" firstAttribute="centerX" secondItem="L34-uD-q6O" secondAttribute="centerX" id="rAg-uC-CfS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="atg-RU-ZQL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bm4-0S-3c0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1974" y="2322"/>
+        </scene>
         <!--Time View Controller-->
         <scene sceneID="hjp-7e-sjF">
             <objects>
