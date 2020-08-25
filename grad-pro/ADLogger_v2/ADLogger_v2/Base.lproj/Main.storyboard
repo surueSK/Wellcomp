@@ -1582,7 +1582,7 @@ Cg
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="その他" id="thr-3p-XZ0">
+                            <tableViewSection headerTitle="バッファ" id="thr-3p-XZ0">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zQc-wI-wcj">
                                         <rect key="frame" x="0.0" y="198.5" width="414" height="43.5"/>
@@ -1591,8 +1591,8 @@ Cg
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="バッファ時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnS-8X-6dQ">
-                                                    <rect key="frame" x="20" y="11" width="104" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="変動バッファ時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnS-8X-6dQ">
+                                                    <rect key="frame" x="20" y="11" width="139" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1614,6 +1614,68 @@ Cg
                                                 <constraint firstItem="tnS-8X-6dQ" firstAttribute="leading" secondItem="Ka7-yo-Kc8" secondAttribute="leadingMargin" id="nWZ-Id-aKY"/>
                                                 <constraint firstItem="LVL-KQ-prH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tnS-8X-6dQ" secondAttribute="trailing" constant="8" symbolic="YES" id="vMG-Lj-3e3"/>
                                                 <constraint firstItem="LVL-KQ-prH" firstAttribute="trailing" secondItem="Ka7-yo-Kc8" secondAttribute="trailingMargin" id="zuT-f0-BpX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="QBZ-6c-NMl">
+                                        <rect key="frame" x="0.0" y="242" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QBZ-6c-NMl" id="Mq8-kD-iOc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="固定バッファ時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKX-dI-wml">
+                                                    <rect key="frame" x="20" y="11" width="139" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lEm-oC-v2M">
+                                                    <rect key="frame" x="362" y="4" width="32" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WC6-fM-6Ar">
+                                                    <rect key="frame" x="306" y="4" width="32" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lp2-Nz-aPh">
+                                                    <rect key="frame" x="346" y="11" width="5" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66f-gm-vFV">
+                                                    <rect key="frame" x="290" y="11" width="5" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lcs-eh-XxL">
+                                                    <rect key="frame" x="250" y="4" width="32" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="66f-gm-vFV" firstAttribute="baseline" secondItem="lp2-Nz-aPh" secondAttribute="baseline" id="0Bt-lY-zCb"/>
+                                                <constraint firstItem="66f-gm-vFV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qKX-dI-wml" secondAttribute="trailing" constant="8" symbolic="YES" id="0sb-HM-wdW"/>
+                                                <constraint firstItem="lEm-oC-v2M" firstAttribute="leading" secondItem="lp2-Nz-aPh" secondAttribute="trailing" constant="11" id="Axr-vc-anf"/>
+                                                <constraint firstItem="66f-gm-vFV" firstAttribute="leading" secondItem="lcs-eh-XxL" secondAttribute="trailing" constant="8" id="DcM-WL-J79"/>
+                                                <constraint firstItem="lp2-Nz-aPh" firstAttribute="centerY" secondItem="qKX-dI-wml" secondAttribute="centerY" id="FAN-Lr-Vem"/>
+                                                <constraint firstItem="lp2-Nz-aPh" firstAttribute="firstBaseline" secondItem="qKX-dI-wml" secondAttribute="firstBaseline" id="Fma-2g-CxS"/>
+                                                <constraint firstItem="WC6-fM-6Ar" firstAttribute="baseline" secondItem="lEm-oC-v2M" secondAttribute="baseline" id="Iyp-3n-x0b"/>
+                                                <constraint firstItem="66f-gm-vFV" firstAttribute="firstBaseline" secondItem="lp2-Nz-aPh" secondAttribute="firstBaseline" id="OHH-sE-i6B"/>
+                                                <constraint firstItem="lp2-Nz-aPh" firstAttribute="centerY" secondItem="lEm-oC-v2M" secondAttribute="centerY" constant="1" id="Ocy-cb-Kee"/>
+                                                <constraint firstItem="qKX-dI-wml" firstAttribute="centerY" secondItem="Mq8-kD-iOc" secondAttribute="centerY" id="TFl-pV-IbE"/>
+                                                <constraint firstItem="lcs-eh-XxL" firstAttribute="baseline" secondItem="WC6-fM-6Ar" secondAttribute="baseline" id="Y9h-80-QBh"/>
+                                                <constraint firstAttribute="trailing" secondItem="66f-gm-vFV" secondAttribute="trailing" constant="119" id="aGU-s1-wlb"/>
+                                                <constraint firstItem="qKX-dI-wml" firstAttribute="leading" secondItem="Mq8-kD-iOc" secondAttribute="leadingMargin" id="bco-gE-rUf"/>
+                                                <constraint firstAttribute="trailing" secondItem="lp2-Nz-aPh" secondAttribute="trailing" constant="63" id="cQ7-tz-q9i"/>
+                                                <constraint firstItem="qKX-dI-wml" firstAttribute="top" secondItem="Mq8-kD-iOc" secondAttribute="topMargin" id="jXM-sS-igY"/>
+                                                <constraint firstItem="WC6-fM-6Ar" firstAttribute="leading" secondItem="66f-gm-vFV" secondAttribute="trailing" constant="11" id="oSX-jG-cYo"/>
+                                                <constraint firstItem="lp2-Nz-aPh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qKX-dI-wml" secondAttribute="trailing" constant="8" symbolic="YES" id="veL-o0-tO0"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

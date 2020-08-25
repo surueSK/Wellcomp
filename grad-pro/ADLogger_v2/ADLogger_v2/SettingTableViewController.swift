@@ -78,7 +78,7 @@ class SettingTableViewController: UITableViewController {
         case 0: // 「実験用設定」のセクション
           return 2
         case 1: // 「その他」のセクション
-          return 1
+          return 2
         default: // ここが実行されることはないはず
           return 0
         }
