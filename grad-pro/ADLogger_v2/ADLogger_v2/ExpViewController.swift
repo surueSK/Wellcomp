@@ -90,7 +90,7 @@ class ExpViewController: UIViewController {
         })
         let defaultAction_2: UIAlertAction = UIAlertAction(title: "総時間登録へ", style: UIAlertAction.Style.default, handler:{
             (action: UIAlertAction!) -> Void in do{
-                
+                self.performSegue(withIdentifier: "tosurvey2", sender: nil)
             }
         })
         // ③ UIAlertControllerにActionを追加

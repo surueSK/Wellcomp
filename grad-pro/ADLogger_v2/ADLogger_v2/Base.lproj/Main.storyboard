@@ -148,6 +148,7 @@
                         <outlet property="emin" destination="oJP-kY-soy" id="Ruc-Ne-YRO"/>
                         <outlet property="esec" destination="ftk-SM-7X3" id="cMi-69-Tpi"/>
                         <outlet property="etname" destination="wDd-ze-rff" id="nh4-Jw-GUY"/>
+                        <segue destination="qsz-xE-gTa" kind="show" identifier="tosurvey2" id="OMC-uL-Dmc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WbS-bY-mQc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -223,6 +224,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="atg-RU-ZQL"/>
                     </view>
+                    <navigationItem key="navigationItem" id="pA1-hB-PRS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bm4-0S-3c0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
