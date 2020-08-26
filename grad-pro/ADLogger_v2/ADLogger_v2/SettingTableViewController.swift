@@ -9,10 +9,9 @@
 import UIKit
 
 class SettingTableViewController: UITableViewController {
-    @IBOutlet weak var TimerColor: UISwitch!
-    @IBOutlet weak var ADLogger: UISwitch!
     let userDefaults = UserDefaults.standard
     // MARK: - タイマー文字透明化
+    @IBOutlet weak var TimerColor: UISwitch!
     @IBAction func TCChanged(_ sender: UISwitch) {
         
         if sender.isOn{
@@ -24,6 +23,7 @@ class SettingTableViewController: UITableViewController {
     }
     
     // MARK: - ADLogger
+    @IBOutlet weak var ADLogger: UISwitch!
     @IBAction func ADChanged(_ sender: UISwitch) {
         
         if sender.isOn{
@@ -52,10 +52,72 @@ class SettingTableViewController: UITableViewController {
             ADLogger.setOn(switchBool2, animated: false)
         }
     }
+    // MARK: - 変動バッファ
+    @IBAction func mButton(_ sender: Any) {
+        
+        let alert: UIAlertController = UIAlertController(title: "変動バッファモード変更", message: "選択してください", preferredStyle:  UIAlertController.Style.alert)
+        // Defaultボタン
+        let defaultAction_1: UIAlertAction = UIAlertAction(title: "急ぎ", style: UIAlertAction.Style.default, handler:{
+            (action: UIAlertAction!) -> Void in do {
+                self.userDefaults.set(0, forKey: "fBuffer")
+                print(UserDefaults.standard.integer(forKey: "fBuffer"))
+            }
+        })
+        let defaultAction_2: UIAlertAction = UIAlertAction(title: "やや急ぎ", style: UIAlertAction.Style.default, handler:{
+            (action: UIAlertAction!) -> Void in do {
+                self.userDefaults.set(1, forKey: "fBuffer")
+                print(UserDefaults.standard.integer(forKey: "fBuffer"))
+            }
+        })
+        let defaultAction_3: UIAlertAction = UIAlertAction(title: "ややゆっくり", style: UIAlertAction.Style.default, handler:{
+            (action: UIAlertAction!) -> Void in do {
+                self.userDefaults.set(2, forKey: "fBuffer")
+                print(UserDefaults.standard.integer(forKey: "fBuffer"))
+            }
+        })
+        
+        let defaultAction_4: UIAlertAction = UIAlertAction(title: "ゆっくり", style: UIAlertAction.Style.default, handler:{
+            (action: UIAlertAction!) -> Void in do {
+                self.userDefaults.set(3, forKey: "fBuffer")
+                print(UserDefaults.standard.integer(forKey: "fBuffer"))
+            }
+        })
+        // Cancelボタン
+        let cancelAction: UIAlertAction = UIAlertAction(title: "cancel", style: UIAlertAction.Style.cancel, handler:{
+            (action: UIAlertAction!) -> Void in do{
+                print(UserDefaults.standard.integer(forKey: "fBuffer"))
+            }
+        })
+        
+        alert.addAction(defaultAction_1)
+        alert.addAction(defaultAction_2)
+        alert.addAction(defaultAction_3)
+        alert.addAction(defaultAction_4)
+        alert.addAction(cancelAction)
+
+        // ④ Alertを表示
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func fBuffer(){
+        let fBuffer = UserDefaults.standard.object(forKey: "fBuffer")
+        if fBuffer == nil {
+            self.userDefaults.set(3, forKey: "fBuffer")
+        }else{
+            let bufferf = userDefaults.bool(forKey: "fBuffer")
+            ADLogger.setOn(bufferf, animated: false)
+        }
+    }
+    
+    
+     // MARK: - 固定バッファ
+    
+    
     // MARK: - 画面
     
     override func viewDidLoad() {
         firstbool()
+        fBuffer()
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
