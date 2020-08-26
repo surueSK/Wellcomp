@@ -140,6 +140,7 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
     
     func calculate(){
         let abuffer = UserDefaults.standard.integer(forKey: "aBuffer")
+        let fbuffer = UserDefaults.standard.integer(forKey: "fBuffer")
         let cSum = cTime.reduce(0, +)+abuffer
         let bSum = bTime.reduce(0, +)
         totalHour.text = String(cSum/3600)
@@ -151,6 +152,26 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
         b2Hour.text = String(abuffer/3600)
         b2Min.text = String(abuffer/60 % 60)
         b2Sec.text = String(abuffer % 60)
+        
+        if fbuffer == 0{
+            bHour.textColor = UIColor.red
+            bMin.textColor = UIColor.red
+            bSec.textColor = UIColor.red
+        }
+        else if fbuffer == 1{
+            bHour.textColor = UIColor.orange
+            bMin.textColor = UIColor.orange
+            bSec.textColor = UIColor.orange
+        }
+        else if fbuffer == 2{
+            bHour.textColor = UIColor.green
+            bMin.textColor = UIColor.green
+            bSec.textColor = UIColor.green
+        }else{
+            bHour.textColor = UIColor.blue
+            bMin.textColor = UIColor.blue
+            bSec.textColor = UIColor.blue
+        }
     }
     // MARK: - チェック機能
     @IBAction func BCheck(_ sender: Any) {
