@@ -1638,6 +1638,9 @@ Cg
                                                     <state key="normal" title="変更">
                                                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="aButton:" destination="BZh-lW-LPU" eventType="touchUpInside" id="XXO-fB-tBz"/>
+                                                    </connections>
                                                 </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lEm-oC-v2M">
                                                     <rect key="frame" x="323" y="4" width="32" height="34"/>
@@ -1704,6 +1707,9 @@ Cg
                     <connections>
                         <outlet property="ADLogger" destination="JyD-k4-NY4" id="V8d-DT-f7V"/>
                         <outlet property="TimerColor" destination="uWr-LR-rGm" id="7np-ig-J1L"/>
+                        <outlet property="abhour" destination="lcs-eh-XxL" id="bKB-cb-Kts"/>
+                        <outlet property="abmin" destination="WC6-fM-6Ar" id="ABF-rh-W16"/>
+                        <outlet property="absec" destination="lEm-oC-v2M" id="g2m-VB-nBb"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OxV-bZ-Fm2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -112,6 +112,46 @@ class SettingTableViewController: UITableViewController {
     
      // MARK: - 固定バッファ
     
+    @IBOutlet weak var abhour: UITextField!
+    @IBOutlet weak var abmin: UITextField!
+    @IBOutlet weak var absec: UITextField!
+    
+    
+    @IBAction func aButton(_ sender: Any) {
+        
+        let nhour = Int(self.abhour.text!)
+        let nmin = Int(self.abmin.text!)
+        let nsec = Int(self.absec.text!)
+        
+        if (nhour == nil) || (nmin == nil) || (nsec == nil) {
+            let alert: UIAlertController = UIAlertController(title: "Error!", message: "空白は 0 を置いてください", preferredStyle:  UIAlertController.Style.alert)
+
+            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+                // ボタンが押された時の処理を書く（クロージャ実装）
+                (action: UIAlertAction!) -> Void in
+                print("Error!")
+            })
+            alert.addAction(defaultAction)
+
+            // ④ Alertを表示
+            present(alert, animated: true, completion: nil)
+            
+        }else{
+            
+            let alert: UIAlertController = UIAlertController(title: "変更", message: "固定バッファが変更されました", preferredStyle:  UIAlertController.Style.alert)
+
+            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+                // ボタンが押された時の処理を書く（クロージャ実装）
+                (action: UIAlertAction!) -> Void in
+                print("success!")
+            })
+            alert.addAction(defaultAction)
+
+            // ④ Alertを表示
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
     
     // MARK: - 画面
     
