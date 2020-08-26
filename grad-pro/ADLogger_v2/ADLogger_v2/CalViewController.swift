@@ -21,6 +21,10 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
     @IBOutlet weak var bMin: UILabel!
     @IBOutlet weak var bSec: UILabel!
     
+    @IBOutlet weak var b2Hour: UILabel!
+    @IBOutlet weak var b2Min: UILabel!
+    @IBOutlet weak var b2Sec: UILabel!
+    
     @IBOutlet var tableView : UITableView!
     var dic:[String:[Int]] = [:]
     var aveTime: [Int] = []
@@ -88,6 +92,8 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
     }
     // MARK: - 平均の計算
     func ccal(){
+        let fbuffer = UserDefaults.standard.integer(forKey: "fBuffer")
+        
         for task in dic {
             let sum: Int = task.value.reduce(0) { $0 + $1 }
             let ave = sum/task.value.count
@@ -103,7 +109,9 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
                 sum2 = sum2+exp
             }
             let dev = sqrt(Double(sum2/task.value.count))
-            devTime.append(Int(dev)*3) //標準偏差をdevTimeに代入
+            devTime.append(Int(dev)*fbuffer)
+            print(fbuffer)
+            //標準偏差をdevTimeに代入
             
             }
     }
@@ -131,7 +139,8 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
     }
     
     func calculate(){
-        let cSum = cTime.reduce(0, +)
+        let abuffer = UserDefaults.standard.integer(forKey: "aBuffer")
+        let cSum = cTime.reduce(0, +)+abuffer
         let bSum = bTime.reduce(0, +)
         totalHour.text = String(cSum/3600)
         totalMin.text = String(cSum/60 % 60)
@@ -139,6 +148,9 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
         bHour.text = String(bSum/3600)
         bMin.text = String(bSum/60 % 60)
         bSec.text = String(bSum % 60)
+        b2Hour.text = String(abuffer/3600)
+        b2Min.text = String(abuffer/60 % 60)
+        b2Sec.text = String(abuffer % 60)
     }
     // MARK: - チェック機能
     @IBAction func BCheck(_ sender: Any) {
