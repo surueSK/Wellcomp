@@ -27,7 +27,7 @@ class Exp2ViewController: UIViewController {
                 
                 if (hour == nil) || (min == nil) || (sec == nil){
                     
-                    let alert: UIAlertController = UIAlertController(title: "エラー", message: "00:00:00の形式で入力してください", preferredStyle:  UIAlertController.Style.alert)
+                    let alert: UIAlertController = UIAlertController(title: "Error!", message: "空白は 0 を置いてください", preferredStyle:  UIAlertController.Style.alert)
                     let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
                         (action: UIAlertAction!) -> Void in
                     })
