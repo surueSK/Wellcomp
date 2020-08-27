@@ -15,8 +15,31 @@ class CalendarViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var min: UILabel!
     @IBOutlet weak var sec: UILabel!
     var times = 0
+    var bool = 0
+    
+    @IBOutlet weak var tseg: UISegmentedControl!
+    @IBAction func timebool(_ sender: Any) {
+        let selectedIndex = tseg.selectedSegmentIndex
+        let tbool = tseg.titleForSegment(at: selectedIndex)!
+        if tbool == "開始" {
+            bool = 0
+        } else {
+            bool = 1
+        }
+        print(bool)
+    }
+    
     @IBAction func addCalendar(_ sender: Any) {
-        print(times)
+        
+        
+    }
+    
+    // MARK: - ADLoggerの時間表示
+    
+    func timeappend(){
+        hour.text = String(format: "%02d", times/3600)
+        min.text = String(format: "%02d", times/60 % 60)
+        sec.text = String(format: "%02d", times % 60)
     }
     
     // MARK: - DatePicker関連
@@ -24,6 +47,7 @@ class CalendarViewController: UIViewController, UIPickerViewDelegate {
        var datePicker: UIDatePicker = UIDatePicker()
        
       override func viewDidLoad() {
+        timeappend()
            super.viewDidLoad()
            
            // ピッカー設定
@@ -44,8 +68,9 @@ class CalendarViewController: UIViewController, UIPickerViewDelegate {
            
            // デフォルト日付
            let formatter = DateFormatter()
-           formatter.dateFormat = "yyyy-MM-dd"
-           datePicker.date = formatter.date(from: "2018-5-14")!
+           formatter.dateFormat = "yyyy/MM/dd HH:mm a"
+           //datePicker.date = formatter.date(from: "2018-5-14")!
+           textField.text = "\(formatter.string(from: Date()))"
        }
        
        // 決定ボタン押下
@@ -54,7 +79,7 @@ class CalendarViewController: UIViewController, UIPickerViewDelegate {
            
            // 日付のフォーマット
            let formatter = DateFormatter()
-           formatter.dateFormat = "yyyy-MM-dd"
+           formatter.dateFormat = "yyyy/MM/dd HH:mm a"
            textField.text = "\(formatter.string(from: Date()))"
        }
     
