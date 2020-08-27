@@ -11,6 +11,15 @@ import UIKit
 class CalendarViewController: UIViewController, UIPickerViewDelegate {
     
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var hour: UILabel!
+    @IBOutlet weak var min: UILabel!
+    @IBOutlet weak var sec: UILabel!
+    var times = 0
+    @IBAction func addCalendar(_ sender: Any) {
+        print(times)
+    }
+    
+    // MARK: - DatePicker関連
        
        var datePicker: UIDatePicker = UIDatePicker()
        

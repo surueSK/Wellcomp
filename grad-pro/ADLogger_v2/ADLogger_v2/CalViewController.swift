@@ -15,7 +15,6 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
     @IBOutlet weak var totalHour: UILabel!
     @IBOutlet weak var totalMin: UILabel!
     @IBOutlet weak var totalSec: UILabel!
-    @IBOutlet weak var check: UIButton!
     
     @IBOutlet weak var bHour: UILabel!
     @IBOutlet weak var bMin: UILabel!
@@ -223,10 +222,23 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
         present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func toCalendar(_ sender: Any) {
+        self.performSegue(withIdentifier: "toCalendar", sender: nil)
+    }
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toCalendar" {
+            let nextVC = segue.destination as! CalendarViewController
+            let abuffer = UserDefaults.standard.integer(forKey: "aBuffer")
+            let cSum = cTime.reduce(0, +)+abuffer
+            nextVC.times = cSum
+        }
+        
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
