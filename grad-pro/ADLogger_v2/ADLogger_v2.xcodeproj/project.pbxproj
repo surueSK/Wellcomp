@@ -15,6 +15,9 @@
 		DA13C1AA24F3EE9D00930B8A /* ExpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13C1A924F3EE9D00930B8A /* ExpViewController.swift */; };
 		DA13C1AC24F4B52A00930B8A /* Exp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13C1AB24F4B52900930B8A /* Exp2ViewController.swift */; };
 		DA13C1AE24F70C1F00930B8A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13C1AD24F70C1F00930B8A /* CalendarViewController.swift */; };
+		DA13C1B024F7BFDD00930B8A /* ADLogger.png in Resources */ = {isa = PBXBuildFile; fileRef = DA13C1AF24F7BFDD00930B8A /* ADLogger.png */; };
+		DA13C1B224F7DFF800930B8A /* latte.png in Resources */ = {isa = PBXBuildFile; fileRef = DA13C1B124F7DFF800930B8A /* latte.png */; };
+		DA13C1B424F7E51F00930B8A /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = DA13C1B324F7E51F00930B8A /* loading.png */; };
 		DA23848F249DF5750062EDB6 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA23848E249DF5750062EDB6 /* SignViewController.swift */; };
 		DA238493249DF92E0062EDB6 /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA238492249DF92E0062EDB6 /* RegViewController.swift */; };
 		DAAC61BE24761FE80027F53C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC61BD24761FE80027F53C /* AppDelegate.swift */; };
@@ -64,6 +67,9 @@
 		DA13C1A924F3EE9D00930B8A /* ExpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpViewController.swift; sourceTree = "<group>"; };
 		DA13C1AB24F4B52900930B8A /* Exp2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exp2ViewController.swift; sourceTree = "<group>"; };
 		DA13C1AD24F70C1F00930B8A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		DA13C1AF24F7BFDD00930B8A /* ADLogger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ADLogger.png; path = ../../apppic/ADLogger/ADLogger.png; sourceTree = "<group>"; };
+		DA13C1B124F7DFF800930B8A /* latte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = latte.png; path = ../../apppic/ADLogger/latte.png; sourceTree = "<group>"; };
+		DA13C1B324F7E51F00930B8A /* loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading.png; path = ../../apppic/ADLogger/loading.png; sourceTree = "<group>"; };
 		DA23848E249DF5750062EDB6 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 		DA238492249DF92E0062EDB6 /* RegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
 		DAAC61BA24761FE80027F53C /* ADLogger_v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADLogger_v2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +191,9 @@
 				DAC4240224DE586C007B0A85 /* SettingTableViewController.swift */,
 				DAE8789A24C2C30A0020F17A /* TableViewCell.xib */,
 				DAC5E62624AEFA540088B4AA /* TimeViewController.swift */,
+				DA13C1B124F7DFF800930B8A /* latte.png */,
+				DA13C1AF24F7BFDD00930B8A /* ADLogger.png */,
+				DA13C1B324F7E51F00930B8A /* loading.png */,
 				DAAC61C924761FEE0027F53C /* Assets.xcassets */,
 				DAAC61CB24761FEE0027F53C /* LaunchScreen.storyboard */,
 				DAAC61CE24761FEE0027F53C /* Info.plist */,
@@ -323,8 +332,11 @@
 			files = (
 				DAAC61CD24761FEE0027F53C /* LaunchScreen.storyboard in Resources */,
 				DAE8789C24C2C30A0020F17A /* TableViewCell.xib in Resources */,
+				DA13C1B224F7DFF800930B8A /* latte.png in Resources */,
 				DAAC61CA24761FEE0027F53C /* Assets.xcassets in Resources */,
 				DAAC61C524761FE80027F53C /* Main.storyboard in Resources */,
+				DA13C1B024F7BFDD00930B8A /* ADLogger.png in Resources */,
+				DA13C1B424F7E51F00930B8A /* loading.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

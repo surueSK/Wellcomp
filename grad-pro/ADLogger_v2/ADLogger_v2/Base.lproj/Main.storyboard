@@ -15,13 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADLogger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZG-eA-V4F">
-                                <rect key="frame" x="78" y="307" width="258.5" height="72"/>
-                                <gestureRecognizers/>
-                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eb4-dz-uc7">
                                 <rect key="frame" x="129" y="537" width="156" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -30,16 +23,22 @@
                                     <segue destination="4T6-DH-yey" kind="show" id="LTr-IP-Uv3"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="latte.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lwi-n5-bB9">
+                                <rect key="frame" x="-92" y="88" width="560" height="404"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="404" id="2dp-gW-MOt"/>
+                                    <constraint firstAttribute="width" constant="560" id="UaG-5q-rdr"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.99329131839999996" green="0.93608611819999998" blue="0.8112849593" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eb4-dz-uc7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="02y-oS-6C3"/>
                             <constraint firstItem="eb4-dz-uc7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HmO-H8-9hO"/>
-                            <constraint firstItem="uZG-eA-V4F" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-105" id="OiR-TE-nVD"/>
-                            <constraint firstItem="eb4-dz-uc7" firstAttribute="top" secondItem="uZG-eA-V4F" secondAttribute="bottom" constant="158" id="fh4-Jy-All"/>
-                            <constraint firstItem="uZG-eA-V4F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iDN-8L-OMM"/>
-                            <constraint firstItem="uZG-eA-V4F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="la9-2a-dGL"/>
+                            <constraint firstItem="Lwi-n5-bB9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cPU-xp-sWR"/>
+                            <constraint firstItem="eb4-dz-uc7" firstAttribute="top" secondItem="Lwi-n5-bB9" secondAttribute="bottom" constant="45" id="lOz-ss-sGp"/>
                             <constraint firstItem="eb4-dz-uc7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rHc-1h-2uC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lwi-n5-bB9" secondAttribute="trailing" constant="-74" id="spf-4u-7AI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -245,15 +244,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" ADLogger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qW-U5-vJG">
-                                <rect key="frame" x="71" y="307" width="272" height="72"/>
-                                <gestureRecognizers/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="55"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCB-bA-fqI">
-                                <rect key="frame" x="146.5" y="561" width="121.5" height="42"/>
+                                <rect key="frame" x="146.5" y="511" width="121.5" height="42"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -265,7 +257,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XI6-69-AyQ">
-                                <rect key="frame" x="160.5" y="628" width="93.5" height="42"/>
+                                <rect key="frame" x="160.5" y="578" width="93.5" height="42"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -276,8 +268,15 @@
                                     <segue destination="E84-RL-nqi" kind="show" id="XtS-5u-TKs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6W-gh-M0W">
-                                <rect key="frame" x="153.5" y="494" width="107" height="42"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ADLogger.png" translatesAutoresizingMaskIntoConstraints="NO" id="d0x-H4-dab">
+                                <rect key="frame" x="-275" y="266" width="964" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="d0x-H4-dab" secondAttribute="height" multiplier="623:64" constant="-184.65625" id="ELC-8J-Lpw"/>
+                                    <constraint firstAttribute="height" constant="118" id="jjZ-8o-5WY"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="px9-De-gYc">
+                                <rect key="frame" x="153.5" y="444" width="107" height="42"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -285,21 +284,20 @@
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="mwM-7i-uPw" kind="show" id="Gs5-Hb-nUl"/>
+                                    <segue destination="mwM-7i-uPw" kind="show" id="L0w-s9-Kld"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99329131839999996" green="0.93608611819999998" blue="0.8112849593" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="h6W-gh-M0W" firstAttribute="top" secondItem="0qW-U5-vJG" secondAttribute="bottom" constant="115" id="1AE-R5-hJs"/>
                             <constraint firstItem="XI6-69-AyQ" firstAttribute="centerX" secondItem="pgx-HH-0t5" secondAttribute="centerX" id="6wn-2m-Bic"/>
-                            <constraint firstItem="0qW-U5-vJG" firstAttribute="centerY" secondItem="pgx-HH-0t5" secondAttribute="centerY" constant="-105" id="Riv-hX-sur"/>
                             <constraint firstItem="lCB-bA-fqI" firstAttribute="centerX" secondItem="pgx-HH-0t5" secondAttribute="centerX" id="SSC-De-qvB"/>
-                            <constraint firstItem="0qW-U5-vJG" firstAttribute="centerX" secondItem="pgx-HH-0t5" secondAttribute="centerX" id="T2c-GD-uup"/>
-                            <constraint firstItem="0qW-U5-vJG" firstAttribute="centerX" secondItem="pgx-HH-0t5" secondAttribute="centerX" id="TTM-S7-0uq"/>
+                            <constraint firstItem="lCB-bA-fqI" firstAttribute="top" secondItem="px9-De-gYc" secondAttribute="bottom" constant="25" id="U1a-cp-HyL"/>
+                            <constraint firstItem="d0x-H4-dab" firstAttribute="centerX" secondItem="pgx-HH-0t5" secondAttribute="centerX" id="V3y-qt-osR"/>
+                            <constraint firstItem="d0x-H4-dab" firstAttribute="top" secondItem="bkW-a1-igF" secondAttribute="top" constant="178" id="VXE-bL-OQp"/>
+                            <constraint firstItem="px9-De-gYc" firstAttribute="centerX" secondItem="pgx-HH-0t5" secondAttribute="centerX" id="WYL-TG-DZQ"/>
                             <constraint firstItem="XI6-69-AyQ" firstAttribute="top" secondItem="lCB-bA-fqI" secondAttribute="bottom" constant="25" id="bf8-kH-tLC"/>
-                            <constraint firstItem="h6W-gh-M0W" firstAttribute="centerX" secondItem="pgx-HH-0t5" secondAttribute="centerX" id="g38-J2-0dY"/>
-                            <constraint firstItem="lCB-bA-fqI" firstAttribute="top" secondItem="h6W-gh-M0W" secondAttribute="bottom" constant="25" id="m9D-cK-ivo"/>
+                            <constraint firstItem="px9-De-gYc" firstAttribute="top" secondItem="d0x-H4-dab" secondAttribute="bottom" constant="60" id="dZK-B5-x6O"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bkW-a1-igF"/>
                     </view>
@@ -2224,8 +2222,10 @@ Cg
         </scene>
     </scenes>
     <resources>
+        <image name="ADLogger.png" width="1246" height="412"/>
         <image name="calendar.badge.plus" catalog="system" width="128" height="101"/>
         <image name="exclamationmark.bubble.fill" catalog="system" width="128" height="110"/>
+        <image name="latte.png" width="1000" height="995"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="timer" catalog="system" width="128" height="121"/>
     </resources>
