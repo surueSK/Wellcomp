@@ -51,7 +51,7 @@ class CalendarViewController: UIViewController, UIPickerViewDelegate {
            super.viewDidLoad()
            
            // ピッカー設定
-        datePicker.datePickerMode = UIDatePicker.Mode.dateAndTime
+           datePicker.datePickerMode = UIDatePicker.Mode.dateAndTime
            datePicker.timeZone = NSTimeZone.local
            datePicker.locale = Locale.current
            textField.inputView = datePicker
@@ -69,7 +69,6 @@ class CalendarViewController: UIViewController, UIPickerViewDelegate {
            // デフォルト日付
            let formatter = DateFormatter()
            formatter.dateFormat = "yyyy/MM/dd HH:mm a"
-           //datePicker.date = formatter.date(from: "2018-5-14")!
            textField.text = "\(formatter.string(from: Date()))"
        }
        
