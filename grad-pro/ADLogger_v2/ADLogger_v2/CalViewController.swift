@@ -58,7 +58,11 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
             func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
                 // Cellの内容を決める（超重要）
                 let cell = tableView.dequeueReusableCell(withIdentifier: "calCell", for: indexPath)as? TableViewCell
-                cell?.textLabel?.text = "\([String](dic.keys)[indexPath.row]) ： \(aveTime[indexPath.row]/3600):\(aveTime[indexPath.row]/60 % 60):\(aveTime[indexPath.row] % 60)"
+                let hour = aveTime[indexPath.row]/3600
+                let min = aveTime[indexPath.row]/60 % 60
+                let sec = aveTime[indexPath.row] % 60
+                //String(format: "%02d", hour)
+                cell?.textLabel?.text = "\([String](dic.keys)[indexPath.row]) ： \(String(format: "%02d", hour)):\(String(format: "%02d", min)):\(String(format: "%02d", sec))"
                 return cell!
                 
             }
@@ -143,15 +147,15 @@ class CalViewController: UIViewController,UITableViewDataSource, UITableViewDele
         let fbuffer = UserDefaults.standard.integer(forKey: "fBuffer")
         let cSum = cTime.reduce(0, +)+abuffer
         let bSum = bTime.reduce(0, +)
-        totalHour.text = String(cSum/3600)
-        totalMin.text = String(cSum/60 % 60)
-        totalSec.text = String(cSum % 60)
-        bHour.text = String(bSum/3600)
-        bMin.text = String(bSum/60 % 60)
-        bSec.text = String(bSum % 60)
-        b2Hour.text = String(abuffer/3600)
-        b2Min.text = String(abuffer/60 % 60)
-        b2Sec.text = String(abuffer % 60)
+        totalHour.text = String(format: "%02d", cSum/3600)
+        totalMin.text = String(format: "%02d", cSum/60 % 60)
+        totalSec.text = String(format: "%02d", cSum % 60)
+        bHour.text = String(format: "%02d", bSum/3600)
+        bMin.text = String(format: "%02d", bSum/60 % 60)
+        bSec.text = String(format: "%02d", bSum % 60)
+        b2Hour.text = String(format: "%02d", abuffer/3600)
+        b2Min.text = String(format: "%02d", abuffer/60 % 60)
+        b2Sec.text = String(format: "%02d", abuffer % 60)
         
         if fbuffer == 0{
             bHour.textColor = UIColor.red
