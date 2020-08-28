@@ -46,7 +46,7 @@ class CalendarViewController: UIViewController, UIPickerViewDelegate {
             present(alert, animated: true, completion: nil)
         }else{
             
-            //allowAuthorization()
+            allowAuthorization() //Calendarへのauth
             
             if bool == 0{
                 print(taskname.text!)
@@ -57,7 +57,7 @@ class CalendarViewController: UIViewController, UIPickerViewDelegate {
             }
         }
     }
-    
+    // MARK: - Calendarへのauth
     func allowAuthorization() {
         if getAuthorization_status() {
             // 許可されている
