@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import EventKit
 
 class CalendarViewController: UIViewController, UIPickerViewDelegate {
-    
+    let eventStore = EKEventStore()
     var times = 0
     var bool = 0
     
@@ -32,7 +33,77 @@ class CalendarViewController: UIViewController, UIPickerViewDelegate {
     }
     
     @IBAction func addCalendar(_ sender: Any) {
-        
+        if taskname.text == nil{
+
+            let alert: UIAlertController = UIAlertController(title: "Error!", message: "カレンダーに登録したいタスク名を入力してください", preferredStyle:  UIAlertController.Style.alert)
+
+            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+                // ボタンが押された時の処理を書く（クロージャ実装）
+                (action: UIAlertAction!) -> Void in
+                print("OK")
+            })
+            alert.addAction(defaultAction)
+            present(alert, animated: true, completion: nil)
+        }else{
+            
+            //allowAuthorization()
+            
+            if bool == 0{
+                print(taskname.text!)
+                print(times)
+            }else{
+                print(taskname.text!)
+                print(times*2)
+            }
+        }
+    }
+    
+    func allowAuthorization() {
+        if getAuthorization_status() {
+            // 許可されている
+            return
+        } else {
+            // 許可されていない
+            eventStore.requestAccess(to: .event, completion: {
+            (granted, error) in
+                if granted {
+                    return
+                }
+                else {
+                    print("Not allowed")
+                }
+            })
+
+        }
+    }
+
+    // 認証ステータスを確認する
+    func getAuthorization_status() -> Bool {
+        // 認証ステータスを取得
+        let status = EKEventStore.authorizationStatus(for: .event)
+
+        // ステータスを表示 許可されている場合のみtrueを返す
+        switch status {
+        case .notDetermined:
+            print("NotDetermined")
+            return false
+
+        case .denied:
+            print("Denied")
+            return false
+
+        case .authorized:
+            print("Authorized")
+            return true
+
+        case .restricted:
+            print("Restricted")
+            return false
+            
+        @unknown default:
+            print("unknown")
+            return false
+        }
     }
     
     // MARK: - ADLoggerの時間表示
