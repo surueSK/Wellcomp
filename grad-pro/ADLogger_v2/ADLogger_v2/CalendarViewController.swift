@@ -45,17 +45,8 @@ class CalendarViewController: UIViewController, UIPickerViewDelegate {
             alert.addAction(defaultAction)
             present(alert, animated: true, completion: nil)
         }else{
-            
             allowAuthorization() //Calendarへのauth
             addEvent()
-            
-            if bool == 0{
-                print(taskname.text!)
-                print(times)
-            }else{
-                print(taskname.text!)
-                print(times*2)
-            }
         }
     }
     // MARK: - Calendarへのauth
@@ -108,17 +99,27 @@ class CalendarViewController: UIViewController, UIPickerViewDelegate {
     }
     // MARK: - Calendarへの追加
     func addEvent() {
-        // イベントの情報を準備
-        let startDate = NSDate()
         let cal = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!
-        let endDate = cal.date(byAdding: .hour, value: 2, to: startDate as Date, options: NSCalendar.Options())!
-        let title = "カレンダーテストイベント"
+        let title = taskname.text!
         let defaultCalendar = eventStore.defaultCalendarForNewEvents
-        // イベントを作成して情報をセット
         let event = EKEvent(eventStore: eventStore)
+        
+        if bool == 0{
+            // イベントの情報を準備
+            let startDate = datePicker.date
+            let endDate = cal.date(byAdding: .minute, value: times/60 % 60, to: startDate as Date, options: NSCalendar.Options())!
+            // イベントを作成して情報をセット
+            event.startDate = startDate as Date
+            event.endDate = endDate
+        }else{
+            // イベントの情報を準備
+            let endDate = datePicker.date
+            let startDate = cal.date(byAdding: .minute, value: -times/60 % 60, to: endDate as Date, options: NSCalendar.Options())!
+            event.startDate = startDate as Date
+            event.endDate = endDate
+        }
+        // イベントを作成して情報をセット
         event.title = title
-        event.startDate = startDate as Date
-        event.endDate = endDate
         event.calendar = defaultCalendar
         // イベントの登録
         do {
@@ -126,7 +127,6 @@ class CalendarViewController: UIViewController, UIPickerViewDelegate {
         } catch let error {
             print(error)
         }
-
     }
     
     // MARK: - ADLoggerの時間表示
