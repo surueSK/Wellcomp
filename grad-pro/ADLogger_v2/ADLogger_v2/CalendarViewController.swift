@@ -47,6 +47,7 @@ class CalendarViewController: UIViewController, UIPickerViewDelegate {
         }else{
             
             allowAuthorization() //Calendarへのauth
+            addEvent()
             
             if bool == 0{
                 print(taskname.text!)
@@ -104,6 +105,28 @@ class CalendarViewController: UIViewController, UIPickerViewDelegate {
             print("unknown")
             return false
         }
+    }
+    // MARK: - Calendarへの追加
+    func addEvent() {
+        // イベントの情報を準備
+        let startDate = NSDate()
+        let cal = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!
+        let endDate = cal.date(byAdding: .hour, value: 2, to: startDate as Date, options: NSCalendar.Options())!
+        let title = "カレンダーテストイベント"
+        let defaultCalendar = eventStore.defaultCalendarForNewEvents
+        // イベントを作成して情報をセット
+        let event = EKEvent(eventStore: eventStore)
+        event.title = title
+        event.startDate = startDate as Date
+        event.endDate = endDate
+        event.calendar = defaultCalendar
+        // イベントの登録
+        do {
+            try eventStore.save(event, span: .thisEvent)
+        } catch let error {
+            print(error)
+        }
+
     }
     
     // MARK: - ADLoggerの時間表示
