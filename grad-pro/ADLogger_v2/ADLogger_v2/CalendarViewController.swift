@@ -10,12 +10,14 @@ import UIKit
 
 class CalendarViewController: UIViewController, UIPickerViewDelegate {
     
-    @IBOutlet weak var textField: UITextField!
+    var times = 0
+    var bool = 0
+    
+    @IBOutlet weak var taskname: UITextField!
     @IBOutlet weak var hour: UILabel!
     @IBOutlet weak var min: UILabel!
     @IBOutlet weak var sec: UILabel!
-    var times = 0
-    var bool = 0
+    @IBOutlet weak var textField: UITextField!
     
     @IBOutlet weak var tseg: UISegmentedControl!
     @IBAction func timebool(_ sender: Any) {
@@ -30,7 +32,6 @@ class CalendarViewController: UIViewController, UIPickerViewDelegate {
     }
     
     @IBAction func addCalendar(_ sender: Any) {
-        
         
     }
     
@@ -68,7 +69,7 @@ class CalendarViewController: UIViewController, UIPickerViewDelegate {
            
            // デフォルト日付
            let formatter = DateFormatter()
-           formatter.dateFormat = "yyyy/MM/dd HH:mm a"
+           formatter.dateFormat = "yyyy/MM/dd HH:mm"
            textField.text = "\(formatter.string(from: Date()))"
        }
        
@@ -78,8 +79,9 @@ class CalendarViewController: UIViewController, UIPickerViewDelegate {
            
            // 日付のフォーマット
            let formatter = DateFormatter()
-           formatter.dateFormat = "yyyy/MM/dd HH:mm a"
-           textField.text = "\(formatter.string(from: Date()))"
+           formatter.dateFormat = "yyyy/MM/dd HH:mm"
+           textField.text = "\(formatter.string(from: datePicker.date))"
+           view.endEditing(true)
        }
     
     

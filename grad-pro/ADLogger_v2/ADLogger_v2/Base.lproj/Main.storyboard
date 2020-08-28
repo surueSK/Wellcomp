@@ -722,6 +722,7 @@
                         <outlet property="hour" destination="WJn-dg-UoK" id="CWW-cU-Xcz"/>
                         <outlet property="min" destination="DKE-do-e4g" id="M5b-zi-Vbp"/>
                         <outlet property="sec" destination="uQn-z0-qsH" id="dQX-Ud-sb7"/>
+                        <outlet property="taskname" destination="PHg-nL-Hbr" id="kbK-Bo-vWx"/>
                         <outlet property="textField" destination="o0Y-PO-M7s" id="Pvg-MA-TQ6"/>
                         <outlet property="tseg" destination="pEO-81-WmU" id="Mk1-wd-bsD"/>
                     </connections>
