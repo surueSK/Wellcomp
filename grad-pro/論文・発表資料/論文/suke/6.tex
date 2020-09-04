@@ -132,40 +132,8 @@ UITableViewCellはaccessoryTypeにcheckmarkが指定されており，UITableVie
 
 \section{サーバ側実装}
 サーバ及びデータベースには，MBaaSであるBack4App~\cite{back4app}を利用する．
-データベースにはユーザの認証情報を格納するUserクラスと， 学習記録を格納するStudyRecordObjectが存在する．
-Userクラスの例を表~\ref{tb:user_class}に，tasktimeObjectの例の例を表~\ref{tb:tasktime_object}に示す．
-
-\begin{table}[htb]
-\begin{center}
-  \begin{tabular}{|l|l|} \hline
-    カラム名 & 値 \\ \hline
-    objectId & ``2rg6ZJp7GQ" \\
-    username & ``testuser" \\
-    password & ``testpassword" \\
-    ACL & ``2rg6ZJp7GQ" \\
-	createdAt & 2020-7-6T07:24:08.810Z  \\
-	updatedAt & 2020-7-6T07:24:08.810Z \\ \hline
-  \end{tabular}
-  \caption{Userクラスの例}
-  \label{tb:user_class}
-\end{center}
-\end{table}
-
-\begin{table}[htb]
-\begin{center}
-  \begin{tabular}{|l|l|} \hline
-    カラム名 & 値 \\ \hline
-    objectId & ``sRPnWYv0t6" \\
-    username & ``testuser" \\
-    taskname & ``test1" \\
-    studyTime & 561 \\ 
-    createdAt & 2020-7-6T07:24:08.810Z  \\
-    updatedAt & 2020-7-6T07:24:08.810Z \\ \hline
-  \end{tabular}
-  \caption{tasktimeObjectの例}
-  \label{tb:tasktime_object}
-\end{center}
-\end{table}
+データベースにはユーザの認証情報を格納するUserクラスと， 行動時間記録を格納するtasktimeObject，アンケート 用のsurveyObject，survey2Objectが存在する．
+Userクラスの例を表~\ref{tb:user_class}，tasktimeObjectの例の例を表~\ref{tb:tasktime_object}，surveyObjectの例の例を表~\ref{tb:survey_object}，survey2Objectの例の例を表~\ref{tb:survey2_object}に示す．
 
 \section{まとめ}
 本章では，ADLoggerシステムの実装について述べた．
