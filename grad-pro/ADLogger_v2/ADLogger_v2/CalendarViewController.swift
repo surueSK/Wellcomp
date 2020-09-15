@@ -124,6 +124,15 @@ class CalendarViewController: UIViewController, UIPickerViewDelegate {
         // イベントの登録
         do {
             try eventStore.save(event, span: .thisEvent)
+            let alert: UIAlertController = UIAlertController(title: "Added!", message: "カレンダーに予定が追加されました", preferredStyle:  UIAlertController.Style.alert)
+
+            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+                // ボタンが押された時の処理を書く（クロージャ実装）
+                (action: UIAlertAction!) -> Void in
+                print("OK")
+            })
+            alert.addAction(defaultAction)
+            present(alert, animated: true, completion: nil)
         } catch let error {
             print(error)
         }
@@ -136,7 +145,6 @@ class CalendarViewController: UIViewController, UIPickerViewDelegate {
         min.text = String(format: "%02d", times/60 % 60)
         sec.text = String(format: "%02d", times % 60)
     }
-    
     // MARK: - DatePicker関連
        
        var datePicker: UIDatePicker = UIDatePicker()
