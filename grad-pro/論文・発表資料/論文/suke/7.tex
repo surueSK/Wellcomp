@@ -14,35 +14,110 @@ ADLogger導入によって，時間管理に対する苦手意識・行動への
 \subsection{実験評価手法}
 今回の評価実験では，作成法\cite{Oguro1961}\cite{Tayama2018}を用いた3回の計測実験を慶應義塾大学の学生男女30名(目標)に対し1ヶ月実施した．
 始めに，被験者は事前に各自保持しているiPhoneにADLoggerをインストールして貰う．
-インストール後，実験で用いたい日常生活動作を3タスク程度，各タスク所要時間5分から15分程度を決定し，タスク名，タスク毎の必要時間予測，タスクを連続で行った時の必要時間予測をADLoggerのアンケート画面から回答する．後日zoom\cite{zoom}を用いながら実際に行動して貰い実測値を計測する．(\UTF{2460})
+インストール後，実験で用いたい日常生活動作を3タスク程度，各タスク所要時間5分から15分程度を決定し，タスク名，タスク毎の必要時間予測，タスクを連続で行った時の必要時間予測をADLoggerのアンケート画面から回答する．後日zoom\cite{zoom}を用いながら実際に行動して貰い実測値を計測する．
 
 その後，被験者が実験用に定めた動作3タスク分を初期設定状態のADLoggerを用いて2週間程度各自計測して貰う．
-2週間経過後，再びアンケートを回答した上でzoom\cite{zoom}を用いながら実際に行動して貰い計測を行う．(\UTF{2461})
+2週間経過後，再びアンケートを回答した上でzoom\cite{zoom}を用いながら実際に行動して貰い計測を行う．
 
 更に，ADLoggerのADLogを用いながら動作3タスク分を更に2週間程度各自計測して貰う．
-2週間経過後，再びアンケートを回答した上でzoom\cite{zoom}を用いながら実際に行動して貰い計測を行う．(\UTF{2462})
+2週間経過後，再びアンケートを回答した上でzoom\cite{zoom}を用いながら実際に行動して貰い計測を行う．
 
 2回目と3回目のアンケート終了後は，日数が経過しないうちにzoom\cite{zoom}を用いて実験者と面会しインタビューを行う．
 
-評価は\UTF{2460}，\UTF{2461}，\UTF{2462}時点における見積もりと実測値とのずれの評価，及び心身面の状態変化を比較する．
-ずれの評価については全体の分布を反復測定分散分析(Repeated Measured ANOVA)を用いて評価した後，四分位数を用いてグループを分けた時のそれぞれの変化量を確認する．
+評価は上記の全3回における実測値およびアンケートで申告した見積もりとのずれの評価，及び心身面の状態変化を比較する．
+ずれの評価は反復測定分散分析(Repeated Measured ANOVA)および四分位数を用いてグループを分けた時のそれぞれの変化量を確認する．
 
 心身面の状態変化に関しては下記に記すインタビューに基づき評価する．
-インタビューにて質問する項目は下記の通りである．%ストレスの減少も？
-\begin{enumerate}
-  \item 実験前における時間管理に対する苦手意識の有無
-  \item 時間管理に対するストレスの変化
-  \item 時間管理に対する苦手意識の変化
-  \item 本アプリケーションの見積もり予測に対する主観としての信憑生
-  \item 本アプリケーションの良かった点・改善すべき点
-  \item 本アプリケーションを可能であれば使い続けたいか否か
-  \item ↑の理由
-  \item その他感想など
-\end{enumerate}
+インタビューにて質問する項目は付録Aにて記載した．%ストレスの減少も？
 
 \section{評価結果}
+〜〜ここからは仮置き〜〜\\
+本節では，本システムの導入後時間管理に対し与える影響について，本評価実験で得られた評価結果を示す．
+まず，3回の計測における見積もりと実測値のずれはの分布は以下の様になった．(図~\ref{fig:hakohige}参照)
+
+\begin{figure}[hb]
+	\begin{center}
+	\fbox{\includegraphics[width=10cm]{images/7/1.png}}
+	\caption{3回の計測における見積もりと実測値のずれ(ダミー)}
+	\label{fig:hakohige}
+	\end{center}
+\end{figure}
+
+その上で反復測定分散分析(Repeated Measured ANOVA)を用いて分析したところ，〇〇だった．
+
+また，1回目の計測の結果を元に被験者グループを下記の4つに分類した．(実験結果の四分位数を元に調整)
+
+\begin{table}[htb]
+  \begin{center}
+  \begin{tabular}{|c|c|c|} \hline
+    1 & 大前倒し群 & 予測の方がX分以上長かった群  \\ \hline
+    2 & 小前倒し群 & 予測の方がX分未満長かった群  \\ \hline
+    3 & 小遅延群 & 実測の方がX分以上長かった群  \\ \hline
+    4 & 大遅延群 & 実測の方がX分未満長かった群  \\ \hline 
+  \end{tabular}
+    \caption{バッファモードの選択分岐}
+    \label{tb:buffer}
+  \end{center}
+\end{table}
+
+その後計測2回分の経過をグループ別に表すとそれぞれ図~\ref{fig:2}，~\ref{fig:3}，~\ref{fig:4}，~\ref{fig:5}の様になった．
+
+\begin{figure}[htb]
+\begin{center}
+\begin{tabular}{c}
+
+  \begin{minipage}[htb]{\linewidth}
+  \begin{center}
+  \includegraphics[width=12cm]{images/7/2.png}
+  \caption{大前倒し群の推移}
+  \label{fig:2}
+  \end{center}
+  \end{minipage}
+  
+  \\
+  
+  \begin{minipage}[htb]{\linewidth}
+  \begin{center}
+  \includegraphics[width=12cm]{images/7/3.png}
+  \caption{小前倒し群の推移}
+  \label{fig:3}
+  \end{center}
+  \end{minipage}
+
+\end{tabular}
+\end{center}
+\end{figure}
+
+\begin{figure}[htb]
+\begin{center}
+\begin{tabular}{c}
+
+  \begin{minipage}[htb]{\linewidth}
+  \begin{center}
+  \includegraphics[width=12cm]{images/7/4.png}
+  \caption{小遅延群の推移}
+  \label{fig:4}
+  \end{center}
+  \end{minipage}
+  
+  \\
+  
+  \begin{minipage}[htb]{\linewidth}
+  \begin{center}
+  \includegraphics[width=12cm]{images/7/5.png}
+  \caption{大遅延群の遷移}
+  \label{fig:5}
+  \end{center}
+  \end{minipage}
+
+\end{tabular}
+\end{center}
+\end{figure}
+
+\subsection{実験終了後アンケート}
 
 \section{考察}
+結果が出次第記述する．
 
 \section{まとめ}
 本章では，評価実験にの概要及び手法についてまとめたた上で，結果・考察を述べた．
