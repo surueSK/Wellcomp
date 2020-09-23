@@ -71,46 +71,14 @@ T_{E} = (O + 4M + P) ÷ 6
 今日では特にパフォーマンスやストレスなど様々な観点から個人管理面においても適切な時間管理が求められている．\cite{Barling1996}\cite{Britton1991}\cite{Burt1994}\cite{Macan1994}．
 
 \section{時間管理をサポートするシステム}
-今日，日常生活動作を基調とし，身近な時間管理をサポートするシステムが複数開発されている．私は現在開発されたアプリケーションの種類を以下の3種類に分類した(表 ~\ref{tb:app})．
-
-\begin{table}[htb]
-\begin{center}
-  \begin{tabular}{|l|l|} \hline
-   1 & タイムログ \\ \hline
-   2 & ルーチン補助 \\ \hline
-   3 & ストップウォッチ \\ \hline
-  \end{tabular}
-  \caption{時間管理ツールの分類}
-  \label{tb:app}
-\end{center}
-\end{table}
-
-1つ目のタイムログに関しては日毎のタスクをなるべく多く記録・計測を行い，一日の時間の使い方を可視化する事を目的としているものである．
-このシステムの先行事例には たすくま\cite{Taskuma} や toggl\cite{toggl} (図~\ref{fig:toggl})が挙げられる．
+今日，日常生活動作を基調とし，身近な時間管理をサポートするシステムが複数開発されている．
+まず，身近な時間管理をサポートするシステムにはトップダウン式のものとボトムアップ式のものがある．
+トップダウン式は予め秒数が固定されたルーティンに沿って時間を遂行する事を補助するものであり，
+例えばルーチンタイマー\cite{RoutineTimer} (図~\ref{fig:routine})やポモドーロテクニック\cite{pomodoro} などが挙げられる，
 \\
 \begin{figure}[ht]
 \begin{center}
 \begin{tabular}{c}
-
-  	\begin{minipage}[b]{0.5\linewidth}
-	\begin{center}
-		\fbox{\includegraphics[width=10cm]{images/2/toggl.png}}
-		\caption{togglによるログの可視化}
-		\label{fig:toggl}
-	\end{center}
-  	\end{minipage}
-\end{tabular}
-\end{center}
-\end{figure}
-\\
-
-2つ目のルーチン補助に関しては，自分がこれから行いたいルーチンをリマインド音などを用いてコントロールするものである．
-このシステムの先行事例には自分でやる事を設定する ルーチンタイマー\cite{RoutineTimer} (図~\ref{fig:routine})やポモドーロテクニック\cite{pomodoro} に則ったリマインドアプリなどがある．
-\\
-\begin{figure}[ht]
-\begin{center}
-\begin{tabular}{c}
-
   	\begin{minipage}[b]{0.5\linewidth}
 	\begin{center}
 		\fbox{\includegraphics[width=5cm]{images/2/routine.png}}
@@ -122,12 +90,37 @@ T_{E} = (O + 4M + P) ÷ 6
 \end{center}
 \end{figure}
 \\
-3つ目のストップウォッチに関しては，ストップウォッチを主機能として時間把握に役立てようとするものであり，用途・目的は様々である．
-例えば時間の流れをイラストで表現するもの(ねずみタイマー\cite{MouseTimer}(図~\ref{fig:mouse}))や時間把握の精度をミニゲームに昇華させたもの\cite{JUSTTIME}，ストップウォッチとメモ帳を組み合わせたもの\cite{StopNote}などが挙げられる．
+一方，ボトムアップ式は時間の使い方を可視化する事を主眼としているものである．
+
+ボトムアップ式の時間管理システムは図~\ref{fig:bottomup}の様に大別が可能である．
 \begin{figure}[ht]
 \begin{center}
 \begin{tabular}{c}
-
+  	\begin{minipage}[b]{0.5\linewidth}
+	\begin{center}
+		\fbox{\includegraphics[width=12cm]{images/2/bottom.png}}
+		\caption{ボトムアップ式の時間管理システムに関する分類}
+		\label{fig:bottomup}
+	\end{center}
+  	\end{minipage}
+\end{tabular}
+\end{center}
+\end{figure}
+まずは行動をタスク別に計測を行う事で過去自分の使った時間を記録し，可視化する事で振り返りに役立てるシステムである．
+例えばストップウォッチとメモ帳を組み合わせたStop\&Note\cite{pomodoro}や日毎の時間傾向を可視化するたすくま\cite{Taskuma}(図~\ref{fig:taskuma}))といったシステムが挙げられる．
+次に，ある時間からの経過時間を可視化する事によって現在の経過時間把握を補助するシステムである．
+所謂ストップウォッチは勿論の事，例えば時間の流れをイラストで表現するもの(ねずみタイマー\cite{MouseTimer}(図~\ref{fig:mouse}))や時間把握の精度をミニゲームに昇華させたもの\cite{JUSTTIME}などが挙げられる．
+\begin{figure}[ht]
+\begin{center}
+\begin{tabular}{c}
+  	\begin{minipage}[b]{0.5\linewidth}
+	\begin{center}
+		\fbox{\includegraphics[width=5cm]{images/2/taskuma.png}}
+		\caption{たすくまによる一日の可視化}
+		\label{fig:taskuma}
+	\end{center}
+  	\end{minipage}
+\\
   	\begin{minipage}[b]{0.5\linewidth}
 	\begin{center}
 		\fbox{\includegraphics[width=5cm]{images/2/mouse.png}}
@@ -135,10 +128,21 @@ T_{E} = (O + 4M + P) ÷ 6
 		\label{fig:mouse}
 	\end{center}
   	\end{minipage}
+	
+	\begin{minipage}[b]{0.5\linewidth}
+	\begin{center}
+		\fbox{\includegraphics[width=5cm]{images/2/willdo.png}}
+		\caption{WillDoによる未来予測}
+		\label{fig:mouse}
+	\end{center}
+  	\end{minipage}
 \end{tabular}
 \end{center}
 \end{figure}
 
+最後に，行動をタスク別に計測する事によって自分の時間傾向をシステム側が把握し，未来自分がどうなるかを予測するシステムである．
+この方向性を持つシステムは現在限られているものの，例えばWillDo\cite{willdo}(図~\ref{fig:taskuma}))が挙げられる．
+WillDoは一日の行動を記録することによって，特定のプロジェクトが目標達成までに毎日どれだけかけるべきかを提示する．
 \section{まとめ}
 本章では，本研究における関連研究を整理し，問題意識を洗い出した．
 次章では，筆者が本研究に先立ち行った研究について述べ，問題意識を洗い出す．
