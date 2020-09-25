@@ -11,49 +11,114 @@ ADLogger導入によって，行動・意識の変容が生じるかどうか評
 本研究では，複数タスクにかかる所要時間の予測に関して被験者の予測とADLoggerの予測の差異を比較する事，
 ADLogger導入によって，時間管理に対する苦手意識・行動への変化が起こる事を目的としている．
 
-\subsection{実験手法}%ーーーーーーーーーーーー！！！ここから要推敲！！！ーーーーーーーーーーーーーーーーーーーー
-今回の評価実験では，作成法\cite{Oguro1961}\cite{Tayama2018}(?)を用いた実験を慶應義塾大学の学生男女30名(目標)に対し実施した．
-被験者は実験で用いたい日常生活動作(3タスク程度，各タスク所要時間10分~20分(or5~10分)程度)を決定し，
-事前に自身が保持しているiPhoneにADLoggerをインストールしてもらう．
-インストール後，ADLoggerを初期設定のままの状態で決定したタスクを時計を見ずにそれぞれ3データ程度記録する．
-3データ取得終了後は被験日前日までに各動作の所要総時間総時間，総所要時間を報告する．
-予定した被験日時にzoom\cite{zoom}を用いてオンライン会議に参加して貰う．
-被験者が入室次第，ADLoggerの設定を変更し，閲覧後実際に行動を行って貰う．
-一行動毎にADLoggerに計測を行い，全行動が終了次第zoomに戻り実験者に終了した旨を伝える．
+\subsection{実験評価手法}
+今回の評価実験では，被験者に時間の長さを教示し，その長さを産生させる時間産生法\cite{Oguro1961}\cite{Tayama2018}を参考にし3回の計測実験を慶應義塾大学の学生男女30名(目標)に対し1ヶ月実施した．
+始めに，被験者は事前に各自保持しているiPhoneにADLoggerをインストールして貰う．
+インストール後，実験で用いたい日常生活動作を3タスク程度，各タスク所要時間5分から15分程度を決定し，タスク名，タスク毎の必要時間予測，タスクを連続で行った時の必要時間予測をADLoggerのアンケート画面から回答する．後日zoom\cite{zoom}を用いながら実際に行動して貰い実測値を計測する．
 
-ーーーー以下メモーーーーーーーーーーーーーーーーーー
-被験当日
-　-実験を知っている人と知らない人で分ける
-本人の動機付けが従わない場合や時間に対する自己統制感が少ない場合は時間管理の能力以外で実験に影響を与える可能性がある(松田, 2004)．
-ーーーーーーーーーーーーーーーーーーーーーーーーーー
+その後，被験者自身が実験用に定めた動作3タスク分に関しては被験者は該当するタスクを日常生活で行う度にアプリケーションに計測して貰う．
+尚，ADLoggerの設定は初期設定のまま動かさないものとする．
+2週間経過後，再びアンケートを回答した上でzoom\cite{zoom}を用いながら実際に行動して貰い計測を行う．
 
-\subsection{評価手法}
-被験者が3データ記録し，各動作の所要総時間総時間，総所要時間を報告後に以下の様に被験者のグループ分けを行う．
-\begin{table}[htb]
-\begin{center}
-  \begin{tabular}{|l|l|} \hline
-   短見積もり群 & 少なくとも1つのタスクを平均より低く申告した群 \\ \hline
-   標準見積もり群 & 全てのタスクを平均〜平均＋標準偏差*3まで報告した群\\ \hline
-   長見積もり群 & 少なくとも1つのタスクを平均＋標準偏差*4以上を報告した群 \\ \hline
-  \end{tabular}
-  \caption{見積もりに関するグループ分け一覧}
-  \label{tb:Lakein}
-\end{center}
-\end{table}
-グループ分け後はADLogger閲覧後zoomで行う行動前に見積もりに変化が起きたかを検証する．
+その後，今度はADLoggerの設定を変更しADLogを使用できる状態にしながら更に動作3タスクを2週間程度各自継続的に計測して貰う．
+2週間経過後，再びアンケートを回答した上でzoom\cite{zoom}を用いながら実際に行動して貰い計測を行う．
 
-ーーーー以下メモーーーーーーーーーーーーーーーーーー
-・アプリの方が正しい群と自分で見積もる方が正しい群に分ける
-・何をもって「正しい」と言うかは検討の必要有
-・仮説検証で効果も見る？
-ーーーーーーーーーーーーーーーーーーーーーーーーーー
+2回目と3回目のアンケート終了後は，日数が経過しないうちにzoom\cite{zoom}を用いて実験者と面会しインタビューを行う．
 
-\subsection{実験終了後アンケート}
-実験終了後のアンケートにおいて，被験前後の意識の変化，及びユーザビリティに対する評価を行ってもらう．%ストレスの減少も？
+評価は上記の全3回における実測値およびアンケートで申告した見積もりとのずれの評価，及び心身面の状態変化を比較する．
+ずれの評価は反復測定分散分析(Repeated Measured ANOVA)および四分位数を用いてグループを分けた時のそれぞれの変化量を確認する．
+
+心身面の状態変化に関しては下記に記すインタビューに基づき評価する．
+インタビューにて質問する項目は付録Aにて記載した．%ストレスの減少も？
 
 \section{評価結果}
+〜〜ここからは仮置き〜〜\\
+本節では，本システムの導入後時間管理に対し与える影響について，本評価実験で得られた評価結果を示す．
+まず，3回の計測における見積もりと実測値のずれはの分布は以下の様になった．(図~\ref{fig:hakohige}参照)
+
+\begin{figure}[hb]
+	\begin{center}
+	\fbox{\includegraphics[width=10cm]{images/7/1.png}}
+	\caption{3回の計測における見積もりと実測値のずれ(ダミー)}
+	\label{fig:hakohige}
+	\end{center}
+\end{figure}
+
+その上で反復測定分散分析(Repeated Measured ANOVA)を用いて分析したところ，〇〇だった．
+
+また，1回目の計測の結果を元に被験者グループを下記の4つに分類した．(実験結果の四分位数を元に調整)
+
+\begin{table}[htb]
+  \begin{center}
+  \begin{tabular}{|c|c|c|} \hline
+    1 & 大前倒し群 & 予測の方がX分以上長かった群  \\ \hline
+    2 & 小前倒し群 & 予測の方がX分未満長かった群  \\ \hline
+    3 & 小遅延群 & 実測の方がX分以上長かった群  \\ \hline
+    4 & 大遅延群 & 実測の方がX分未満長かった群  \\ \hline 
+  \end{tabular}
+    \caption{バッファモードの選択分岐}
+    \label{tb:buffer}
+  \end{center}
+\end{table}
+
+その後計測2回分の経過をグループ別に表すとそれぞれ図~\ref{fig:2}，~\ref{fig:3}，~\ref{fig:4}，~\ref{fig:5}の様になった．
+
+\begin{figure}[htb]
+\begin{center}
+\begin{tabular}{c}
+
+  \begin{minipage}[htb]{\linewidth}
+  \begin{center}
+  \includegraphics[width=12cm]{images/7/2.png}
+  \caption{大前倒し群の推移}
+  \label{fig:2}
+  \end{center}
+  \end{minipage}
+  
+  \\
+  
+  \begin{minipage}[htb]{\linewidth}
+  \begin{center}
+  \includegraphics[width=12cm]{images/7/3.png}
+  \caption{小前倒し群の推移}
+  \label{fig:3}
+  \end{center}
+  \end{minipage}
+
+\end{tabular}
+\end{center}
+\end{figure}
+
+\begin{figure}[htb]
+\begin{center}
+\begin{tabular}{c}
+
+  \begin{minipage}[htb]{\linewidth}
+  \begin{center}
+  \includegraphics[width=12cm]{images/7/4.png}
+  \caption{小遅延群の推移}
+  \label{fig:4}
+  \end{center}
+  \end{minipage}
+  
+  \\
+  
+  \begin{minipage}[htb]{\linewidth}
+  \begin{center}
+  \includegraphics[width=12cm]{images/7/5.png}
+  \caption{大遅延群の遷移}
+  \label{fig:5}
+  \end{center}
+  \end{minipage}
+
+\end{tabular}
+\end{center}
+\end{figure}
+
+\subsection{実験終了後アンケート}
 
 \section{考察}
+結果が出次第記述する．
 
 \section{まとめ}
 本章では，評価実験にの概要及び手法についてまとめたた上で，結果・考察を述べた．

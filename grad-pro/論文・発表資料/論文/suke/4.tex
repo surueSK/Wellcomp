@@ -11,44 +11,41 @@ ADLoggerはユーザの行動名別に経過時間を記録するiOSアプリケ
 
 \section{ADLoggerシステムの特徴}
 本節では，ADLoggerシステムの特徴としてあげられる機能を挙げる．
+
 \subsection{タスク別ストップウォッチ記録}
 内蔵されているストップウォッチで行動名毎に行動時間を実測で記録される．
+実測値を記録する為，個人の見積もり精度に依らない数値を取得することが可能である．
+
 \subsection{各時間予測}
 各行動を下記の計算方法を用いてユーザの行動別記録時間の標準的な時間を算出し，リスト形式で行動別に表示する．
-\subsection{合計時間の算出}
 リストのカラムをタップすると，選択された行動の合計の必要時間を下記の計算手法を元に算出する．
+これにより簡単に複数タスクに対する必要時間見込みを簡単に把握する事が可能となる．
+算出された合計時間はAppleのカレンダーに登録が可能であり，Appleカレンダーに登録された既存の予定と同時に閲覧することが可能である．
+
 
 \section{平均時間の算出方法}
+システム上の各タスク毎の見積もり及びバッファの定め方に関して記述する．
 \subsection{各時間予測}
-行動別の時間の表示は前述した三点見積もり法を参考にした．
-タスク完了に要する時間の期待時間を$TE$，記録内最短時間を$O$，記録内最長時間を$P$とすると，数式(\ref{TE})の様に見積もりを行う．
-尚，先行研究の項目で述べた通り三点見積もり法の再確時間は通常最頻値を採用するが，今回は少ないデータ数でも見積もりが可能となる様代替として平均値を採用した．
-また，表には表示されないものの各タスクは三点見積もり法の標準偏差を求め，標準偏差の3倍をかける事で信頼範囲99.7\%の値を算出する(数式(\ref{SD}))．
-\\※下記の三点見積もり法に則った平均時間・標準偏差にするか通常の統計で用いられる平均時間・標準偏差にするかは吟味する事！
+タスク完了に要する時間の期待時間を$\bar{T}$，記録時間を$T$とすると，数式(\ref{T})の様に平均時間を用いて各タスクの見積もりを行う．
+また標準偏差の信頼範囲に則り，各タスクの標準偏差$\sigma (T)$に$N (N=0〜3)$を掛けたものを変動バッファ$Tv$と定義した(数式(\ref{Tv}))．
 \begin{equation}
-\label{TE}
-TE=\{ O + 4(\frac{1}{n}\displaystyle\sum_{i=1}^{n}x_{i}) + P\}/6
+\label{T}
+\bar{T}=\frac{1}{n}\displaystyle\sum_{i=1}^{n}T_{i}
 \end{equation}
 
-\begin{equation}
-\label{SD}
-SD = (P - O)/2
-\end{equation}
+\begin{eqnarray}
+\label{Tv}
+Tv=\sigma (T)×N \\
+(N= 0, 1,2, 3 )\nonumber
+\end{eqnarray}
 
 \subsection{合計時間の算出}
 
-先ほど算出したタスク毎の$TE$と$SD$を用いて，ユーザが選択したタスクの合計時間$T_{sum}$を算出する(数式(\ref{Ts}))．
-また標準偏差$SD$は，合計値の下に選択タスクの$SD$合計値$SD_{sum}$を「バッファ用時間」として算出する(数式(\ref{Ts}))．
+合計時間の予測を出すにはまず先ほど算出したタスク毎の$\bar{T}$と$Tv$し，更にユーザが自分で決定し数値として入力ができる固定バッファ$Tf$を足す事で算出する(数式(\ref{Ts}))．
 \begin{equation}
 \label{Ts}
-T_{sum}= \displaystyle\sum_{i=1}^{n} (TE_{i} + SD_{i})
+T_{sum}= \displaystyle\sum_{i=1}^{n} (\bar{T}_{i} + Tv_{i})+Tf
 \end{equation}
-
-\begin{equation}
-\label{SDs}
-SD_{sum}= \displaystyle\sum_{i=1}^{n}  SD_{i}
-\end{equation}
-
 
 
 \section{ADLoggerシステムの使用方法}
@@ -62,16 +59,22 @@ SD_{sum}= \displaystyle\sum_{i=1}^{n}  SD_{i}
 ``TIMER"ボタンを押すと，``START"ボタンのあるストップウォッチ画面が現れる(図~\ref{fig:stopwatch})．
 ``START"ボタンを押すと``START"ボタンが``STOP"ボタンに切り替わった後，ストップウォッチが起動し時間を計測できる．
 計測後は``STOP"ボタンを押す．出力されるアラートの中から``終了"ボタンを選択し，タスク名選択画面に移行する(図~\ref{fig:list})．
-尚，記録を破棄したい場合はアラートの``Reset"ボタンを，ストップウォッチを止めたくない場合は`計測に戻る"を選択する．
+尚，記録を破棄したい場合はアラートの``Reset"ボタンを，ストップウォッチを止めたくない場合は``計測に戻る"を選択する．
 
 タスク選択画面では行動名がリスト形式で表示されている．一度でも登録された行動名であれば行動名を選択する事で経過時間を保存する事ができる．
 新たな行動名であれば``新規追加"ボタンを押し，出力されたアラートに行動名を入力し名前を登録後上記同様に保存する．
 
 一度でも記録時間が保存されると``ADLog"ボタンから行動記録を閲覧する事が可能である(図~\ref{fig:log})．
-ユーザは必要に応じてタスクを選択しする事で，複数タスクの合計時間を見る事が可能である．
+ユーザは必要に応じてタスクを選択しする事で，複数タスクの合計時間を変動バッファ(中央下色がついている数値)・固定バッファ(中央下黒色の数値)を適宜調整しながら見る事が可能である．
 
-利用規約，実験の説明，アプリの使用方法，設定などはトップ画面(図~\ref{fig:top})の``HELP"ボタンを押すと確認が可能な様にする(図~\ref{fig:help})．
-後述する実験の関係上，ADLoggerボタンから行動記録の閲覧と，ストップウォッチスタート時のカウントアップの閲覧に関しては設定画面から制御できるようにした．
+右上のカレンダーのアイコンをクリックすると，カレンダー登録画面(図~\ref{fig:calendar})に遷移する．
+画面上のタスク名，日付，登録時間に対する開始時刻/終了時刻を入力し``追加"ボタンを押すとAppleのカレンダーに記入した時刻が登録できる．
+
+利用規約，実験の説明%アプリも
+，アンケート，設定に関してはトップ画面(図~\ref{fig:top})の``HELP"ボタン先の画面で管理する(図~\ref{fig:help})．
+アンケート画面は各タスクかかった時間と全てのタスクを連続でやった時の総時間の予測を記入してもらうものである(図~\ref{fig:survey1}，図~\ref{fig:survey2})．
+設定画面は変動バッファと固定バッファの調整を行うことが出来る図~\ref{fig:setting}．
+また，後述する実験の関係上，ADLoggerボタンから行動記録の閲覧とストップウォッチスタート時のカウントアップの閲覧に関しても設定画面から制御できるようにした．
 
 \begin{figure}[ht]
 \begin{center}
@@ -156,6 +159,48 @@ SD_{sum}= \displaystyle\sum_{i=1}^{n}  SD_{i}
   	\end{tabular}
   \end{center}
 \end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+\begin{tabular}{c}
+
+	\begin{minipage}[b]{0.5\linewidth}
+	\begin{center}
+		\fbox{\includegraphics[width=5cm]{images/4/calendar.png}}
+		\caption{カレンダー登録画面}
+		\label{fig:calendar}
+	\end{center}
+  	\end{minipage}
+
+	\begin{minipage}[b]{0.5\linewidth}
+	\begin{center}
+		\fbox{\includegraphics[width=5cm]{images/4/survey1.png}}
+		\caption{アンケート画面1}
+		\label{fig:survey1}
+	\end{center}
+  	\end{minipage}
+	
+	\\
+	\begin{minipage}[b]{0.5\linewidth}
+	\begin{center}
+		\fbox{\includegraphics[width=5cm]{images/4/survey2.png}}
+		\caption{アンケート画面2}
+		\label{fig:survey2}
+	\end{center}
+  	\end{minipage}
+	
+		\begin{minipage}[b]{0.5\linewidth}
+	\begin{center}
+		\fbox{\includegraphics[width=5cm]{images/4/setting.png}}
+		\caption{設定画面}
+		\label{fig:setting}
+	\end{center}
+  	\end{minipage}
+	
+  	\end{tabular}
+  \end{center}
+\end{figure}
+
 
 \section{まとめ}
 本章では，日常生活動作別行動時間記録及びリマインドを目的としたADLoggerシステムを提案した．
