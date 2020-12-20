@@ -1,0 +1,69 @@
+ipsjstyle-ms2012.dot:    MD5 = FC B5 98 D4 B2 16 77 7D  46 47 58 AD D7 6F 35 FF
+ipsjstyle-ms2012.dot:   SHA1 = A8B8 150D 131A 34BF 0917  65B9 66E6 99F0 FF53
+                               431C
+ipsjstyle-ms2012.dot: RMD160 = 9C3C FC5E 2A6B CC11 EBCF  8552 C33C FF0A 0F48
+                               068E
+ipsjstyle-ms2012.dot: SHA224 = 00728522 21679877 5B496B18 BA2CC288 7FD7D5EB
+                               9CC4DD62 B0697F02
+ipsjstyle-ms2012.dot: SHA256 = 80C38A8A A256609A 0A77694C 771B3B4E CAC0C829
+                               3B6A2F53 0FCFA73B 33664DC9
+ipsjstyle-ms2012.dot: SHA384 = EDB18C74 D74BAFCF 63230629 BC2716C0 D97B02BE
+                               0FB89438 CB45D0DB 342F6C19 66914675 C83D229E
+                               191AC10A 7B35B3E5
+ipsjstyle-ms2012.dot: SHA512 = FCE5FFDC 677C292E 910D4A26 F66F1325 0F10A07A
+                               1CA77D38 DC353E4E 8CBF0AE6 1460CF59 1DC2E421
+                               FFD4A700 04C96E9F 8A9B7FC4 A929AE39 D6E44179
+                               6F3CE441
+
+ipsjstyle-ms2012_en.dot:    MD5 = 4B 37 AC A9 10 73 ED 37  DC 27 4D C8 4B F8 AC
+                                  84
+ipsjstyle-ms2012_en.dot:   SHA1 = 6AB3 C54D 9F4A 8A0B B1E5  6EC7 5B76 DC6E FACB
+                                  C3DC
+ipsjstyle-ms2012_en.dot: RMD160 = 8AD7 78B8 A6F2 02BB 14CC  92D6 FCEB 090B 792A
+                                  F749
+ipsjstyle-ms2012_en.dot: SHA224 = EE8F70DB E15118CD 8A6BD47F D7F81CA0 382D279F
+                                  E66317E3 157F6200
+ipsjstyle-ms2012_en.dot: SHA256 = EBB57B5B B074F02A D9CCD220 5E5FE0AB ED958FA7
+                                  CD7CB995 41F09FD4 25A9AF03
+ipsjstyle-ms2012_en.dot: SHA384 = 4034B187 16B7E784 0A6A17EC 675E0B1D CAE3794F
+                                  B1CB3544 1ABC26DA 14031673 C8D33B36 97EFDE9D
+                                  D78F445F 0B021A53
+ipsjstyle-ms2012_en.dot: SHA512 = 1C738F36 789C2FE4 C9335B06 9EED195D 27E6600A
+                                  993BA1F2 40EF3BF4 A42FAF4C 56D76716 5228A9AD
+                                  C5CA965F 84A6EC2C DD80B7C2 DD6F41B8 BA553E10
+                                  7CADBFB7
+
+ipsjstyle-ms2012.pdf:    MD5 = 36 87 A6 C5 C6 7E 60 1B  27 0B 4C CF 78 5C 24 B4
+ipsjstyle-ms2012.pdf:   SHA1 = 5271 50B5 2241 A192 D4EB  2D99 649F 270F 8C5A
+                               F528
+ipsjstyle-ms2012.pdf: RMD160 = 801A 6EF0 10EC 77E3 2D85  F23F 445E DB71 3C01
+                               6C7E
+ipsjstyle-ms2012.pdf: SHA224 = 6BC1B820 0F832F5C 35B46F09 85AD52CF 4CE80D4C
+                               ACAE7FAC 555B6A7A
+ipsjstyle-ms2012.pdf: SHA256 = AF514117 BB390172 205E1BCE 204BDB07 5E6B9AED
+                               C5474AA4 2B62CDD6 DE58ABBA
+ipsjstyle-ms2012.pdf: SHA384 = 01685B46 F9AEC467 04B2E500 D7417A11 BAD43317
+                               B9193C7C 7190CE41 24A1AE0F 8A5BEDA4 074DA797
+                               13D0708E BEBEDCFC
+ipsjstyle-ms2012.pdf: SHA512 = 6205B20A A9F44E01 172A653C 38DD93C4 3A54B555
+                               AA6F6A48 BDF3C7FC D9D2E55A 8813EE3D A8D998D3
+                               495CBCD1 49511AC3 40584D93 7A92D4F5 93D6AAB8
+                               D22A696A
+
+ipsjstyle-ms2012_en.pdf:    MD5 = 6B EA C6 B5 74 04 70 FC  70 9C 6E B8 0A 12 A9
+                                  F9
+ipsjstyle-ms2012_en.pdf:   SHA1 = EBD1 9CD5 B412 6384 F652  0487 191B 56B7 89BF
+                                  D491
+ipsjstyle-ms2012_en.pdf: RMD160 = 348E 2841 31FB E667 390B  B059 60FD D806 4832
+                                  C070
+ipsjstyle-ms2012_en.pdf: SHA224 = B774BF13 7024C4A2 149E71BF 0FE2578B 23A4BD4B
+                                  865955EE 9E9186E1
+ipsjstyle-ms2012_en.pdf: SHA256 = 42437A99 9A576921 85D9FCFD 0E7106EE B2B21051
+                                  369ADA8F E4E45752 796E92AD
+ipsjstyle-ms2012_en.pdf: SHA384 = FB9606E8 E28BCA6E FB542100 E8D72B7D 73E78620
+                                  503A5B7C CD00119D E7D14227 7803E217 A4E39DE6
+                                  ABC0FE70 DD6041EA
+ipsjstyle-ms2012_en.pdf: SHA512 = C4F12B6B 50CF8999 9DE0FD24 BBAA8477 D81C6726
+                                  A48E8D86 BCAF5A07 522BEA78 9A6B8216 2B0A9A42
+                                  6D27EC0E 48D722D3 99223EC4 475289AE B0FF462A
+                                  4FC84386
