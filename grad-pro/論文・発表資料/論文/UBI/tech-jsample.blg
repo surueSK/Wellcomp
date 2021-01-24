@@ -1,0 +1,56 @@
+This is pBibTeX, Version 0.99d-j0.33 (utf8.euc) (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: tech-jsample.aux
+The style file: unsrt.bst
+Database file #1: bibsample.bib
+Warning--I didn't find a database entry for "okumura"
+Warning--I didn't find a database entry for "companion"
+Warning--I didn't find a database entry for "webpage2"
+Warning--I didn't find a database entry for "book1"
+Warning--I didn't find a database entry for "book2"
+Warning--I didn't find a database entry for "book3"
+Warning--I didn't find a database entry for "book4"
+Warning--there's a number but no volume in Imura2016
+You've used 11 entries,
+            1791 wiz_defined-function locations,
+            529 strings with 5152 characters,
+and the built_in function-call counts, 2171 in all, are:
+= -- 189
+> -- 80
+< -- 1
++ -- 32
+- -- 21
+* -- 122
+:= -- 345
+add.period$ -- 33
+call.type$ -- 11
+change.case$ -- 9
+chr.to.int$ -- 0
+cite$ -- 12
+duplicate$ -- 107
+empty$ -- 227
+format.name$ -- 21
+if$ -- 496
+int.to.chr$ -- 0
+int.to.str$ -- 11
+missing$ -- 11
+newline$ -- 58
+num.names$ -- 11
+pop$ -- 38
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 53
+stack$ -- 0
+substring$ -- 107
+swap$ -- 26
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 17
+width$ -- 13
+write$ -- 117
+is.kanji.str$ -- 0
+(There were 8 warnings)
