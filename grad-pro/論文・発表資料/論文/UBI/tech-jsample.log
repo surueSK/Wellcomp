@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.10.25)  26 JAN 2021 23:15
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.10.25)  27 JAN 2021 11:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -4270,11 +4270,7 @@ File: dvipdfmx.def 2017/06/24 v5.0g Graphics/color driver for dvipdfmx
 \Gin@req@height=\dimen130
 \Gin@req@width=\dimen131
 )
-(./tech-jsample.aux
-
-LaTeX Warning: Label `tb:dif' multiply defined.
-
-)
+(./tech-jsample.aux)
 \openout1 = `tech-jsample.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
@@ -4323,8 +4319,16 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <11.82813> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 63.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <11.82813> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 63.
- (I search kanjifont definition file: . . ) (I search font definition file: .
-. . . . . . )
+
+
+LaTeX Warning: Citation `history' on page 1 undefined on input line 64.
+
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <9.61035> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 64.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <9.61035> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 64.
+(I search kanjifont definition file: . . ) (I search font definition file: . .
+. . . . . )
 LaTeX Font Info:    Try loading font information for OMS+txsy on input line 70.
 
  (/usr/local/texlive/2018/texmf-dist/tex/latex/txfonts/omstxsy.fd
@@ -4333,6 +4337,7 @@ File: omstxsy.fd 2000/12/15 v3.1
 LaTeX Font Info:    Try loading font information for OT1+txsy on input line 70.
 
 LaTeX Font Info:    No file OT1txsy.fd. on input line 70.
+
 
 LaTeX Font Warning: Font shape `OT1/txsy/m/n' undefined
 (Font)              using `OT1/cmr/m/n' instead on input line 70.
@@ -4344,20 +4349,82 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 
 
 ]
+
+LaTeX Warning: Reference `tb:dif' on page 2 undefined on input line 73.
+
+
+LaTeX Warning: Citation `Britton1991' on page 2 undefined on input line 75.
+
+
+LaTeX Warning: Citation `Trueman1996' on page 2 undefined on input line 75.
+
+
+LaTeX Warning: Citation `Macan1994' on page 2 undefined on input line 75.
+
+
+LaTeX Warning: Citation `Claessens2007' on page 2 undefined on input line 75.
+
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 9.60999pt on input line 78.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <8.13184> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 81.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <8.13184> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 81.
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <9.61035> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 120.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <9.61035> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 120.
+
+LaTeX Warning: Citation `bunkyo' on page 2 undefined on input line 110.
+
+
+LaTeX Warning: Citation `Lakein1989' on page 2 undefined on input line 122.
+
+
+LaTeX Warning: Reference `tb:Lakein' on page 2 undefined on input line 122.
+
+
+LaTeX Warning: Citation `Claessens2007' on page 2 undefined on input line 138.
+
+
+LaTeX Warning: Reference `tb:Claessens' on page 2 undefined on input line 138.
+
+
+LaTeX Warning: Citation `Roy2007' on page 2 undefined on input line 156.
+
+
+LaTeX Warning: Citation `Oguro1961' on page 2 undefined on input line 156.
+
+
+LaTeX Warning: Citation `Murakami2016' on page 2 undefined on input line 156.
+
+
+LaTeX Warning: Reference `pert' on page 2 undefined on input line 160.
+
+
+LaTeX Warning: Citation `Kato1965' on page 2 undefined on input line 160.
+
+
+LaTeX Warning: Citation `Oguro1961' on page 2 undefined on input line 169.
+
+
+LaTeX Warning: Citation `Sakai2003' on page 2 undefined on input line 172.
+
+
+LaTeX Warning: Reference `fig:routine' on page 2 undefined on input line 177.
+
 File: images/2/routine.png Graphic file (type bmp)
 <images/2/routine.png>
 File: images/2/bottom.png Graphic file (type bmp)
 <images/2/bottom.png>
+
+LaTeX Warning: Reference `fig:bottomup' on page 2 undefined on input line 199.
+
+
+LaTeX Warning: Citation `Britton1991' on page 2 undefined on input line 200.
+
+
+LaTeX Warning: Reference `fig:taskuma' on page 2 undefined on input line 203.
+
+
+LaTeX Warning: Reference `fig:mouse' on page 2 undefined on input line 206.
+
 File: images/2/taskuma.png Graphic file (type bmp)
 <images/2/taskuma.png>
 
@@ -4390,6 +4457,24 @@ Overfull \hbox (29.00432pt too wide) in paragraph at lines 235--236
  [] 
  []
 
+
+LaTeX Warning: Reference `fig:will' on page 3 undefined on input line 246.
+
+
+LaTeX Warning: Reference `fig:bottomup' on page 3 undefined on input line 252.
+
+
+LaTeX Warning: Reference `tb:Q' on page 3 undefined on input line 257.
+
+
+LaTeX Warning: Reference `1' on page 3 undefined on input line 257.
+
+
+LaTeX Warning: Reference `2' on page 3 undefined on input line 257.
+
+
+LaTeX Warning: Reference `fig:yobiapp' on page 3 undefined on input line 257.
+
 [3]
 File: images/3/yobi.png Graphic file (type bmp)
 <images/3/yobi.png>
@@ -4397,6 +4482,12 @@ File: images/3/yobi.png Graphic file (type bmp)
 Overfull \hbox (29.00432pt too wide) in paragraph at lines 275--276
  [] 
  []
+
+
+LaTeX Warning: Reference `fig:re1' on page 4 undefined on input line 302.
+
+
+LaTeX Warning: Reference `fig:re2' on page 4 undefined on input line 302.
 
 File: images/3/1.png Graphic file (type bmp)
 <images/3/1.png>
@@ -4412,50 +4503,73 @@ Overfull \hbox (29.00432pt too wide) in paragraph at lines 318--319
  [] 
  []
 
-[4] [5]
+
+LaTeX Warning: Reference `T' on page 4 undefined on input line 355.
+
+
+LaTeX Warning: Reference `Tv' on page 4 undefined on input line 356.
+
+[4]
+
+LaTeX Warning: Reference `Ts' on page 5 undefined on input line 370.
+
+[5]
 File: images/4/stopwatch.png Graphic file (type bmp)
 <images/4/stopwatch.png>
 
-Overfull \hbox (29.00432pt too wide) in paragraph at lines 386--387
+Overfull \hbox (29.00432pt too wide) in paragraph at lines 383--384
  [] 
  []
 
 File: images/4/list.png Graphic file (type bmp)
 <images/4/list.png>
 
-Overfull \hbox (29.00432pt too wide) in paragraph at lines 394--395
+Overfull \hbox (29.00432pt too wide) in paragraph at lines 391--392
  [] 
  []
 
 File: images/4/log.png Graphic file (type bmp)
 <images/4/log.png>
 
-Overfull \hbox (29.00432pt too wide) in paragraph at lines 410--411
+Overfull \hbox (29.00432pt too wide) in paragraph at lines 407--408
  [] 
  []
 
 File: images/4/calendar.png Graphic file (type bmp)
 <images/4/calendar.png>
 
-Overfull \hbox (29.00432pt too wide) in paragraph at lines 418--419
+Overfull \hbox (29.00432pt too wide) in paragraph at lines 415--416
  [] 
  []
 
 
-LaTeX Warning: Citation `Tayama2018' on page 6 undefined on input line 439.
+LaTeX Warning: Citation `Oguro1961' on page 6 undefined on input line 436.
 
 [6]
 
-LaTeX Warning: Reference `fig:day' on page 7 undefined on input line 455.
+LaTeX Warning: Reference `fig:day' on page 7 undefined on input line 456.
 
 
-LaTeX Warning: Reference `fig:compare' on page 7 undefined on input line 465.
+LaTeX Warning: Reference `fig:10' on page 7 undefined on input line 460.
+
+
+LaTeX Warning: Reference `fig:10' on page 7 undefined on input line 461.
+
+
+LaTeX Warning: Reference `fig:10' on page 7 undefined on input line 462.
 
 File: images/7/10.png Graphic file (type bmp)
 <images/7/10.png>
-(./tech-jsample.bbl [7]
+[7] [8]
+
+LaTeX Warning: Citation `multitask' on page 9 undefined on input line 537.
+
+
+LaTeX Warning: Citation `Tayama2018' on page 9 undefined on input line 537.
+
+(./tech-jsample.bbl
 LaTeX Font Info:    Calculating math sizes for size <8.8711> on input line 1.
-) [8] (./tech-jsample.aux)
+) [9] (./tech-jsample.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -4463,16 +4577,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 1729 strings out of 493281
- 23688 string characters out of 6145040
+ 1728 strings out of 493281
+ 23675 string characters out of 6145040
  96951 words of memory out of 5000000
- 5646 multiletter control sequences out of 15000+600000
+ 5645 multiletter control sequences out of 15000+600000
  34577 words of font info for 155 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  30i,16n,24p,1384b,531s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on tech-jsample.dvi (8 pages, 51376 bytes).
+Output written on tech-jsample.dvi (9 pages, 57784 bytes).
