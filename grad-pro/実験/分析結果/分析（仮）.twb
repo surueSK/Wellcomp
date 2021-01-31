@@ -310,6 +310,7 @@
         </desc>
       </column>
       <column-instance column='[ExpectTime]' derivation='Avg' name='[avg:ExpectTime:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[TotalTime]' derivation='Avg' name='[avg:TotalTime:qk]' pivot='key' type='quantitative' />
       <column-instance column='[tasktime]' derivation='Avg' name='[avg:tasktime:qk]' pivot='key' type='quantitative' />
       <column-instance column='[day]' derivation='Count' name='[cnt:day:qk]' pivot='key' type='quantitative' />
       <column-instance column='[day]' derivation='CountD' name='[ctd:day:qk]' pivot='key' type='quantitative' />
@@ -353,6 +354,9 @@
             </map>
             <map to='#4e79a7'>
               <bucket>&quot;[federated.0uxbotc1hp29mi18x99m40o0q4dm].[sum:ExpectTime:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0uxbotc1hp29mi18x99m40o0q4dm].[avg:TotalTime:qk]&quot;</bucket>
             </map>
             <map to='#e15759'>
               <bucket>&quot;[federated.0uxbotc1hp29mi18x99m40o0q4dm].[cnt:day:qk]&quot;</bucket>
@@ -3142,8 +3146,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1200' minheight='1200' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='109' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='108' param='vert' w='98400' x='800' y='1000'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='111' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='110' param='vert' w='84000' x='8000' y='8000'>
                 <zone fixed-size='280' h='98000' id='59' is-fixed='true' name='効果について (task時間全体)' w='24600' x='800' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -3243,10 +3247,10 @@
       </viewpoint>
       <simple-id uuid='{A1869C61-195D-4A55-9C00-5427D6A726B5}' />
     </window>
-    <window class='worksheet' name='箱ひげ'>
+    <window class='worksheet' maximized='true' name='箱ひげ'>
       <cards>
         <edge name='left'>
-          <strip size='160'>
+          <strip size='100'>
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
@@ -3439,7 +3443,7 @@
           <floating-toolbar-visibility value='1' />
         </viewpoint>
       </viewpoints>
-      <active id='59' />
+      <active id='-1' />
       <simple-id uuid='{A7742976-DB1B-4E4E-A804-307499093861}' />
     </window>
     <window class='worksheet' name='効果について (task時間)'>
@@ -3593,7 +3597,7 @@
       </cards>
       <simple-id uuid='{DBE52BF8-C008-429C-8354-7238B3485DD1}' />
     </window>
-    <window class='worksheet' maximized='true' name='効果について (T時間全体)'>
+    <window class='worksheet' name='効果について (T時間全体)'>
       <cards>
         <edge name='left'>
           <strip size='160'>

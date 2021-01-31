@@ -801,7 +801,7 @@
       </viewpoint>
       <simple-id uuid='{A41BED61-9976-46E3-9E29-35AD7962A672}' />
     </window>
-    <window class='worksheet' name='予想と実態の平均時間比較(ユーザ別) (2)'>
+    <window class='worksheet' maximized='true' name='予想と実態の平均時間比較(ユーザ別) (2)'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -838,7 +838,7 @@
       </viewpoint>
       <simple-id uuid='{C44836C8-B9DB-47B4-9CEB-3B5EEFE50F35}' />
     </window>
-    <window class='worksheet' maximized='true' name='予想と実態の平均時間比較(ユーザ別総合)'>
+    <window class='worksheet' name='予想と実態の平均時間比較(ユーザ別総合)'>
       <cards>
         <edge name='left'>
           <strip size='160'>

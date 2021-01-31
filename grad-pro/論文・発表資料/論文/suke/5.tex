@@ -216,7 +216,7 @@ UIAlertControllerには``急ぎ"``やや急ぎ"``ややゆっくり"``ゆっく�
 サーバー側ではユーザ別に登録タスクとタスク時間記録をサーバ内にて管理する．
 サーバ及びデータベースには，MBaaSであるBack4App~\cite{back4app}を利用する．
 データベースにはユーザの認証情報を格納するUserクラスと， 行動時間記録を格納するtasktimeObject，アンケート 用のsurveyObject，survey2Objectが存在する．
-Userクラスの例を表~\ref{tb:user_class}，tasktimeObjectの例の例を表~\ref{tb:tasktime_object}，surveyObjectの例の例を表~\ref{tb:survey_object}，survey2Objectの例の例を表~\ref{tb:survey2_object}に示す．
+Userクラスの例を表~\ref{tb:user_class}，tasktimeObjectの例を表~\ref{tb:tasktime_object}，surveyObjectの例の例を表~\ref{tb:survey_object}，survey2Objectの例の例を表~\ref{tb:survey2_object}に示す．
 
 \begin{table}[htb]
 \begin{center}
@@ -234,12 +234,13 @@ Userクラスの例を表~\ref{tb:user_class}，tasktimeObjectの例の例を表
 \end{center}
 \end{table}
 
-\begin{figure}[htb]
+\begin{table}[htb]
 \begin{center}
 \begin{tabular}{c}
 
 \begin{minipage}[htb]{\linewidth}
 \begin{center}
+   \caption{tasktimeObjectの例}
   \begin{tabular}{|l|l|} \hline
     カラム名 & 値 \\ \hline
     objectId & ``sRPnWYv0t6" \\
@@ -249,7 +250,6 @@ Userクラスの例を表~\ref{tb:user_class}，tasktimeObjectの例の例を表
     createdAt & 2020-7-6T07:24:08.810Z  \\
     updatedAt & 2020-7-6T07:24:08.810Z \\ \hline
   \end{tabular}
-   \caption{tasktimeObjectの例}
   \label{tb:tasktime_object}
 \end{center}
 \end{minipage}
@@ -288,4 +288,4 @@ Userクラスの例を表~\ref{tb:user_class}，tasktimeObjectの例の例を表
 \end{minipage}
 \end{tabular}
 \end{center}
-\end{figure}
+\end{table}
