@@ -4531,62 +4531,162 @@ Overfull \hbox (29.00432pt too wide) in paragraph at lines 391--392
 File: images/4/log.png Graphic file (type bmp)
 <images/4/log.png>
 
-Overfull \hbox (29.00432pt too wide) in paragraph at lines 407--408
+Overfull \hbox (29.00432pt too wide) ed on input line 257.
+
+
+LaTeX Warning: Reference `1' on page 3 undefined on input line 257.
+
+
+LaTeX Warning: Reference `2' on page 3 undefined on input line 257.
+
+
+LaTeX Warning: Reference `fig:yobiapp' on page 3 undefined on input line 257.
+
+[3]
+File: images/3/yobi.png Graphic file (type bmp)
+<images/3/yobi.png>
+
+Overfull \hbox (29.00432pt too wide) in paragraph at lines 275--276
+ [] 
+ []
+
+
+LaTeX Warning: Reference `fig:re1' on page 4 undefined on input line 302.
+
+
+LaTeX Warning: Reference `fig:re2' on page 4 undefined on input line 302.
+
+File: images/3/1.png Graphic file (type bmp)
+<images/3/1.png>
+
+Overfull \hbox (29.00432pt too wide) in paragraph at lines 310--311
+ [] 
+ []
+
+File: images/3/2.png Graphic file (type bmp)
+<images/3/2.png>
+
+Overfull \hbox (29.00432pt too wide) in paragraph at lines 318--319
+ [] 
+ []
+
+[4]
+
+LaTeX Warning: Reference `T' on page 5 undefined on input line 358.
+
+
+LaTeX Warning: Reference `Tv' on page 5 undefined on input line 359.
+
+[5]
+
+LaTeX Warning: Reference `Ts' on page 6 undefined on input line 373.
+
+File: images/4/stopwatch.png Graphic file (type bmp)
+<images/4/stopwatch.png>
+
+Overfull \hbox (29.00432pt too wide) in paragraph at lines 386--387
+ [] 
+ []
+
+File: images/4/list.png Graphic file (type bmp)
+<images/4/list.png>
+
+Overfull \hbox (29.00432pt too wide) in paragraph at lines 394--395
+ [] 
+ []
+
+File: images/4/log.png Graphic file (type bmp)
+<images/4/log.png>
+
+Overfull \hbox (29.00432pt too wide) in paragraph at lines 410--411
  [] 
  []
 
 File: images/4/calendar.png Graphic file (type bmp)
 <images/4/calendar.png>
 
-Overfull \hbox (29.00432pt too wide) in paragraph at lines 415--416
+Overfull \hbox (29.00432pt too wide) in paragraph at lines 418--419
  [] 
  []
 
 
-LaTeX Warning: Citation `Oguro1961' on page 6 undefined on input line 436.
+LaTeX Warning: Citation `Oguro1961' on page 6 undefined on input line 439.
+
+
+LaTeX Warning: Citation `Tayama2018' on page 6 undefined on input line 439.
+
+
+LaTeX Warning: Citation `zoom' on page 6 undefined on input line 445.
 
 [6]
 
 LaTeX Warning: Reference `fig:day' on page 7 undefined on input line 456.
 
 
-LaTeX Warning: Reference `fig:10' on page 7 undefined on input line 460.
+LaTeX Warning: Citation `tableau' on page 7 undefined on input line 464.
 
 
-LaTeX Warning: Reference `fig:10' on page 7 undefined on input line 461.
+LaTeX Warning: Reference `fig:compare' on page 7 undefined on input line 466.
 
 
-LaTeX Warning: Reference `fig:10' on page 7 undefined on input line 462.
+LaTeX Warning: Reference `fig:7' on page 7 undefined on input line 473.
+
+
+LaTeX Warning: Reference `fig:7' on page 7 undefined on input line 474.
+
+
+LaTeX Warning: Reference `fig:8' on page 7 undefined on input line 476.
+
+
+LaTeX Warning: Reference `fig:9' on page 7 undefined on input line 476.
+
+
+LaTeX Warning: Reference `fig:9' on page 7 undefined on input line 477.
+
+
+LaTeX Warning: Reference `fig:9' on page 7 undefined on input line 479.
+
+
+LaTeX Warning: Reference `fig:9' on page 7 undefined on input line 480.
 
 File: images/7/10.png Graphic file (type bmp)
 <images/7/10.png>
-[7] [8]
+[7]
 
-LaTeX Warning: Citation `multitask' on page 9 undefined on input line 537.
+LaTeX Warning: Reference `fig:11' on page 8 undefined on input line 495.
 
 
-LaTeX Warning: Citation `Tayama2018' on page 9 undefined on input line 537.
+LaTeX Warning: Reference `fig:12' on page 8 undefined on input line 495.
+
+
+LaTeX Warning: Reference `fig:13' on page 8 undefined on input line 495.
+
+
+LaTeX Warning: Reference `fig:14' on page 8 undefined on input line 495.
 
 (./tech-jsample.bbl
 LaTeX Font Info:    Calculating math sizes for size <8.8711> on input line 1.
-) [9] (./tech-jsample.aux)
 
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+./tech-jsample.bbl:5: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.5 \def n
+          ewblock 時計の歴史.
+? 
+./tech-jsample.bbl:5: Emergency stop.
+<inserted text> 
+                \inaccessible 
+l.5 \def n
+          ewblock 時計の歴史.
+End of file on the terminal!
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ 
 Here is how much of TeX's memory you used:
- 1728 strings out of 493281
- 23675 string characters out of 6145040
- 96951 words of memory out of 5000000
- 5645 multiletter control sequences out of 15000+600000
+ 1714 strings out of 493281
+ 23478 string characters out of 6145040
+ 97951 words of memory out of 5000000
+ 5633 multiletter control sequences out of 15000+600000
  34577 words of font info for 155 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 30i,16n,24p,1384b,531s stack positions out of 5000i,500n,10000p,200000b,80000s
-
-Output written on tech-jsample.dvi (9 pages, 57784 bytes).
+ 30i,16n,23p,1384b,585s stack positions out of 5000i,500n,10000p,200000b,80000s
+Output written on tech-jsample.dvi (7 pages, 46788 bytes).
