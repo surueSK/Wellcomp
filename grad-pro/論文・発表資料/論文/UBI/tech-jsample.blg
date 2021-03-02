@@ -1,0 +1,49 @@
+This is pBibTeX, Version 0.99d-j0.33 (utf8.euc) (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: tech-jsample.aux
+The style file: unsrt.bst
+Database file #1: bibsample.bib
+Warning--empty journal in Murakami2016
+You've used 24 entries,
+            1791 wiz_defined-function locations,
+            592 strings with 6502 characters,
+and the built_in function-call counts, 4253 in all, are:
+= -- 374
+> -- 140
+< -- 2
++ -- 60
+- -- 36
+* -- 191
+:= -- 662
+add.period$ -- 72
+call.type$ -- 24
+change.case$ -- 21
+chr.to.int$ -- 0
+cite$ -- 25
+duplicate$ -- 205
+empty$ -- 479
+format.name$ -- 36
+if$ -- 982
+int.to.chr$ -- 0
+int.to.str$ -- 24
+missing$ -- 18
+newline$ -- 123
+num.names$ -- 24
+pop$ -- 90
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 121
+stack$ -- 0
+substring$ -- 189
+swap$ -- 47
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 36
+width$ -- 26
+write$ -- 242
+is.kanji.str$ -- 0
+(There was 1 warning)
